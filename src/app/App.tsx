@@ -1,12 +1,11 @@
 import { Route, Routes } from 'react-router-dom';
-import { Counter } from './components/Counter';
 import './styles/index.scss'
-import { Link } from 'react-router-dom';
-import { MainPageLazy } from './pages/MainPage/MainPage.lazy';
-import { AboutPageLazy } from './pages/AboutPage/AboutPage.lazy';
 import { Suspense } from 'react';
-import { useTheme } from './theme/useTheme';
-import { classNames } from './helpers/classNames/classNames';
+import { Link } from 'react-router-dom';
+import { classNames } from 'shared/lib/classNames/classNames';
+import { useTheme } from 'app/providers/ThemeProvider';
+import { MainPage } from 'pages/MainPage';
+import { AboutPage } from 'pages/AboutPage';
 
 
 
@@ -16,13 +15,12 @@ const App = () => {
         <div className={classNames('app', {}, [theme])}>
             <button onClick={toggleTheme}>TOGGLE THEME</button>
             Text Text Text
-            <Counter/>
             <Link to={'/'}>Главная</Link>
             <Link to={'/about'}>О сайте</Link>
             <Suspense fallback={<div>Loading ...</div>}>
                 <Routes>
-                    <Route path={'/'} element={<MainPageLazy/>} />
-                    <Route path={'/about'} element={<AboutPageLazy/>} />
+                    <Route path={'/'} element={<MainPage/>} />
+                    <Route path={'/about'} element={<AboutPage/>} />
                 </Routes>
             </Suspense>
 
