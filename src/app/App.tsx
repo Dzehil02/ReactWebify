@@ -10,7 +10,6 @@ const App = () => {
     const {theme} = useTheme();
     return (
         <div className={classNames('app', {}, [theme])}>
-            Text Text Text
             <Suspense fallback="">
                 <Navbar/>
                 <div className='content-page'>
@@ -18,8 +17,6 @@ const App = () => {
                     <AppRouter/>
                 </div>
             </Suspense>
-
-
         </div>
     );
 };
