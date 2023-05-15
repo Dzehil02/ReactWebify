@@ -1,5 +1,8 @@
 {
-  "Главная страница": "Главная страница",
-  "О сайте": "О сайте",
-  "Язык": "Язык"
+  "about-page": "about-page",
+  "lang": "lang",
+  "main": "main",
+  "main-page": "main-page",
+  "page-not-found": "page-not-found",
+  "turn-on-off": "turn-on-off"
 }

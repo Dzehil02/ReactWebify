@@ -21,7 +21,7 @@ export const LangSwitcher: FC<LangSwitcherProps> = ({ className }) => {
             theme={ThemeButton.CLEAR} 
             onClick={toggle}
         >
-            {t('Язык')}
+            {t('lang')}
         </Button>
     )
 }

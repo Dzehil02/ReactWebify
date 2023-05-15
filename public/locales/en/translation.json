@@ -1,6 +1,8 @@
 {
-    "Перевод текста": "Translate of text",
-    "Перевод": "Translate",
-    "Главная страница": "Main page",
-    "Язык": "Русский"
+	"main-page": "Main page",
+	"main": "Main",
+	"about-page": "About page",
+	"turn-on-off": "Turn on/off",
+	"page-not-found": "Page not found",
+	"lang": "English"
 }
