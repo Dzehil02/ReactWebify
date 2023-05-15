@@ -4,5 +4,8 @@
 	"about-page": "About page",
 	"turn-on-off": "Turn on/off",
 	"page-not-found": "Page not found",
-	"lang": "English"
+	"lang": "English",
+	"errorboundary": "Mistake ErrorBoundary was happened",
+	"reload-page": "Reload Page",
+	"throwError": "Throw Error"
 }

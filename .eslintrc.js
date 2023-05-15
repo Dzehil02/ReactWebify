@@ -47,7 +47,7 @@ module.exports = {
         'no-underscore-dangle': 'off',
         'i18next/no-literal-string': [
             'error', 
-            {markupOnly: true, 'ignoreAttribute': ['to', 'fallback']}
+            {markupOnly: true, 'ignoreAttribute': ['to', 'fallback', 'onClick']}
         ],
         'max-len': ['error', {'code': 100, 'ignoreComments': true}],
     },

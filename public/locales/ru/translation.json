@@ -4,5 +4,8 @@
 	"about-page": "О сайте",
 	"turn-on-off": "Панель вкл/выкл",
 	"page-not-found": "Страница не найдена",
-	"lang": "Русский"
+	"lang": "Русский",
+	"errorboundary": "Произошла ошибка ErrorBoundary",
+	"reload-page": "Обновить страницу",
+	"throwError": "Выбросить ошибку"
 }
