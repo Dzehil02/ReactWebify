@@ -1,5 +1,4 @@
 {
-  "": "",
   "about-page": "about-page",
   "errorboundary": "errorboundary",
   "lang": "lang",
@@ -7,7 +6,6 @@
   "main-page": "main-page",
   "page-not-found": "page-not-found",
   "reload-page": "reload-page",
-  "throw Error": "throw Error",
   "throwError": "throwError",
   "turn-on-off": "turn-on-off"
 }
