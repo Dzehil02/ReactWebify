@@ -11,8 +11,6 @@ module.exports = {
         "plugin:@typescript-eslint/recommended",
         "plugin:i18next/recommended"
     ],
-    overrides: [
-    ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaFeatures: {
@@ -47,7 +45,7 @@ module.exports = {
         'no-underscore-dangle': 'off',
         'i18next/no-literal-string': [
             'error', 
-            {markupOnly: true, 'ignoreAttribute': ['to', 'fallback', 'onClick']}
+            {markupOnly: true, 'ignoreAttribute': ['to', 'fallback', 'onClick', 'data-testid']}
         ],
         'max-len': ['error', {'code': 100, 'ignoreComments': true}],
     },
@@ -59,4 +57,12 @@ module.exports = {
             version: 'detected'
         },
     },
+    overrides: [
+        {
+            files: ['**/src/**/*.test.{ts,tsx}'],
+            rules: {
+                'i18next/no-literal-string': 'off',
+            },
+        },
+    ],
 };
