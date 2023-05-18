@@ -17,7 +17,9 @@ jobs:
         uses: actions/setup-node@v1
         with: 
           node-version: ${{ matrix.node-version }}
-      - name: install modules --legacy-peer-deps
+      - name: install loki
+        run: npm i -D loki@0.31.2 --legacy-peer-deps
+      - name: install modules
         run: npm install 
       - name: build production project
         run: npm run build:prod
