@@ -5,12 +5,12 @@ import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDeco
 import { PageError } from './PageError';
 
 const meta: Meta<typeof PageError> = {
-  title: 'widgets/PageError',
-  component: PageError,
-  tags: ['autodocs'],
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
+    title: 'widgets/PageError',
+    component: PageError,
+    tags: ['autodocs'],
+    argTypes: {
+    // backgroundColor: { control: 'color' },
+    },
 };
 
 export default meta;

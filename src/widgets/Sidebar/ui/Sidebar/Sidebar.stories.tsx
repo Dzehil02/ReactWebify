@@ -5,12 +5,12 @@ import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDeco
 import { Sidebar } from './Sidebar';
 
 const meta: Meta<typeof Sidebar> = {
-  title: 'widgets/Sidebar',
-  component: Sidebar,
-  tags: ['autodocs'],
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
+    title: 'widgets/Sidebar',
+    component: Sidebar,
+    tags: ['autodocs'],
+    argTypes: {
+    // backgroundColor: { control: 'color' },
+    },
 };
 
 export default meta;

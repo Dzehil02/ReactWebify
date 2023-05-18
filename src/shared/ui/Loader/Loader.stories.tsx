@@ -5,12 +5,12 @@ import { Theme } from 'app/providers/ThemeProvider';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 
 const meta: Meta<typeof Loader> = {
-  title: 'shared/Loader',
-  component: Loader,
-  tags: ['autodocs'],
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
+    title: 'shared/Loader',
+    component: Loader,
+    tags: ['autodocs'],
+    argTypes: {
+    // backgroundColor: { control: 'color' },
+    },
 };
 
 export default meta;

@@ -2,15 +2,15 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import  AboutPage  from './AboutPage';
 import { Theme } from 'app/providers/ThemeProvider';
-import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import  { ThemeDecorator }  from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 
 const meta: Meta<typeof AboutPage> = {
-  title: 'pages/AboutPage',
-  component: AboutPage,
-  tags: ['autodocs'],
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
+    title: 'pages/AboutPage',
+    component: AboutPage,
+    tags: ['autodocs'],
+    argTypes: {
+        backgroundColor: { control: 'color' },
+    },
 };
 
 export default meta;

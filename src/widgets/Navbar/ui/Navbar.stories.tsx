@@ -5,12 +5,12 @@ import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDeco
 import { Navbar } from './Navbar';
 
 const meta: Meta<typeof Navbar> = {
-  title: 'widgets/Navbar',
-  component: Navbar,
-  tags: ['autodocs'],
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
+    title: 'widgets/Navbar',
+    component: Navbar,
+    tags: ['autodocs'],
+    argTypes: {
+    // backgroundColor: { control: 'color' },
+    },
 };
 
 export default meta;
