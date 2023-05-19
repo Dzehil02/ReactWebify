@@ -7,5 +7,6 @@
 	"lang": "English",
 	"errorboundary": "Mistake ErrorBoundary was happened",
 	"reload-page": "Reload Page",
-	"throwError": "Throw Error"
+	"throwError": "Throw Error",
+	"shortLang": "EN"
 }
