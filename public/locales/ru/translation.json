@@ -8,5 +8,6 @@
 	"errorboundary": "Произошла ошибка ErrorBoundary",
 	"reload-page": "Обновить страницу",
 	"throwError": "Выбросить ошибку",
-	"shortLang": "РУС"
+	"shortLang": "РУС",
+	"Enter": "Войти"
 }

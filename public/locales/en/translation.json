@@ -8,5 +8,6 @@
 	"errorboundary": "Mistake ErrorBoundary was happened",
 	"reload-page": "Reload Page",
 	"throwError": "Throw Error",
-	"shortLang": "EN"
+	"shortLang": "EN",
+	"Enter": "Log in"
 }
