@@ -9,5 +9,7 @@
 	"reload-page": "Reload Page",
 	"throwError": "Throw Error",
 	"shortLang": "EN",
-	"Enter": "Log in"
+	"Enter": "Log in",
+	"increment": "Increment",
+	"decrement": "Decrement"
 }

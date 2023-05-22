@@ -9,5 +9,7 @@
 	"reload-page": "Обновить страницу",
 	"throwError": "Выбросить ошибку",
 	"shortLang": "РУС",
-	"Enter": "Войти"
+	"Enter": "Войти",
+	"increment": "Увеличить",
+	"decrement": "Уменьшить"
 }
