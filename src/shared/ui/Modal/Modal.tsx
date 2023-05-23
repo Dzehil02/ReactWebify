@@ -2,7 +2,6 @@ import { ReactNode, useCallback, useEffect, useRef, useState } from 'react'
 import { classNames } from 'shared/lib/classNames/classNames'
 import cls from './Modal.module.scss'
 import { Portal } from 'shared/ui/Portal/Portal';
-import { useTheme } from 'app/providers/ThemeProvider';
 
 interface ModalProps {
     className?: string;
@@ -24,7 +23,6 @@ export const Modal = (props: ModalProps) => {
 
     const [isClosing, setIsClosing] = useState(false);
     const timerRef = useRef<ReturnType<typeof setTimeout>>();
-    const {theme} = useTheme();
 
     const mods: Record<string, boolean> = {
         [cls.opened]: isOpen,
@@ -61,11 +59,11 @@ export const Modal = (props: ModalProps) => {
             window.removeEventListener('keydown', onKeyDown);
         };
     }, [isOpen, onKeyDown]);
-    // В блоке div, указан style для модального окна, чтобы страница была видна "за" модальным окном
+
     return (
         <Portal>
-            <div style={{background: 'none'}}
-                className={classNames(cls.Modal, mods, [className, 'app', theme])}>
+            <div
+                className={classNames(cls.Modal, mods, [className])}>
                 <div className={cls.overlay} onClick={closeHandler}>
                     <div className={cls.content} onClick={onContentClick}>
                         {children}
