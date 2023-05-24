@@ -11,5 +11,7 @@
 	"shortLang": "EN",
 	"Enter": "Log in",
 	"increment": "Increment",
-	"decrement": "Decrement"
+	"decrement": "Decrement",
+	"Enter name": "Enter name",
+	"Enter password": "Enter password"
 }
