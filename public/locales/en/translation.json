@@ -10,8 +10,11 @@
 	"throwError": "Throw Error",
 	"shortLang": "EN",
 	"Enter": "Log in",
+	"Exit": "Log out",
 	"increment": "Increment",
 	"decrement": "Decrement",
 	"Enter name": "Enter name",
-	"Enter password": "Enter password"
+	"Enter password": "Enter password",
+	"Authorization form": "Authorization form",
+	"Error in LoginForm": "Wrong username or password"
 }
