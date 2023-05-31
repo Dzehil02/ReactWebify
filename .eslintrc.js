@@ -46,10 +46,10 @@ module.exports = {
         'no-underscore-dangle': 'off',
         'i18next/no-literal-string': ['error', {
             markupOnly: true,
-            'ignoreAttribute': ['to', 'fallback', 'onClick', 'data-testid', 'placeholder']
+            'ignoreAttribute': ['to', 'fallback', 'onClick', 'data-testid', 'placeholder', 'name']
         }],
         'max-len': ['error', {
-            'code': 100,
+            'code': 120,
             'ignoreComments': true
         }],
         "react/display-name": "off",
