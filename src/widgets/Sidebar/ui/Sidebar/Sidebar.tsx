@@ -1,26 +1,30 @@
-import { FC, useState } from 'react'
+import { memo, useMemo, useState } from 'react'
 import { classNames } from 'shared/lib/classNames/classNames'
 import cls from './Sidebar.module.scss'
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
 import { LangSwitcher } from 'widgets/LangSwitcher';
-import { useTranslation } from 'react-i18next';
 import { Button, ButtonSize, ButtonTheme } from 'shared/ui/Button/Button';
-import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
-import { RoutePath } from 'shared/config/routeConfig/routeConfig';
-import MainIcon from 'shared/assets/icons/main.svg';
-import AboutIcon from 'shared/assets/icons/about.svg';
+import { SidebarItemsList } from '../../model/items';
+import { SidebarItem } from '../SidebarItem/SidebarItem';
 
 interface SidebarProps {
     className?: string;
 }
 
-export const Sidebar: FC<SidebarProps> = ({ className }) => {
-    const {t} = useTranslation()
+export const Sidebar = memo(({ className }: SidebarProps) => {
     const [collapsed, setCollapsed] = useState(false);
     
     const onToggle = () => {
         setCollapsed(prev => !prev)
     }
+
+    const itemsList = useMemo(() => SidebarItemsList.map((item) => (
+        <SidebarItem
+            item={item}
+            collapsed={collapsed}
+            key={item.path}
+        />
+    )), [collapsed])
 
     return (
         <div
@@ -40,27 +44,7 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
                 {collapsed ? '>' : '<'}
             </Button>
             <div className={cls.items}>
-                <div>
-                    <AppLink
-                        theme={AppLinkTheme.INVERTED}
-                        to={RoutePath.main}
-                        className={cls.item}
-                    >
-                        <MainIcon className={cls.icon}/>
-                        <span className={cls.link}>{t('main')}</span>
-                    </AppLink>
-                </div>
-
-                <div>
-                    <AppLink
-                        theme={AppLinkTheme.INVERTED}
-                        to={RoutePath.about}
-                        className={cls.item}
-                    >
-                        <AboutIcon className={cls.icon}/>
-                        <span className={cls.link}>{t('about-page')}</span>
-                    </AppLink>
-                </div>
+                {itemsList}
             </div>
             <div className={cls.switchers}>
                 <ThemeSwitcher/>
@@ -68,4 +52,4 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
             </div>    
         </div>
     )
-}
+})

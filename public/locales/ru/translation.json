@@ -16,5 +16,6 @@
 	"Enter name": "Введите имя",
 	"Enter password": "Введите пароль",
 	"Authorization form": "Форма авторизации",
-	"Error in LoginForm": "Ведён неверный логин или пароль"
+	"Error in LoginForm": "Ведён неверный логин или пароль",
+	"profile-page": "Страница профиля"
 }

@@ -18,5 +18,14 @@
             "password": "1234"
         }
     ],
-    "profile": { "name": "typicode" }
+    "profile": {
+      "first": "Кевин",
+      "lastname": "Спейси",
+      "age": 42,
+      "currency": "EUR",
+      "country": "Italia",
+      "city": "Roma",
+      "username": "admin",
+      "avatar": "https://avatarzo.ru/wp-content/uploads/squid-game-anime.jpg"
+    }
   }

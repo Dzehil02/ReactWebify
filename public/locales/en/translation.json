@@ -16,5 +16,6 @@
 	"Enter name": "Enter name",
 	"Enter password": "Enter password",
 	"Authorization form": "Authorization form",
-	"Error in LoginForm": "Wrong username or password"
+	"Error in LoginForm": "Wrong username or password",
+	"profile-page": "Profile page"
 }
