@@ -7,7 +7,7 @@ interface PortalProps {
 }
 
 export const Portal = (props: PortalProps) => {
-    const ref = useRef();
+    const ref = useRef<Element>();
     const [mounted, setMounted] = useState(false);
 
     const {
