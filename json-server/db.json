@@ -1,31 +1,43 @@
 {
-    "posts": [
-      { "id": "1", "title": "json-server", "author": "typicode" },
-      { "id": "2", "title": "json-server 2", "author": "typicode 2" },
-      { "id": "3", "title": "json-server 3", "author": "typicode 3" }
-    ],
-    "comments": [
-      { 
-          "id": "1",
-          "body": "some comment",
-          "postId": 1
-      }
-    ],
-    "users": [
-        {
-            "id": "1",
-            "username": "admin",
-            "password": "1234"
-        }
-    ],
-    "profile": {
-      "first": "Кевин",
-      "lastname": "Спейси",
-      "age": 42,
-      "currency": "EUR",
-      "country": "Italia",
-      "city": "Roma",
-      "username": "admin",
-      "avatar": "https://avatarzo.ru/wp-content/uploads/squid-game-anime.jpg"
+  "posts": [
+    {
+      "id": "1",
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": "2",
+      "title": "json-server 2",
+      "author": "typicode 2"
+    },
+    {
+      "id": "3",
+      "title": "json-server 3",
+      "author": "typicode 3"
     }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "username": "admin",
+      "password": "1234"
+    }
+  ],
+  "profile": {
+    "first": "Кевин",
+    "lastname": "Спейси",
+    "age": 63,
+    "currency": "EUR",
+    "country": "Italy",
+    "city": "Roma",
+    "username": "admin",
+    "avatar": "https://avatarzo.ru/wp-content/uploads/squid-game-anime.jpg"
   }
+}

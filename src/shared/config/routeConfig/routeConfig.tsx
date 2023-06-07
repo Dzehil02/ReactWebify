@@ -4,6 +4,7 @@ import { NotFoundPage } from "pages/NotFoundPage"
 import { ProfilePage } from "pages/ProfilePage"
 import { RouteObject } from "react-router-dom"
 
+// У Улби тут реализован тип AppRoutesProps для авторизованного пользователя, чтобы показывать страницу Профиля
 
 export enum AppRoutes {
     MAIN = 'main',
@@ -26,7 +27,7 @@ export const RoutePath: Record<AppRoutes, string> = {
 export const routeConfig: RouteObject[] = [
     {
         path: RoutePath[AppRoutes.MAIN],
-        element: <MainPage />
+        element: <MainPage />,
     },
     {
         path: RoutePath[AppRoutes.ABOUT],

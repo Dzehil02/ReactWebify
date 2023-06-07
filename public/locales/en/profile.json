@@ -2,5 +2,15 @@
     "Profile": "Profile",
     "Edit": "Edit",
     "Firstname": "Your firstname",
-    "Lastname": "Your lastname"
+    "Lastname": "Your lastname",
+    "ProfileError": "An error occurred while loading the Profile",
+    "RefreshProfilePage": "Try to refresh the page",
+    "Cancel": "Cancel",
+    "Save": "Save",
+    "Age": "Your age",
+    "City": "Your city",
+    "Username": "Enter your username",
+    "Avatar": "Enter link to your avatar",
+    "Currency": "Choose the currency",
+    "Country": "Choose the country"
 }
