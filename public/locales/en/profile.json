@@ -12,5 +12,10 @@
     "Username": "Enter your username",
     "Avatar": "Enter link to your avatar",
     "Currency": "Choose the currency",
-    "Country": "Choose the country"
+    "Country": "Choose the country",
+    "INCORRECT_USER_DATA": "Incorrect name or lastname",
+    "INCORRECT_COUNTRY": "Incorrect country",
+    "INCORRECT_AGE": "Incorrect age",
+    "NO_DATA": "No profile data",
+    "SERVER_ERROR": "Server error"
 }
