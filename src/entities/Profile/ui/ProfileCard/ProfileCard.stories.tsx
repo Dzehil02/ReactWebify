@@ -1,29 +1,26 @@
 import type { Meta, StoryObj } from '@storybook/react';
-
-import ProfilePage from './ProfilePage';
-import { Theme } from 'app/providers/ThemeProvider';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
-import avatar from 'shared/assets/tests/storybook.jpg'
+import { Theme } from 'app/providers/ThemeProvider';
+import { ProfileCard } from './ProfileCard';
 import { Country } from 'entities/Country';
 import { Currency } from 'entities/Currency';
+import avatar from 'shared/assets/tests/storybook.jpg'
 
-const meta: Meta<typeof ProfilePage> = {
-    title: 'pages/ProfilePage',
-    component: ProfilePage,
+const meta: Meta<typeof ProfileCard> = {
+    title: 'entities/ProfileCard',
+    component: ProfileCard,
     tags: ['autodocs'],
     argTypes: {
-        // backgroundColor: { control: 'color' },
+    // backgroundColor: { control: 'color' },
     },
 };
 
 export default meta;
-type Story = StoryObj<typeof ProfilePage>;
+type Story = StoryObj<typeof ProfileCard>;
 
-export const Light: Story = {};
-Light.decorators = [StoreDecorator({
-    profile: {
-        form: {
+export const Primary: Story = {
+    args: {
+        data: {
             first: "Pit",
             lastname: "Bred",
             age: 55,
@@ -33,13 +30,12 @@ Light.decorators = [StoreDecorator({
             currency: Currency.USD,
             avatar: avatar
         }
-    }
-})];
+    },
+};
 
-export const Dark: Story = {};
-Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({
-    profile: {
-        form: {
+export const Secondary: Story = {
+    args: {
+        data: {
             first: "Pit",
             lastname: "Bred",
             age: 55,
@@ -49,5 +45,19 @@ Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({
             currency: Currency.USD,
             avatar: avatar
         }
-    }
-})];
+    },
+};
+Secondary.decorators = [ThemeDecorator(Theme.DARK)]
+
+export const Error: Story = {
+    args: {
+        error: "ProfileError"
+    },
+};
+
+export const IsLoading: Story = {
+    args: {
+        isLoading: true
+    },
+};
+
