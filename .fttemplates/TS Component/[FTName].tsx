@@ -14,5 +14,5 @@ export const [FTName]: FC<[FTName]Props> = ({className}) => {
         <div className={classNames(cls.[FTName], {}, [className])}>
 
         </div>
-    );files.associations
+    );
 }
