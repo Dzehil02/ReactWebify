@@ -1,17 +1,34 @@
-import { Suspense, memo } from 'react';
-import { useRoutes } from 'react-router-dom';
-import { routeConfig } from 'shared/config/routeConfig/routeConfig';
+import { Suspense, memo, useCallback } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import { AppRoutesProps, routeConfig } from 'shared/config/routeConfig/routeConfig';
 import { PageLoader } from 'widgets/PageLoader/ui/PageLoader';
+import { RequireAuth } from './RequireAuth';
 
 const AppRouter = () => {
-    const elements = useRoutes(routeConfig);
+    // const elements = useRoutes(routeConfig);
     // У Улби тут логика для routes. Логика фильтрует страницы для авторизованного пользователя (41 урок, 1:10:00)
+    const renderWithWrapper = useCallback((route: AppRoutesProps) => {
+        const element = (
+            <Suspense fallback={<PageLoader/>}>
+                <div className='page-wrapper'>
+                    {route.element}
+                </div>
+            </Suspense>
+        )
+
+        return (
+            <Route
+                key={route.path}
+                path={route.path}
+                element={route.authOnly ? <RequireAuth>{element}</RequireAuth> : element}
+            />
+        )
+    }, [])
+
     return (
-        <Suspense fallback={<PageLoader/>}>
-            <div className='page-wrapper'>
-                {elements}
-            </div>
-        </Suspense>
+        <Routes>
+            {Object.values(routeConfig).map(renderWithWrapper)}
+        </Routes>
     );
 };
 

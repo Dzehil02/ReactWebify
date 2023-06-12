@@ -2,9 +2,17 @@ import { AboutPage } from "pages/AboutPage"
 import { MainPage } from "pages/MainPage"
 import { NotFoundPage } from "pages/NotFoundPage"
 import { ProfilePage } from "pages/ProfilePage"
-import { RouteObject } from "react-router-dom"
+import { RouteObject, RouteProps } from "react-router-dom"
 
 // У Улби тут реализован тип AppRoutesProps для авторизованного пользователя, чтобы показывать страницу Профиля
+
+export type AppRoutesProps = RouteObj & {
+    authOnly?: boolean;
+}
+
+interface RouteObj extends RouteObject {
+    authOnly?: boolean;
+}
 
 export enum AppRoutes {
     MAIN = 'main',
@@ -24,7 +32,7 @@ export const RoutePath: Record<AppRoutes, string> = {
     [AppRoutes.NOT_FOUND]: '*',
 }
 
-export const routeConfig: RouteObject[] = [
+export const routeConfig: RouteObj[] = [
     {
         path: RoutePath[AppRoutes.MAIN],
         element: <MainPage />,
@@ -35,7 +43,8 @@ export const routeConfig: RouteObject[] = [
     },
     {
         path: RoutePath[AppRoutes.PROFILE],
-        element: <ProfilePage />
+        element: <ProfilePage />,
+        authOnly: true,
     },
     //last
     {
