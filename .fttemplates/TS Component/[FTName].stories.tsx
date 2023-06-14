@@ -16,7 +16,15 @@ const meta: Meta<typeof [FTName]> = {
 export default meta;
 type Story = StoryObj<typeof [FTName]>;
 
-export const Light: Story = {};
+export const Light: Story = {
+        args: {
 
-export const Dark: Story = {};
+    }
+};
+
+export const Dark: Story = {
+        args: {
+            
+    }
+};
 Dark.decorators = [ThemeDecorator(Theme.DARK)];
