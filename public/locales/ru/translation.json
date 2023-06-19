@@ -18,5 +18,7 @@
 	"Authorization form": "Форма авторизации",
 	"Error in LoginForm": "Ведён неверный логин или пароль",
 	"profile-page": "Страница профиля",
-	"articles-page": "Страница статей"
+	"articles-page": "Страница статей",
+	"Enter comment": "Введите комментарий",
+	"Send comment": "Отправить комментарий"
 }

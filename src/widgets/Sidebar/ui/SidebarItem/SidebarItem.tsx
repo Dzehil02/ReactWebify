@@ -1,5 +1,5 @@
 import cls from './SidebarItem.module.scss'
-import { SidebarItemType } from '../../model/items';
+import { SidebarItemType } from "widgets/Sidebar/model/types/sidebar";
 import { useTranslation } from 'react-i18next';
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import { memo } from 'react';

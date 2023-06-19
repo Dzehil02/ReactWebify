@@ -1,4 +1,4 @@
-import { FC, useCallback, useEffect } from 'react'
+import { FC, useCallback } from 'react'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { 
@@ -20,6 +20,8 @@ import { Currency } from 'entities/Currency';
 import { Country } from 'entities/Country';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { useTranslation } from 'react-i18next';
+import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
+import { useParams } from 'react-router-dom';
 
 
 const reducers: ReducersList = {
@@ -38,6 +40,7 @@ const ProfilePage: FC<ProfilePageProps> = ({ className }) => {
     const isLoading = useSelector(getProfileIsLoading);
     const readonly = useSelector(getProfileReadonly);
     const validateErrors = useSelector(getProfileValidateErrors)
+    const {id} = useParams<{id: string}>();
 
     const validateErrorTranslates = {
         [ValidateProfileErrors.SERVER_ERROR]: t('SERVER_ERROR'), 
@@ -47,11 +50,12 @@ const ProfilePage: FC<ProfilePageProps> = ({ className }) => {
         [ValidateProfileErrors.NO_DATA]: t('NO_DATA'), 
     }
 
-    useEffect(() => {
-        if (__PROJECT__ !== 'storybook') {
-            dispatch(fetchProfileData());
+    useInitialEffect(() => {
+        if (id) {
+            dispatch(fetchProfileData(id));  
         }
-    }, [dispatch])
+
+    })
 
     const onChangeFirstname = useCallback((value?: string) => {
         dispatch(profileActions.updatePofile({first: value || ''}))

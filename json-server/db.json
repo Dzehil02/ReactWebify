@@ -24,7 +24,9 @@
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
       "views": 1022,
       "createdAt": "26.02.2022",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -93,7 +95,9 @@
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNsWNdN8bimV8v3tDEkHhNzIyJMAEMhNZDaw&usqp=CAU.jpg",
       "views": 478,
       "createdAt": "16.06.2023",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -154,6 +158,42 @@
       "text": "some comment 4",
       "articleId": "2",
       "userId": "2"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "New comment",
+      "id": "To9iWQT"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "New comment 2",
+      "id": "cANPOCY"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "New comment 3",
+      "id": "LfGJC18"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "Comment from user",
+      "id": "B6tsPqH"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "Else",
+      "id": "uVM7dX6"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "xo-xo-xo",
+      "id": "Bk1NvYy"
     }
   ],
   "users": [
@@ -172,14 +212,28 @@
       "avatar": "https://avatarzo.ru/wp-content/uploads/naruto-figure.jpg"
     }
   ],
-  "profile": {
-    "first": "Кевин",
-    "lastname": "Спейси",
-    "age": 63,
-    "currency": "EUR",
-    "country": "Italy",
-    "city": "Roma",
-    "username": "admin",
-    "avatar": "https://avatarzo.ru/wp-content/uploads/squid-game-anime.jpg"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "first": "Кевин",
+      "lastname": "Спейси",
+      "age": 63,
+      "currency": "EUR",
+      "country": "Italy",
+      "city": "Roma",
+      "username": "admin",
+      "avatar": "https://avatarzo.ru/wp-content/uploads/squid-game-anime.jpg"
+    },
+    {
+      "id": "2",
+      "first": "Том 2",
+      "lastname": "Круз",
+      "age": 65,
+      "currency": "EUR",
+      "country": "France",
+      "city": "Paris",
+      "username": "user",
+      "avatar": "https://avatarzo.ru/wp-content/uploads/naruto-figure.jpg"
+    }
+  ]
 }
