@@ -11,6 +11,11 @@ const article: Article = {
     views: 1022,
     createdAt: "26.02.2022",
     type: [ArticleType.IT],
+    user: {
+        id: "1",
+        username: "Entoni",
+        avatar: "https://avatarzo.ru/wp-content/uploads/squid-game-anime.jpg"
+    },
     blocks: [
         {
             id: "1",

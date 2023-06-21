@@ -9,6 +9,11 @@ const data: Article = {
     img: "picture",
     views: 1022,
     createdAt: "26.02.2022",
+    user: {
+        id: "1",
+        username: "Entoni",
+        avatar: "https://avatarzo.ru/wp-content/uploads/squid-game-anime.jpg"
+    },
     type: [],
     blocks: []
 }

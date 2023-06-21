@@ -4,10 +4,10 @@ import { Theme } from 'app/providers/ThemeProvider';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { ArticleDetails } from './ArticleDetails';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
-import { Article, ArticleBlockType, ArticleType } from 'entities/Article/model/types/article';
+import { Article, ArticleBlockType, ArticleType } from '../../model/types/article';
 
 const meta: Meta<typeof ArticleDetails> = {
-    title: 'entities/ArticleDetails',
+    title: 'entities/Article/ArticleDetails',
     component: ArticleDetails,
     tags: ['autodocs'],
     argTypes: {
@@ -26,6 +26,10 @@ const article: Article = {
     "views": 1022,
     "createdAt": "26.02.2022",
     "type": [ArticleType.IT],
+    "user": {
+        id: "1",
+        username: "Entoni",
+    },
     "blocks": [
         {
             "id": "1",

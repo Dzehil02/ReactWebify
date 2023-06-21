@@ -24,6 +24,7 @@
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
       "views": 1022,
       "createdAt": "26.02.2022",
+      "userId": "1",
       "type": [
         "IT"
       ],
@@ -95,6 +96,7 @@
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNsWNdN8bimV8v3tDEkHhNzIyJMAEMhNZDaw&usqp=CAU.jpg",
       "views": 478,
       "createdAt": "16.06.2023",
+      "userId": "2",
       "type": [
         "IT"
       ],

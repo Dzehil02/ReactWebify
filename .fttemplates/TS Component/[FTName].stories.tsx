@@ -17,13 +17,13 @@ export default meta;
 type Story = StoryObj<typeof [FTName]>;
 
 export const Light: Story = {
-        args: {
+    args: {
 
     }
 };
 
 export const Dark: Story = {
-        args: {
+    args: {
             
     }
 };
