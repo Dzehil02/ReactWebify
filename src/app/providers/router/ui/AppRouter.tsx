@@ -5,14 +5,11 @@ import { PageLoader } from 'widgets/PageLoader/ui/PageLoader';
 import { RequireAuth } from './RequireAuth';
 
 const AppRouter = () => {
-    // const elements = useRoutes(routeConfig);
-    // У Улби тут логика для routes. Логика фильтрует страницы для авторизованного пользователя (41 урок, 1:10:00)
+
     const renderWithWrapper = useCallback((route: AppRoutesProps) => {
         const element = (
             <Suspense fallback={<PageLoader/>}>
-                <div className='page-wrapper'>
-                    {route.element}
-                </div>
+                {route.element}
             </Suspense>
         )
 
