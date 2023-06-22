@@ -134,68 +134,90 @@
           ]
         }
       ]
+    },
+    {
+      "id": "3",
+      "title": "Java news",
+      "subtitle": "История языка программирования Java",
+      "img": "https://it-cube48.ru/wp-content/uploads/2019/06/java-logo.jpg",
+      "views": 233,
+      "createdAt": "22.06.2023",
+      "userId": "2",
+      "type": [
+        "IT"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "История создания языка программирования JAVA",
+          "paragraphs": [
+            "История JAVA началась еще в 1991 году, когда Патрик Ноутон, Билл Джой и Джеймс Гослинг начали работу над собственным проектом. Основной целью проекта было создание аппаратно-программной платформы нового поколения, использование которой не требовало бы специальных знаний. Речь шла о создании «компьютера для людей», максимально надежного и при этом простого в управлении. Проект получил название «Green». В ходе работ возникла потребность в новом языке программирования, который был бы максимально универсальным и мог бы применяться на любых платформах. Так появился «Oak»."
+          ]
+        },
+        {
+          "id": "4",
+          "type": "CODE",
+          "code": "<!DOCTYPE html>\n<html>\n  <body>\n    <p id=\"hello\"></p>\n\n    <script>\n      document.getElementById(\"hello\").innerHTML = \"Hello, world!\";\n    </script>\n  </body>\n</html>;"
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png",
+          "title": "Рисунок 1 - скриншот сайта"
+        },
+        {
+          "id": "3",
+          "type": "CODE",
+          "code": "const path = require('path');\n\nconst server = jsonServer.create();\n\nconst router = jsonServer.router(path.resolve(__dirname, 'db.json'));\n\nserver.use(jsonServer.defaults({}));\nserver.use(jsonServer.bodyParser);"
+        },
+        {
+          "id": "5",
+          "type": "TEXT",
+          "title": "Заголовок этого блока",
+          "paragraphs": [
+            "Язык программирования JAVA в том виде, в котором мы его знаем, появился далеко не сразу. Несколько лет подряд разработчики пытались внедрить новую технологию в различные сферы, начиная от интерактивного телефиденья и заканчивая игровыми приставками, ноо везде потерпели неудачу. Первым продвижением с мертвой точки стало создание в 1994 году браузера «WebRunner», который был способен отображать интерактивные программы-апплеты, встроенные непосредственно в страницы. Новый браузер обладал всем необходимым набором для того, чтобы стать популярным"
+          ]
+        }
+      ]
     }
   ],
   "comments": [
     {
-      "id": "1",
-      "text": "some comment",
-      "articleId": "1",
-      "userId": "1"
+      "articleId": "3",
+      "userId": "2",
+      "text": "Java - старый язык! Для олдов!",
+      "id": 1
     },
     {
-      "id": "2",
-      "text": "some comment 2",
-      "articleId": "1",
-      "userId": "1"
-    },
-    {
-      "id": "3",
-      "text": "some comment 3",
-      "articleId": "1",
-      "userId": "2"
-    },
-    {
-      "id": "4",
-      "text": "some comment 4",
       "articleId": "2",
-      "userId": "2"
-    },
-    {
-      "articleId": "1",
-      "userId": "1",
-      "text": "New comment",
-      "id": "To9iWQT"
-    },
-    {
-      "articleId": "1",
-      "userId": "1",
-      "text": "New comment 2",
-      "id": "cANPOCY"
-    },
-    {
-      "articleId": "1",
-      "userId": "1",
-      "text": "New comment 3",
-      "id": "LfGJC18"
+      "userId": "2",
+      "text": "Путхон - норм язык :)",
+      "id": 2
     },
     {
       "articleId": "1",
       "userId": "2",
-      "text": "Comment from user",
-      "id": "B6tsPqH"
+      "text": "Ох уж эти ДжаваСкриптезёры !!",
+      "id": 3
+    },
+    {
+      "articleId": "3",
+      "userId": "1",
+      "text": "Это ложь и провокация",
+      "id": 4
+    },
+    {
+      "articleId": "2",
+      "userId": "1",
+      "text": "Питон питонович",
+      "id": 5
     },
     {
       "articleId": "1",
-      "userId": "2",
-      "text": "Else",
-      "id": "uVM7dX6"
-    },
-    {
-      "articleId": "1",
-      "userId": "2",
-      "text": "xo-xo-xo",
-      "id": "Bk1NvYy"
+      "userId": "1",
+      "text": "Норм, Чё",
+      "id": 6
     }
   ],
   "users": [

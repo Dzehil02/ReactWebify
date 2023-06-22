@@ -6,3 +6,4 @@ export {fetchArticleById} from './model/services/fetchArticleById/fetchArticleBy
 export {getArticleDetailsData} from './model/selectors/articleDetails'
 
 export {ArticleList} from './ui/ArticleList/ArticleList'
+export {ArticleViewSelector} from './ui/ArticleViewSelector/ArticleViewSelector'
