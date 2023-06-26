@@ -550,6 +550,12 @@
       "userId": "1",
       "text": "Норм, Чё",
       "id": 6
+    },
+    {
+      "articleId": "15",
+      "userId": "1",
+      "text": "last comment",
+      "id": 7
     }
   ],
   "users": [
