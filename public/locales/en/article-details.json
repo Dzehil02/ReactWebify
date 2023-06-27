@@ -3,5 +3,13 @@
     "Error Article": "Error loading article",
     "Comments": "Comments",
     "Read more": "Read more ...",
-    "Back to articles": "Back to articles"
+    "Back to articles": "Back to articles",
+    "Sorted by": "Sorted by",
+    "by": "by",
+    "Search": "Search",
+    "ascending": "ascending",
+    "descending": "descending",
+    "date": "date",
+    "title": "title",
+    "views": "views"
 }

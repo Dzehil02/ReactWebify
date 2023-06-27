@@ -186,8 +186,8 @@
       "title": "Javascript news 2",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 985,
+      "createdAt": "22.04.2022",
       "userId": "1",
       "type": [
         "IT"
@@ -239,14 +239,14 @@
     },
     {
       "id": "6",
-      "title": "Java news 2",
+      "title": "Java news 2 ECONOMICS",
       "subtitle": "История языка программирования Java",
       "img": "https://it-cube48.ru/wp-content/uploads/2019/06/java-logo.jpg",
-      "views": 233,
-      "createdAt": "22.06.2023",
+      "views": 432,
+      "createdAt": "22.02.2023",
       "userId": "2",
       "type": [
-        "IT"
+        "ECONOMICS"
       ],
       "blocks": [
         {
@@ -266,14 +266,15 @@
     },
     {
       "id": "7",
-      "title": "Javascript news 3",
+      "title": "Javascript news 3 ECONOMICS",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 228,
+      "createdAt": "11.08.2022",
       "userId": "1",
       "type": [
-        "IT"
+        "IT",
+        "ECONOMICS"
       ],
       "blocks": [
         {
@@ -295,14 +296,15 @@
     },
     {
       "id": "8",
-      "title": "Python news 3",
+      "title": "Python news 3 ECONOMICS",
       "subtitle": "Что нового в Python за 2023 год?",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNsWNdN8bimV8v3tDEkHhNzIyJMAEMhNZDaw&usqp=CAU.jpg",
-      "views": 478,
+      "views": 896,
       "createdAt": "16.06.2023",
       "userId": "2",
       "type": [
-        "IT"
+        "IT",
+        "ECONOMICS"
       ],
       "blocks": [
         {
@@ -322,14 +324,15 @@
     },
     {
       "id": "9",
-      "title": "Java news 3",
+      "title": "Java news 3 SCIENCE",
       "subtitle": "История языка программирования Java",
       "img": "https://it-cube48.ru/wp-content/uploads/2019/06/java-logo.jpg",
-      "views": 233,
-      "createdAt": "22.06.2023",
+      "views": 157,
+      "createdAt": "09.09.2023",
       "userId": "2",
       "type": [
-        "IT"
+        "IT",
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -349,14 +352,14 @@
     },
     {
       "id": "10",
-      "title": "Javascript news 4",
-      "subtitle": "Что нового в JS за 2022 год?",
+      "title": "Javascript news 4 SCIENCE",
+      "subtitle": "SCIENCE в JS за 2020 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 8000,
+      "createdAt": "01.01.2020",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -378,14 +381,14 @@
     },
     {
       "id": "11",
-      "title": "Python news 4",
-      "subtitle": "Что нового в Python за 2023 год?",
+      "title": "Python news 4 SCIENCE",
+      "subtitle": "SCIENCE в Python за 2020 год?",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNsWNdN8bimV8v3tDEkHhNzIyJMAEMhNZDaw&usqp=CAU.jpg",
-      "views": 478,
-      "createdAt": "16.06.2023",
+      "views": 5670,
+      "createdAt": "16.06.2020",
       "userId": "2",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -405,14 +408,15 @@
     },
     {
       "id": "12",
-      "title": "Java news 4",
-      "subtitle": "История языка программирования Java",
+      "title": "Java news 4 SCIENCE",
+      "subtitle": "История языка программирования Java SCIENCE",
       "img": "https://it-cube48.ru/wp-content/uploads/2019/06/java-logo.jpg",
-      "views": 233,
-      "createdAt": "22.06.2023",
+      "views": 2289,
+      "createdAt": "21.07.2021",
       "userId": "2",
       "type": [
-        "IT"
+        "IT",
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -432,11 +436,11 @@
     },
     {
       "id": "13",
-      "title": "Javascript news 5",
-      "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "title": "Golang news ",
+      "subtitle": "Что нового в GO за 2022 год?",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Go_Logo_Blue.svg/1200px-Go_Logo_Blue.svg.png",
+      "views": 468,
+      "createdAt": "27.06.2023",
       "userId": "1",
       "type": [
         "IT"
@@ -461,14 +465,15 @@
     },
     {
       "id": "14",
-      "title": "Python news 5",
-      "subtitle": "Что нового в Python за 2023 год?",
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNsWNdN8bimV8v3tDEkHhNzIyJMAEMhNZDaw&usqp=CAU.jpg",
-      "views": 478,
-      "createdAt": "16.06.2023",
+      "title": "Ruby news 2023",
+      "subtitle": "Что нового в Ruby за 2023 год?",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Ruby_logo.svg/640px-Ruby_logo.svg.png",
+      "views": 122,
+      "createdAt": "08.05.2023",
       "userId": "2",
       "type": [
-        "IT"
+        "IT",
+        "ECONOMICS"
       ],
       "blocks": [
         {
@@ -488,14 +493,14 @@
     },
     {
       "id": "15",
-      "title": "Java news 5",
-      "subtitle": "История языка программирования Java",
-      "img": "https://it-cube48.ru/wp-content/uploads/2019/06/java-logo.jpg",
-      "views": 233,
-      "createdAt": "22.06.2023",
+      "title": "Node JS news Economics",
+      "subtitle": "Экономика Node JS в 2023",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png",
+      "views": 1160,
+      "createdAt": "04.02.2023",
       "userId": "2",
       "type": [
-        "IT"
+        "ECONOMICS"
       ],
       "blocks": [
         {
