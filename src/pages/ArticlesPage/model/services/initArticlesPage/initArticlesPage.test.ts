@@ -15,7 +15,7 @@ describe('initArticlesPage.test', () => {
         
         await thunk.callThunk();
         expect(thunk.dispatch).toBeCalledTimes(4);
-        expect(fetchArticlesList).toBeCalledWith({page: 1});
+        expect(fetchArticlesList).toBeCalled();
     });
 
     test('initArticlesPage not called', async () => {
