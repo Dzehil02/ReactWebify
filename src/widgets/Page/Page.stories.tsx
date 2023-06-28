@@ -5,7 +5,7 @@ import { Theme } from 'app/providers/ThemeProvider';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 
 const meta: Meta<typeof Page> = {
-    title: 'shared/Page',
+    title: 'widgets/Page',
     component: Page,
     tags: ['autodocs'],
     argTypes: {

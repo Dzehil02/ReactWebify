@@ -4,6 +4,7 @@
     "Comments": "Comments",
     "Read more": "Read more ...",
     "Back to articles": "Back to articles",
+    "Articles not found": "Articles not found",
     "Sorted by": "Sorted by",
     "by": "by",
     "Search": "Search",
@@ -11,5 +12,9 @@
     "descending": "descending",
     "date": "date",
     "title": "title",
-    "views": "views"
+    "views": "views",
+    "ALL": "ALL",
+    "IT": "IT",
+    "ECONOMICS": "ECONOMICS",
+    "SCIENCE": "SCIENCE"
 }

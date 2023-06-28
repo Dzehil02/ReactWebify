@@ -1,12 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { ArticleSortSelector } from './ArticleSortSelector';
+import { ArticleTypeTabs } from './ArticleTypeTabs';
 import { Theme } from 'app/providers/ThemeProvider';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 
-const meta: Meta<typeof ArticleSortSelector> = {
-    title: 'entities/Article/ArticleSortSelector',
-    component: ArticleSortSelector,
+const meta: Meta<typeof ArticleTypeTabs> = {
+    title: 'entities/Article/ArticleTypeTabs',
+    component: ArticleTypeTabs,
     tags: ['autodocs'],
     argTypes: {
         
@@ -14,7 +14,7 @@ const meta: Meta<typeof ArticleSortSelector> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof ArticleSortSelector>;
+type Story = StoryObj<typeof ArticleTypeTabs>;
 
 export const Light: Story = {
     args: {

@@ -16,6 +16,7 @@ import { Page } from 'widgets/Page/Page';
 import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage';
 import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage';
 import { ArticlesPageFilters } from '../ArticlesPageFilters/ArticlesPageFilters';
+import { useSearchParams } from 'react-router-dom';
 
 interface ArticlesPageProps {
     className?: string;
@@ -31,20 +32,19 @@ const ArticlesPage: FC<ArticlesPageProps> = ({className}) => {
     const isLoading = useSelector(getArticlesPageIsLoading)
     const view = useSelector(getArticlesPageView)
     const error = useSelector(getArticlesPageError);
+    const [searchParams] = useSearchParams();
 
     if (error) {
         console.log('error in ArticlesPage')
     }
 
-
+    useInitialEffect(() => {
+        dispatch(initArticlesPage(searchParams));
+    })
 
     const onLoadNextPart = useCallback(() => {
         dispatch(fetchNextArticlesPage());
-    }, [dispatch])
-
-    useInitialEffect(() => {
-        dispatch(initArticlesPage());
-    })
+    }, [dispatch])   
 
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount={false}>
