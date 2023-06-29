@@ -7,6 +7,8 @@
 body {
     font: var(--font-m);
     color: var(--primary-color);
+    scrollbar-color: var(--inverted-bg-color) var(--card-bg);
+    scrollbar-width: thin;
 }
 
 .app {

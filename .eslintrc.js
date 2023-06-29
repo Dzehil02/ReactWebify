@@ -46,7 +46,7 @@ module.exports = {
         'no-underscore-dangle': 'off',
         'i18next/no-literal-string': ['error', {
             markupOnly: true,
-            'ignoreAttribute': ['to', 'fallback', 'onClick', 'data-testid', 'placeholder', 'name']
+            'ignoreAttribute': ['to', 'fallback', 'onClick', 'data-testid', 'placeholder', 'name', 'target']
         }],
         'max-len': ['error', {
             'code': 120,
