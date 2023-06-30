@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './ArticleDetailsPage.module.scss';
 import { ArticleDetails, ArticleList } from 'entities/Article';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { Text, TextSize } from 'shared/ui/Text/Text';
 import { CommentList } from 'entities/Comment';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
@@ -19,8 +19,6 @@ import { AddCommentForm } from 'features/addCommentForm';
 import { 
     addCommentForArticle
 } from '../../model/services/addCommentForArticle/addCommentForArticle';
-import { Button, ButtonTheme } from 'shared/ui/Button/Button';
-import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { Page } from 'widgets/Page/Page';
 import {
     getArticleRecommends
@@ -28,6 +26,7 @@ import {
 import { getArticleRecommendsIsLoading } from '../../model/selectors/recommends';
 import { fetchArticleRecommends } from '../../model/services/fetchArticleRecommends/fetchArticleRecommends';
 import { articleDetailsPageReducer } from '../../model/slices';
+import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';
 
 interface ArticleDetailsPageProps {
     className?: string;
@@ -45,7 +44,7 @@ const ArticleDetailsPage: FC<ArticleDetailsPageProps> = ({className}) => {
     const recommends = useSelector(getArticleRecommends.selectAll);
     const recommendsIsLoading = useSelector(getArticleRecommendsIsLoading);
     const commentsIsLoading = useSelector(getArticleCommentsIsLoading);
-    const navigate = useNavigate();
+
 
     const onSendComment = useCallback((text: string) => {
         dispatch(addCommentForArticle(text));
@@ -56,9 +55,7 @@ const ArticleDetailsPage: FC<ArticleDetailsPageProps> = ({className}) => {
         dispatch(fetchArticleRecommends())
     });
 
-    const onBackToList = useCallback(() => {
-        navigate(RoutePath.articles)
-    }, [navigate])
+
 
     if (!id) {
         return (
@@ -71,9 +68,7 @@ const ArticleDetailsPage: FC<ArticleDetailsPageProps> = ({className}) => {
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
             <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
-                <Button theme={ButtonTheme.OUTLINE} onClick={onBackToList}>
-                    {t('Back to articles')}
-                </Button>
+                <ArticleDetailsPageHeader/>
                 <ArticleDetails id={id}/>
                 <Text size={TextSize.L} className={cls.commentTitle} title={t('Recommendations')} />
                 <ArticleList 

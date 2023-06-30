@@ -5,6 +5,7 @@
     "Recommendations": "Recommendations",
     "Read more": "Read more ...",
     "Back to articles": "Back to articles",
+    "Edit": "Edit",
     "Articles not found": "Articles not found",
     "Sorted by": "Sorted by",
     "by": "by",
@@ -17,5 +18,7 @@
     "ALL": "ALL",
     "IT": "IT",
     "ECONOMICS": "ECONOMICS",
-    "SCIENCE": "SCIENCE"
+    "SCIENCE": "SCIENCE",
+    "Edit article": "Edit article with ID = ",
+    "New article": "Creating new article"
 }

@@ -20,5 +20,7 @@
 	"profile-page": "Страница профиля",
 	"articles-page": "Страница статей",
 	"Enter comment": "Введите комментарий",
-	"Send comment": "Отправить комментарий"
+	"Send comment": "Отправить комментарий",
+    "ReactWebify": "ReactWebify",
+    "Create article": "Создать статью"
 }

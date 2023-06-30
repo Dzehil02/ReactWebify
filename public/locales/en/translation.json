@@ -20,5 +20,7 @@
 	"profile-page": "Profile page",
 	"articles-page": "Articles page",
 	"Enter comment": "Enter comment",
-	"Send comment": "Send comment"
+	"Send comment": "Send comment",
+    "ReactWebify": "ReactWebify",
+    "Create article": "Create article"
 }

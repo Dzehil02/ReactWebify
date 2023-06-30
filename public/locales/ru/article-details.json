@@ -5,6 +5,7 @@
     "Recommendations": "Рекомендации",
     "Read more": "Читать далее ...",
     "Back to articles": "Вернуться к списку статей",
+    "Edit": "Редактировать",
     "Articles not found": "Статьи не найдены",
     "Sorted by": "Сортировать по",
     "by": "по",
@@ -17,5 +18,7 @@
     "ALL": "ВСЕ",
     "IT": "АЙТИ",
     "ECONOMICS": "ЭКОНОМИКА",
-    "SCIENCE": "НАУКА"
+    "SCIENCE": "НАУКА",
+    "Edit article": "Редактирование статьи с ID = ",
+    "New article": "Создание новой статьи"
 }
