@@ -25,6 +25,7 @@ module.exports = {
         '@typescript-eslint', 
         'i18next', 
         'react-hooks',
+        'webify-plugin'
     ],
     rules: {
         'react/jsx-indent': [2, 4],
@@ -55,6 +56,7 @@ module.exports = {
         "react/display-name": "off",
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "error", 
+        'webify-plugin/path-checker': 'error',
 
     },
     globals: {
