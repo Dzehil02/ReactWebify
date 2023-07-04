@@ -50,7 +50,7 @@ module.exports = {
             'ignoreAttribute': [
                 'to', 'fallback', 'onClick', 'data-testid',
                 'placeholder', 'name', 'target', 'justify',
-                'align', 'direction', 'gap'
+                'align', 'direction', 'gap', 'role'
             ]
         }],
         'max-len': ['error', {
