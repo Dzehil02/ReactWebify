@@ -1,17 +1,18 @@
 import { BugButton } from 'app/providers/ErrorBoundary';
 import { useTranslation } from 'react-i18next';
+import { Page } from 'widgets/Page/Page';
 
 const MainPage = () => {
     const {t} = useTranslation();
 
     return (
-        <div>
+        <Page>
             <BugButton/>
             <div>
-                {t('main-page')}
+                <div>{t('main-page')}</div>
             </div>
 
-        </div>
+        </Page>
     );
 };
 
