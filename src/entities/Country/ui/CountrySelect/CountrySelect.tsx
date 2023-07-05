@@ -3,7 +3,6 @@ import { memo, useCallback } from 'react'
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames'
 import { ListBox } from 'shared/ui/ListBox/ListBox';
-import { Select } from 'shared/ui/Select/Select';
 
 interface CountrySelectProps {
     className?: string;
@@ -37,7 +36,7 @@ export const CountrySelect = memo(({ className, value, onChange, readonly }: Cou
             defaultValue={t('Country')}
             items={options}
             readonly={readonly}
-            direction={'top'}
+            direction={'top right'}
         />
     )
 
