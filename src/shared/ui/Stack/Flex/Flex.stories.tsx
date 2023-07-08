@@ -73,6 +73,7 @@ export const RowGap16: Story = {
 
 export const RowGap32: Story = {
     args: {
+        direction: 'row',
         gap: '32',
         children: (
             <>
@@ -84,6 +85,38 @@ export const RowGap32: Story = {
         )
     }
 };
+
+export const RowGap32Dark: Story = {
+    args: {
+        direction: 'row',
+        gap: '32',
+        children: (
+            <>
+                <div>first</div>
+                <div>second</div>
+                <div>third</div>
+                <div>fourth</div>
+            </>
+        )
+    }
+};
+RowGap32Dark.decorators=[ThemeDecorator(Theme.DARK)]
+
+export const RowGap32Blue: Story = {
+    args: {
+        direction: 'row',
+        gap: '32',
+        children: (
+            <>
+                <div>first</div>
+                <div>second</div>
+                <div>third</div>
+                <div>fourth</div>
+            </>
+        )
+    }
+};
+RowGap32Blue.decorators=[ThemeDecorator(Theme.BLUE)]
 
 export const Column: Story = {
     args: {
@@ -159,11 +192,10 @@ export const ColumnGap32: Story = {
     }
 };
 
-export const ColumnGap32AlignEnd: Story = {
+export const ColumnGap32Dark: Story = {
     args: {
         direction: 'column',
         gap: '32',
-        align: 'end',
         children: (
             <>
                 <div>first</div>
@@ -174,3 +206,20 @@ export const ColumnGap32AlignEnd: Story = {
         )   
     }
 };
+ColumnGap32Dark.decorators=[ThemeDecorator(Theme.DARK)]
+
+export const ColumnGap32Blue: Story = {
+    args: {
+        direction: 'column',
+        gap: '32',
+        children: (
+            <>
+                <div>first</div>
+                <div>second</div>
+                <div>third</div>
+                <div>fourth</div>
+            </>
+        )   
+    }
+};
+ColumnGap32Blue.decorators=[ThemeDecorator(Theme.BLUE)]

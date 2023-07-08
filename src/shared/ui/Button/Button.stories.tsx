@@ -22,12 +22,42 @@ export const Primary: Story = {
     },
 };
 
+export const PrimaryDark: Story = {
+    args: {
+        children: 'Text'
+    },
+};
+PrimaryDark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const PrimaryBlue: Story = {
+    args: {
+        children: 'Text'
+    },
+};
+PrimaryBlue.decorators = [ThemeDecorator(Theme.BLUE)];
+
 export const Clear: Story = {
     args: {
         children: 'Text',
         theme: ButtonTheme.CLEAR,
     },
 };
+
+export const ClearDark: Story = {
+    args: {
+        children: 'Text',
+        theme: ButtonTheme.CLEAR,
+    },
+};
+ClearDark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const ClearBlue: Story = {
+    args: {
+        children: 'Text',
+        theme: ButtonTheme.CLEAR,
+    },
+};
+ClearBlue.decorators = [ThemeDecorator(Theme.BLUE)];
 
 export const ClearInverted: Story = {
     args: {
@@ -36,7 +66,23 @@ export const ClearInverted: Story = {
     },
 };
 
-export const Outline: Story = {
+export const ClearInvertedDark: Story = {
+    args: {
+        children: 'Text',
+        theme: ButtonTheme.CLEAR_INVERTED,
+    },
+};
+ClearInvertedDark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const ClearInvertedBlue: Story = {
+    args: {
+        children: 'Text',
+        theme: ButtonTheme.CLEAR_INVERTED,
+    },
+};
+ClearInvertedBlue.decorators = [ThemeDecorator(Theme.BLUE)];
+
+export const OutlineSizeM: Story = {
     args: {
         children: 'Text',
         theme: ButtonTheme.OUTLINE,
@@ -59,14 +105,57 @@ export const OutlineSizeXL: Story = {
     },
 };
 
-
-export const OutlineDark: Story = {
+export const OutlineDarkSizeM: Story = {
     args: {
         children: 'Text',
         theme: ButtonTheme.OUTLINE,
     },
 };
-OutlineDark.decorators = [ThemeDecorator(Theme.DARK)];
+OutlineDarkSizeM.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const OutlineDarkSizeL: Story = {
+    args: {
+        children: 'Text',
+        theme: ButtonTheme.OUTLINE,
+        size: ButtonSize.L
+    },
+};
+OutlineDarkSizeL.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const OutlineDarkSizeXL: Story = {
+    args: {
+        children: 'Text',
+        theme: ButtonTheme.OUTLINE,
+        size: ButtonSize.XL
+    },
+};
+OutlineDarkSizeXL.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const OutlineBlueSizeM: Story = {
+    args: {
+        children: 'Text',
+        theme: ButtonTheme.OUTLINE,
+    },
+};
+OutlineBlueSizeM.decorators = [ThemeDecorator(Theme.BLUE)];
+
+export const OutlineBlueSizeL: Story = {
+    args: {
+        children: 'Text',
+        theme: ButtonTheme.OUTLINE,
+        size: ButtonSize.L
+    },
+};
+OutlineBlueSizeL.decorators = [ThemeDecorator(Theme.BLUE)];
+
+export const OutlineBlueSizeXL: Story = {
+    args: {
+        children: 'Text',
+        theme: ButtonTheme.OUTLINE,
+        size: ButtonSize.XL
+    },
+};
+OutlineBlueSizeXL.decorators = [ThemeDecorator(Theme.BLUE)];
 
 export const BackgroundTheme: Story = {
     args: {
@@ -75,6 +164,22 @@ export const BackgroundTheme: Story = {
     },
 };
 
+export const BackgroundThemeDark: Story = {
+    args: {
+        children: 'Text',
+        theme: ButtonTheme.BACKGROUND,
+    },
+};
+BackgroundThemeDark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const BackgroundThemeBlue: Story = {
+    args: {
+        children: 'Text',
+        theme: ButtonTheme.BACKGROUND,
+    },
+};
+BackgroundThemeBlue.decorators = [ThemeDecorator(Theme.BLUE)];
+
 export const BackgroundInverted: Story = {
     args: {
         children: 'Text',
@@ -82,13 +187,21 @@ export const BackgroundInverted: Story = {
     },
 };
 
-export const Square: Story = {
+export const BackgroundInvertedDark: Story = {
     args: {
-        children: '>',
+        children: 'Text',
         theme: ButtonTheme.BACKGROUND_INVERTED,
-        square: true,
     },
 };
+BackgroundInvertedDark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const BackgroundInvertedBlue: Story = {
+    args: {
+        children: 'Text',
+        theme: ButtonTheme.BACKGROUND_INVERTED,
+    },
+};
+BackgroundInvertedBlue.decorators = [ThemeDecorator(Theme.BLUE)];
 
 export const SquareSizeM: Story = {
     args: {
@@ -117,6 +230,66 @@ export const SquareSizeXL: Story = {
     },
 };
 
+export const SquareDarkSizeM: Story = {
+    args: {
+        children: '>',
+        theme: ButtonTheme.BACKGROUND_INVERTED,
+        square: true,
+        size: ButtonSize.M,
+    },
+};
+SquareDarkSizeM.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const SquareDarkSizeL: Story = {
+    args: {
+        children: '>',
+        theme: ButtonTheme.BACKGROUND_INVERTED,
+        square: true,
+        size: ButtonSize.L,
+    },
+};
+SquareDarkSizeL.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const SquareDarkSizeXL: Story = {
+    args: {
+        children: '>',
+        theme: ButtonTheme.BACKGROUND_INVERTED,
+        square: true,
+        size: ButtonSize.XL,
+    },
+};
+SquareDarkSizeXL.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const SquareBlueSizeM: Story = {
+    args: {
+        children: '>',
+        theme: ButtonTheme.BACKGROUND_INVERTED,
+        square: true,
+        size: ButtonSize.M,
+    },
+};
+SquareBlueSizeM.decorators = [ThemeDecorator(Theme.BLUE)];
+
+export const SquareBlueSizeL: Story = {
+    args: {
+        children: '>',
+        theme: ButtonTheme.BACKGROUND_INVERTED,
+        square: true,
+        size: ButtonSize.L,
+    },
+};
+SquareBlueSizeL.decorators = [ThemeDecorator(Theme.BLUE)];
+
+export const SquareBlueSizeXL: Story = {
+    args: {
+        children: '>',
+        theme: ButtonTheme.BACKGROUND_INVERTED,
+        square: true,
+        size: ButtonSize.XL,
+    },
+};
+SquareBlueSizeXL.decorators = [ThemeDecorator(Theme.BLUE)];
+
 export const Disabled: Story = {
     args: {
         children: 'Text',
@@ -124,3 +297,21 @@ export const Disabled: Story = {
         disabled: true,
     },
 };
+
+export const DisabledDark: Story = {
+    args: {
+        children: 'Text',
+        theme: ButtonTheme.OUTLINE,
+        disabled: true,
+    },
+};
+DisabledDark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const DisabledBlue: Story = {
+    args: {
+        children: 'Text',
+        theme: ButtonTheme.OUTLINE,
+        disabled: true,
+    },
+};
+DisabledBlue.decorators = [ThemeDecorator(Theme.BLUE)];

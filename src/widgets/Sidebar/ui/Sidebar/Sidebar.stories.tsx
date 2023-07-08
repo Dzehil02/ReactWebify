@@ -27,7 +27,22 @@ Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({
     user: {authData: {}}
 })];
 
-export const NoAuth: Story = {};
-NoAuth.decorators = [StoreDecorator({
+export const Blue: Story = {};
+Blue.decorators = [ThemeDecorator(Theme.BLUE), StoreDecorator({
+    user: {authData: {}}
+})];
+
+export const NoAuthLight: Story = {};
+NoAuthLight.decorators = [StoreDecorator({
+    user: {}
+})]
+
+export const NoAuthDark: Story = {};
+NoAuthDark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({
+    user: {}
+})]
+
+export const NoAuthBlue: Story = {};
+NoAuthBlue.decorators = [ThemeDecorator(Theme.BLUE), StoreDecorator({
     user: {}
 })]

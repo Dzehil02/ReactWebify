@@ -34,6 +34,15 @@ Secondary.decorators = [StoreDecorator({
     loginForm: {username: 'root', password: 'root'}
 }), ThemeDecorator(Theme.DARK)]
 
+export const Third: Story = {
+    args: {
+
+    },
+};
+Third.decorators = [StoreDecorator({
+    loginForm: {username: 'root', password: 'root'}
+}), ThemeDecorator(Theme.BLUE)]
+
 export const Error: Story = {
     args: {
 

@@ -24,7 +24,14 @@ export const Light: Story = {
 
 export const Dark: Story = {
     args: {
-            
+        
     }
 };
 Dark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const Blue: Story = {
+    args: {
+        
+    }
+};
+Blue.decorators = [ThemeDecorator(Theme.BLUE)];

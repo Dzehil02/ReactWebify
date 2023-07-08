@@ -3,6 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Theme } from 'app/providers/ThemeProvider';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { CountrySelect } from './CountrySelect';
+import { Country } from '../../model/types/country';
 
 const meta: Meta<typeof CountrySelect> = {
     title: 'entities/CountrySelect',
@@ -17,10 +18,21 @@ export default meta;
 type Story = StoryObj<typeof CountrySelect>;
 
 export const Primary: Story = {
-    args: {}
+    args: {
+        value: Country.Belarus, 
+    }
 };
 
 export const Secondary: Story = {
-    args: {}
+    args: {
+        value: Country.Belarus, 
+    }
 };
 Secondary.decorators = [ThemeDecorator(Theme.DARK)]
+
+export const Third: Story = {
+    args: {
+        value: Country.Belarus, 
+    }
+};
+Third.decorators = [ThemeDecorator(Theme.BLUE)]

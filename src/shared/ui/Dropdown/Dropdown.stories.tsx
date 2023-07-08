@@ -10,7 +10,6 @@ const meta: Meta<typeof Dropdown> = {
     component: Dropdown,
     tags: ['autodocs'],
     argTypes: {
-        
     },
 };
 
@@ -51,3 +50,21 @@ export const Dark: Story = {
     }
 };
 Dark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const Blue: Story = {
+    args: {
+        trigger: <Button>Open menu</Button>,
+        items: [
+            {
+                content: 'first'
+            },
+            {
+                content: 'second'
+            },
+            {
+                content: 'third'
+            },
+        ]    
+    }
+};
+Blue.decorators = [ThemeDecorator(Theme.BLUE)];

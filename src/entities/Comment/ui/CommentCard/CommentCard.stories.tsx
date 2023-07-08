@@ -48,10 +48,25 @@ export const Blue: Story = {
 };
 Blue.decorators = [ThemeDecorator(Theme.BLUE)];
 
-export const Loading: Story = {
+export const LoadingLight: Story = {
     args: {
         isLoading: true
 
     }
 };
-Loading.decorators = [ThemeDecorator(Theme.BLUE)];
+
+export const LoadingDark: Story = {
+    args: {
+        isLoading: true
+
+    }
+};
+LoadingDark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const LoadingBlue: Story = {
+    args: {
+        isLoading: true
+
+    }
+};
+LoadingBlue.decorators = [ThemeDecorator(Theme.BLUE)];

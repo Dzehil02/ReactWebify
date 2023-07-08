@@ -11,7 +11,6 @@ const MainPage = () => {
             <div>
                 <div>{t('main-page')}</div>
             </div>
-
         </Page>
     );
 };

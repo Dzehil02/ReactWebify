@@ -29,3 +29,11 @@ export const Dark: Story = {
     },
 };
 Dark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const Blue: Story = {
+    args: {
+        isOpen: true,
+        children: 'Modal Text Modal Text Modal Text Modal Text Modal Text Modal Text'
+    },
+};
+Blue.decorators = [ThemeDecorator(Theme.BLUE)];

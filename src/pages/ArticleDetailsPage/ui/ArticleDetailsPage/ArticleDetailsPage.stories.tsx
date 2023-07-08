@@ -108,3 +108,10 @@ Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({
         data: article
     }
 })];
+
+export const Blue: Story = {};
+Blue.decorators = [ThemeDecorator(Theme.BLUE), StoreDecorator({
+    articleDetails: {
+        data: article
+    }
+})];

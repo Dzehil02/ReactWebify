@@ -49,6 +49,23 @@ export const Secondary: Story = {
 };
 Secondary.decorators = [ThemeDecorator(Theme.DARK)]
 
+export const ThirdReadonly: Story = {
+    args: {
+        data: {
+            first: "Pit",
+            lastname: "Bred",
+            age: 55,
+            username: "BredPit",
+            country: Country.Armenia,
+            city: "Florida",
+            currency: Currency.USD,
+            avatar: avatar
+        },
+        readonly: true
+    },
+};
+ThirdReadonly.decorators = [ThemeDecorator(Theme.BLUE)]
+
 export const Error: Story = {
     args: {
         error: "ProfileError"

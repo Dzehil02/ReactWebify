@@ -12,6 +12,7 @@ const meta: Meta<typeof ArticleList> = {
     argTypes: {
         
     },
+
 };
 
 export default meta;

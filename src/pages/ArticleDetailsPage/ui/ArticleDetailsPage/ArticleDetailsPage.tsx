@@ -52,11 +52,11 @@ const ArticleDetailsPage: FC<ArticleDetailsPageProps> = ({className}) => {
     }, [dispatch])
 
     useInitialEffect(() => {
-        dispatch(fetchCommentsByArticleId(id))
-        dispatch(fetchArticleRecommends())
+        if (__PROJECT__ !== 'storybook') {
+            dispatch(fetchCommentsByArticleId(id))
+            dispatch(fetchArticleRecommends())
+        }
     });
-
-
 
     if (!id) {
         return (

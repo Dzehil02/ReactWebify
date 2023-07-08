@@ -27,7 +27,7 @@ export const Light: Story = {
                 content: 'text text text', value: '123'
             },
             {
-                content: 'text text text 4', value: '1234'
+                content: 'text text text 4', value: '1234', disabled: true
             },
             {
                 content: 'text text text 5', value: '12345'
@@ -44,7 +44,7 @@ export const Dark: Story = {
                 content: 'text text text', value: '123'
             },
             {
-                content: 'text text text 4', value: '1234'
+                content: 'text text text 4', value: '1234', disabled: true
             },
             {
                 content: 'text text text 5', value: '12345'
@@ -53,6 +53,24 @@ export const Dark: Story = {
     }
 };
 Dark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const Blue: Story = {
+    args: {
+        value: 'click me',
+        items: [
+            {
+                content: 'text text text', value: '123'
+            },
+            {
+                content: 'text text text 4', value: '1234', disabled: true
+            },
+            {
+                content: 'text text text 5', value: '12345'
+            },
+        ]   
+    }
+};
+Blue.decorators = [ThemeDecorator(Theme.BLUE)];
 
 export const TopLeft: Story = {
     args: {

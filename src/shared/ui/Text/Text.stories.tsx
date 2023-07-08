@@ -65,6 +65,28 @@ export const OnlyTextDark: Story = {
 };
 OnlyTextDark.decorators = [ThemeDecorator(Theme.DARK)]
 
+export const PrimaryBlue: Story = {
+    args: {
+        title: 'Title Title Title',
+        text: 'Text Text Text'
+    },
+};
+PrimaryBlue.decorators = [ThemeDecorator(Theme.BLUE)]
+
+export const OnlyTitleBlue: Story = {
+    args: {
+        title: 'Title Title Title',
+    },
+};
+OnlyTitleBlue.decorators = [ThemeDecorator(Theme.BLUE)]
+
+export const OnlyTextBlue: Story = {
+    args: {
+        text: 'Text Text Text',
+    },
+};
+OnlyTextBlue.decorators = [ThemeDecorator(Theme.BLUE)]
+
 export const SizeS: Story = {
     args: {
         title: 'Title Title Title',

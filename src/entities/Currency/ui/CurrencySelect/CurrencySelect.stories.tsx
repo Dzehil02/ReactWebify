@@ -3,6 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Theme } from 'app/providers/ThemeProvider';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { CurrencySelect } from './CurrencySelect';
+import { Currency } from '../../model/types/currency';
 
 const meta: Meta<typeof CurrencySelect> = {
     title: 'entities/CurrencySelect',
@@ -17,10 +18,21 @@ export default meta;
 type Story = StoryObj<typeof CurrencySelect>;
 
 export const Primary: Story = {
-    args: {}
+    args: {
+        value: Currency.BYN
+    }
 };
 
 export const Secondary: Story = {
-    args: {}
+    args: {
+        value: Currency.BYN
+    }
 };
 Secondary.decorators = [ThemeDecorator(Theme.DARK)]
+
+export const Third: Story = {
+    args: {
+        value: Currency.BYN
+    }
+};
+Third.decorators = [ThemeDecorator(Theme.BLUE)]

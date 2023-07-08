@@ -51,3 +51,19 @@ Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({
         }
     }
 })];
+
+export const Blue: Story = {};
+Blue.decorators = [ThemeDecorator(Theme.BLUE), StoreDecorator({
+    profile: {
+        form: {
+            first: "Pit",
+            lastname: "Bred",
+            age: 55,
+            username: "BredPit",
+            country: Country.Armenia,
+            city: "Florida",
+            currency: Currency.USD,
+            avatar: avatar
+        }
+    }
+})];

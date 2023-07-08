@@ -38,3 +38,15 @@ export const Secondary: Story = {
     },
 };
 Secondary.decorators = [ThemeDecorator(Theme.DARK)]
+
+export const Third: Story = {
+    args: {
+        label: "Текст лейбла",
+        options: [
+            {value: '1', content: 'First'},
+            {value: '2', content: 'Second'},
+            {value: '3', content: 'Third'},
+        ]
+    },
+};
+Third.decorators = [ThemeDecorator(Theme.BLUE)]
