@@ -21,7 +21,7 @@ export const ArticleRecommendationsList = memo((props: ArticleRecommendationsLis
         )
     }
 
-    if (error) {
+    if (error || !articles) {
         return (
             <div>{t('ErrorRecommends')}</div>
         )
