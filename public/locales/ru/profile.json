@@ -17,5 +17,6 @@
     "INCORRECT_COUNTRY": "Некорректная страна",
     "INCORRECT_AGE": "Некорректный возраст",
     "NO_DATA": "Не указаны данные пользователя",
-    "SERVER_ERROR": "Ошибка сервера"
+    "SERVER_ERROR": "Ошибка сервера",
+    "ProfileNotFound": "Профиль не найден"
 }

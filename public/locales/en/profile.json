@@ -17,5 +17,6 @@
     "INCORRECT_COUNTRY": "Incorrect country",
     "INCORRECT_AGE": "Incorrect age",
     "NO_DATA": "No profile data",
-    "SERVER_ERROR": "Server error"
+    "SERVER_ERROR": "Server error",
+    "ProfileNotFound": "Profile not found"
 }

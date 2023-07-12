@@ -32,6 +32,6 @@ export function buildPlugins({paths, isDev, apiUrl, project}: BuildOptions): web
         plugins.push(new ReactRefreshWebpackPlugin({overlay: false}));
         plugins.push(new BundleAnalyzerPlugin({openAnalyzer: false}));
     }
-
+    
     return plugins;
 }

@@ -6,7 +6,7 @@ import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDeco
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 
 const meta: Meta<typeof ArticlesPageFilters> = {
-    title: 'pages/Article/ArticlesPageFilters',
+    title: 'pages/ArticlePage/ArticlesPageFilters',
     component: ArticlesPageFilters,
     tags: ['autodocs'],
     argTypes: {

@@ -20,5 +20,8 @@
     "ECONOMICS": "ECONOMICS",
     "SCIENCE": "SCIENCE",
     "Edit article": "Edit article with ID = ",
-    "New article": "Creating new article"
+    "New article": "Creating new article",
+    "Loading": "Loading ...",
+    "ErrorRecommends": "Error loading recommendations",
+    "ErrorArticles": "Error loading articles"
 }

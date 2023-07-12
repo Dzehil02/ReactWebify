@@ -7,7 +7,7 @@ import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDeco
 import { ArticleType } from 'entities/Article';
 
 const meta: Meta<typeof ArticlesPage> = {
-    title: 'pages/Article/ArticlesPage',
+    title: 'pages/ArticlePage/ArticlesPage',
     component: ArticlesPage,
     tags: ['autodocs'],
     argTypes: {
