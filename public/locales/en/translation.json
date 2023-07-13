@@ -19,9 +19,11 @@
 	"Error in LoginForm": "Wrong username or password",
 	"profile-page": "Profile page",
 	"profile": "Profile",
+	"admin": "Admin",
 	"articles-page": "Articles page",
 	"Enter comment": "Enter comment",
 	"Send comment": "Send comment",
     "ReactWebify": "ReactWebify",
-    "Create article": "Create article"
+    "Create article": "Create article",
+    "access": "you don't have access to this page"
 }

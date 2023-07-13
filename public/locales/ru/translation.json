@@ -19,9 +19,11 @@
 	"Error in LoginForm": "Ведён неверный логин или пароль",
 	"profile-page": "Страница профиля",
 	"profile": "Профиль",
+	"admin": "Админ",
 	"articles-page": "Страница статей",
 	"Enter comment": "Введите комментарий",
 	"Send comment": "Отправить комментарий",
     "ReactWebify": "ReactWebify",
-    "Create article": "Создать статью"
+    "Create article": "Создать статью",
+	"access": "у вас нет доступа к этой странице"
 }

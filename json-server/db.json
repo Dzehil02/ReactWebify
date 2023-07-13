@@ -592,15 +592,22 @@
       "id": "1",
       "username": "admin",
       "password": "1234",
-      "role": "ADMIN",
+      "roles": ["ADMIN"],
       "avatar": "https://avatarzo.ru/wp-content/uploads/squid-game-anime.jpg"
     },
     {
       "id": "2",
       "username": "user",
       "password": "4321",
-      "role": "USER",
+      "roles": ["USER"],
       "avatar": "https://avatarzo.ru/wp-content/uploads/naruto-figure.jpg"
+    },
+    {
+      "id": "3",
+      "username": "manager",
+      "password": "manager",
+      "roles": ["MANAGER"],
+      "avatar": "https://static.baza.farpost.ru/v/1675754411371_bulletin.jpg"
     }
   ],
   "profile": [
