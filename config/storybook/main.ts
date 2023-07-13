@@ -5,6 +5,7 @@ const config: StorybookConfig = {
         "@storybook/addon-links",
         "@storybook/addon-essentials",
         "@storybook/addon-interactions",
+        "storybook-addon-mock/register",
     ],
     framework: {
         name: "@storybook/react-webpack5",
@@ -14,7 +15,7 @@ const config: StorybookConfig = {
         autodocs: "tag",
     },
     features: {
-        // storyStoreV7: false
+        storyStoreV7: false
     }
 };
 export default config;

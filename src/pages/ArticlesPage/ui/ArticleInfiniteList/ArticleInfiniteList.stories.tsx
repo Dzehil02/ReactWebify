@@ -3,6 +3,8 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { ArticleInfiniteList } from './ArticleInfiniteList';
 import { Theme } from 'app/providers/ThemeProvider';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
+import { ArticleType } from 'entities/Article';
 
 const meta: Meta<typeof ArticleInfiniteList> = {
     title: 'pages/ArticlePage/ArticleInfiniteList',
@@ -21,10 +23,11 @@ export const Light: Story = {
 
     }
 };
+Light.decorators = [StoreDecorator({})];
 
 export const Dark: Story = {
     args: {
             
     }
 };
-Dark.decorators = [ThemeDecorator(Theme.DARK)];
+Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({})];

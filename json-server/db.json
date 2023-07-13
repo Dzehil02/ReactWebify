@@ -603,6 +603,12 @@
       "userId": "2",
       "text": "hello everyone",
       "id": 14
+    },
+    {
+      "articleId": "7",
+      "userId": "2",
+      "text": "Comment just for",
+      "id": 15
     }
   ],
   "users": [
@@ -648,12 +654,12 @@
     },
     {
       "id": "2",
-      "first": "Том 2",
+      "first": "Том",
       "lastname": "Круз",
-      "age": 65,
-      "currency": "EUR",
-      "country": "Italy",
-      "city": "Paris",
+      "age": 64,
+      "currency": "USD",
+      "country": "France",
+      "city": "Milan",
       "username": "user",
       "avatar": "https://avatarzo.ru/wp-content/uploads/naruto-figure.jpg"
     }
