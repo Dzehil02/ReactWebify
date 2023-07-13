@@ -585,6 +585,24 @@
       "userId": "1",
       "text": "Second comment",
       "id": 11
+    },
+    {
+      "articleId": "10",
+      "userId": "2",
+      "text": "third comment",
+      "id": 12
+    },
+    {
+      "articleId": "10",
+      "userId": "2",
+      "text": "Fourth comment",
+      "id": 13
+    },
+    {
+      "articleId": "15",
+      "userId": "2",
+      "text": "hello everyone",
+      "id": 14
     }
   ],
   "users": [
@@ -592,21 +610,27 @@
       "id": "1",
       "username": "admin",
       "password": "1234",
-      "roles": ["ADMIN"],
+      "roles": [
+        "ADMIN"
+      ],
       "avatar": "https://avatarzo.ru/wp-content/uploads/squid-game-anime.jpg"
     },
     {
       "id": "2",
       "username": "user",
       "password": "4321",
-      "roles": ["USER"],
+      "roles": [
+        "USER"
+      ],
       "avatar": "https://avatarzo.ru/wp-content/uploads/naruto-figure.jpg"
     },
     {
       "id": "3",
       "username": "manager",
       "password": "manager",
-      "roles": ["MANAGER"],
+      "roles": [
+        "MANAGER"
+      ],
       "avatar": "https://static.baza.farpost.ru/v/1675754411371_bulletin.jpg"
     }
   ],
