@@ -1,7 +1,7 @@
 import { validateProfileData } from "./validateProfileData";
 import { Country } from "entities/Country";
 import { Currency } from "entities/Currency";
-import { ValidateProfileErrors } from "../../types/editableProfileCardSchema";
+import { ValidateProfileErrors } from "../../consts/consts";
 
 const data = {
     first: "Pit",
