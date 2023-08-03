@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Dropdown } from './Dropdown';
 import { Theme } from 'app/providers/ThemeProvider';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Button } from '../Button/Button';
+import { Button } from '../../../Button/Button';
 
 const meta: Meta<typeof Dropdown> = {
     title: 'shared/Dropdown',
