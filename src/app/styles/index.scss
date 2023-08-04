@@ -12,7 +12,8 @@ body {
 }
 
 .app,
-.app_drawer {
+.app_drawer,
+.app_modal {
     font: var(--font-m);
     color: var(--primary-color);
 }
