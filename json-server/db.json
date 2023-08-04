@@ -643,6 +643,12 @@
       "userId": "2",
       "text": "Comment just for",
       "id": 15
+    },
+    {
+      "articleId": "9",
+      "userId": "1",
+      "text": "Java comment",
+      "id": 16
     }
   ],
   "users": [

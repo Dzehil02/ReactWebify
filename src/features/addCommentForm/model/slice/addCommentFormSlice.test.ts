@@ -1,5 +1,5 @@
-import { Country } from "entities/Country";
-import { Currency } from "entities/Currency";
+import { Country } from "@/entities/Country";
+import { Currency } from "@/entities/Currency";
 import { AddCommentFormSchema } from "../types/addCommentForm";
 import { addCommentFormActions, addCommentFormReducer } from "./addCommentFormSlice";
 
