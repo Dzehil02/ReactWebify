@@ -2,6 +2,7 @@ import { MutableRefObject, ReactNode, useCallback, useEffect, useRef, useState }
 import { Mods, classNames } from 'shared/lib/classNames/classNames'
 import cls from './Modal.module.scss'
 import { Portal } from '../Portal/Portal';
+import { Overlay } from '../Overlay/Overlay';
 
 interface ModalProps {
     className?: string;
@@ -39,10 +40,6 @@ export const Modal = (props: ModalProps) => {
         }
     }, [onClose]);
 
-    const onContentClick = (e: React.MouseEvent) => {
-        e.stopPropagation();
-    }
-
     // useCallback - для сохранения ОДНОЙ ссылки для функции
     const onKeyDown = useCallback((e: KeyboardEvent) => {
         if (e.key === 'Escape') {
@@ -64,10 +61,9 @@ export const Modal = (props: ModalProps) => {
         <Portal>
             <div
                 className={classNames(cls.Modal, mods, [className])}>
-                <div className={cls.overlay} onClick={closeHandler}>
-                    <div className={cls.content} onClick={onContentClick}>
-                        {children}
-                    </div>
+                <Overlay onClick={closeHandler} />
+                <div className={cls.content}>
+                    {children}
                 </div>
             </div>
         </Portal>
