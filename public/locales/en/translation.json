@@ -25,5 +25,8 @@
 	"Send comment": "Send comment",
     "ReactWebify": "ReactWebify",
     "Create article": "Create article",
-    "access": "you don't have access to this page"
+    "access": "you don't have access to this page",
+	"feedback": "Your feedback",
+	"close": "Close",
+	"send": "Send"
 }

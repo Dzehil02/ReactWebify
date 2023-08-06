@@ -1,12 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { [FTName] } from './[FTName]';
+import { StarRating } from './StarRating';
 import { Theme } from '@/app/providers/ThemeProvider';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
 
-const meta: Meta<typeof [FTName]> = {
-    title: 'shared/[FTName]',
-    component: [FTName],
+const meta: Meta<typeof StarRating> = {
+    title: 'shared/StarRating',
+    component: StarRating,
     tags: ['autodocs'],
     argTypes: {
         
@@ -14,7 +14,7 @@ const meta: Meta<typeof [FTName]> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof [FTName]>;
+type Story = StoryObj<typeof StarRating>;
 
 export const Light: Story = {
     args: {
