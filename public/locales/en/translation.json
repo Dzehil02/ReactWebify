@@ -28,6 +28,8 @@
     "access": "you don't have access to this page",
 	"feedbackArtickeTitle": "Leave your feedback about the article",
 	"rateArticle": "Rate the article",
+	"feedbackProfileTitle": "Leave your feedback about this Profile",
+	"rateProfile": "Rate this Profile",
 	"close": "Close",
 	"send": "Send",
 	"ratingThanks": "Thanks for rating!"

@@ -702,12 +702,23 @@
       "id": "2",
       "first": "Том",
       "lastname": "Круз",
-      "age": 64,
-      "currency": "USD",
+      "age": 65,
+      "currency": "EUR",
       "country": "France",
       "city": "Milan",
       "username": "user",
       "avatar": "https://avatarzo.ru/wp-content/uploads/naruto-figure.jpg"
+    },
+    {
+      "id": "3",
+      "first": "Бред",
+      "lastname": "Пит",
+      "age": 62,
+      "currency": "USD",
+      "country": "France",
+      "city": "Paris",
+      "username": "manager",
+      "avatar": "https://static.baza.farpost.ru/v/1675754411371_bulletin.jpg"
     }
   ],
   "article-ratings": [
@@ -1303,6 +1314,12 @@
       "rate": 2,
       "feedback": "java scipters",
       "id": "5YkVaGT"
+    },
+    {
+      "userId": "2",
+      "articleId": "7",
+      "rate": 2,
+      "id": "5cdAdhU"
     }
   ],
   "profile-ratings": [
@@ -1326,6 +1343,19 @@
       "feedback": "Спасибо",
       "userId": "2",
       "profileId": "2"
+    },
+    {
+      "userId": "3",
+      "profileId": "3",
+      "rate": 5,
+      "feedback": "Спасибо, Бред Пит !",
+      "id": "buykQV0"
+    },
+    {
+      "userId": "3",
+      "profileId": "1",
+      "rate": 5,
+      "id": "xPLYx2g"
     }
   ]
 }
