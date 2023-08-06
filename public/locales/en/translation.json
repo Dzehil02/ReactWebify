@@ -26,7 +26,9 @@
     "ReactWebify": "ReactWebify",
     "Create article": "Create article",
     "access": "you don't have access to this page",
-	"feedback": "Your feedback",
+	"feedbackArtickeTitle": "Leave your feedback about the article",
+	"rateArticle": "Rate the article",
 	"close": "Close",
-	"send": "Send"
+	"send": "Send",
+	"ratingThanks": "Thanks for rating!"
 }

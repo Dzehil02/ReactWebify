@@ -649,6 +649,12 @@
       "userId": "1",
       "text": "Java comment",
       "id": 16
+    },
+    {
+      "articleId": "13",
+      "userId": "1",
+      "text": "Go lang !!",
+      "id": 17
     }
   ],
   "users": [
@@ -702,6 +708,624 @@
       "city": "Milan",
       "username": "user",
       "avatar": "https://avatarzo.ru/wp-content/uploads/naruto-figure.jpg"
+    }
+  ],
+  "article-ratings": [
+    {
+      "id": "1",
+      "rate": 3,
+      "feedback": "Статья понравилась. Так держать",
+      "userId": "1",
+      "articleId": "1"
+    },
+    {
+      "id": "2",
+      "rate": 4,
+      "feedback": "Статья понравилась",
+      "userId": "1",
+      "articleId": "2"
+    },
+    {
+      "id": "3",
+      "rate": 5,
+      "feedback": "Так держать",
+      "userId": "2",
+      "articleId": "2"
+    },
+    {
+      "userId": "1",
+      "articleId": "3",
+      "rate": 1,
+      "feedback": "",
+      "id": "Z6g-Utr"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "rate": 4,
+      "feedback": "Ruby Ruby Ruby",
+      "id": "-zg_SM_"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "cqdZZcG"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "VIUfo1_"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "B6Kz87W"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "gOoIX8H"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "pyVIqRq"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "pCy5syH"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "OtyTbxZ"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "6Zm37FH"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "GhHUN40"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "PEw_JMw"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "01tgWcS"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "B--v8sf"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "WxyEMNh"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "FwDYzTs"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "kFBzxgw"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "dTK5Wuq"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "HOUepF4"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "Z4xI80b"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "Fco5qDg"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "CRLw22n"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "LfiHurG"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "U_6xInd"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "eUcyJrl"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "vAKTPPh"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "_dziIdO"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "tgyeK5j"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "EnGOT5v"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "zunXwJU"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "amrC0f7"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "uDcHh84"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "BR0hK0x"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "2soLqhx"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "84fJgfU"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "0eZy-MN"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "ZNSqqWI"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "7sVlT01"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "hQ5V9PM"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "XrFQdL6"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "qqPK7Dv"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "3wY7QZi"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "ezWMzHl"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "81ofMRO"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "N2yfoUt"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "lyquB3l"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "WPmnRDC"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "O3MeKmJ"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "jgA-UEP"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "LvZPSSX"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "ZPnswrN"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "V5aV6e1"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "bc51DFD"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "Qbo2E6j"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "yB_rFfr"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "dHgAd-A"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "UMfzCla"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "duGa7jV"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "IE25P4y"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "k_IzZEo"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "3E1_djF"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "bj2pn0E"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "NTNXFCz"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "WQCT3W3"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "fwZL_e5"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "rZn6DFg"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "MF7jKv3"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "T_X0wD6"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "uqT0lgH"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "0dpWznh"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "vheQD6X"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "w0fYdOA"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "MYrN2UP"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "IZIvL4P"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "fNxhogS"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "qY1hZ1Y"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "G1niAyx"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "l_rbFiO"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "0RdWJbj"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "2JS7BFf"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "f78Nz8I"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "8lcjEr6"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "hMT-Oj4"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "vJkMXOg"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "FNiuT5N"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "x3zzDYg"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "UhNn1QB"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "DKyHEUp"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "fnpKrp_"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "70_9pjv"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "eVOvfMm"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "ctw0YEZ"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "13QSEFy"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "cWMEB4B"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "X5LELW_"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "K4R5DTB"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "ZYTYOSd"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "qj9A3Ia"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "y5NYlFH"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "2_GuhAE"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "06EH0nZ"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "inMd27_"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "m0JaSe4"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "FFEa-Yy"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "j7N38l_"
+    },
+    {
+      "userId": "1",
+      "articleId": "14",
+      "id": "x5h-rp9"
+    },
+    {
+      "userId": "1",
+      "articleId": "15",
+      "rate": 5,
+      "feedback": "Node js is brave!",
+      "id": "3toRS7j"
+    },
+    {
+      "userId": "1",
+      "articleId": "13",
+      "rate": 2,
+      "id": "826O3Ua"
+    },
+    {
+      "userId": "1",
+      "articleId": "13",
+      "rate": 1,
+      "id": "Apbtm3j"
+    },
+    {
+      "userId": "2",
+      "articleId": "10",
+      "rate": 5,
+      "id": "9ZguWUW"
+    },
+    {
+      "userId": "2",
+      "articleId": "13",
+      "rate": 1,
+      "id": "9QtpK_3"
+    },
+    {
+      "userId": "2",
+      "articleId": "1",
+      "rate": 2,
+      "feedback": "java scipters",
+      "id": "5YkVaGT"
+    }
+  ],
+  "profile-ratings": [
+    {
+      "id": "1",
+      "rate": 3,
+      "feedback": "Ровный штрих",
+      "userId": "1",
+      "profileId": "1"
+    },
+    {
+      "id": "2",
+      "rate": 4,
+      "feedback": "Пользователь помог",
+      "userId": "1",
+      "profileId": "2"
+    },
+    {
+      "id": "3",
+      "rate": 5,
+      "feedback": "Спасибо",
+      "userId": "2",
+      "profileId": "2"
     }
   ]
 }

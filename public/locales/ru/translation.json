@@ -26,7 +26,9 @@
     "ReactWebify": "ReactWebify",
     "Create article": "Создать статью",
 	"access": "у вас нет доступа к этой странице",
-	"feedback": "Ваш отзыв",
+	"feedbackArtickeTitle": "Оставьте ваш отзыв о статье",
+	"rateArticle": "Оцените статью",
 	"close": "Закрыть",
-	"send": "Отправить"
+	"send": "Отправить",
+	"ratingThanks": "Спасибо за оценку!"
 }
