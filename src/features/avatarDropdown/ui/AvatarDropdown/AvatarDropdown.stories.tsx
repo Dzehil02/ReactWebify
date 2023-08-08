@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { AvatarDropdown } from './AvatarDropdown';
-import { Theme } from '@/app/providers/ThemeProvider';
-import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
+import { UserRole } from '@/entities/User';
 
 const meta: Meta<typeof AvatarDropdown> = {
-    title: 'shared/AvatarDropdown',
+    title: 'features/AvatarDropdown',
     component: AvatarDropdown,
     tags: ['autodocs'],
     argTypes: {
@@ -18,13 +18,16 @@ type Story = StoryObj<typeof AvatarDropdown>;
 
 export const Light: Story = {
     args: {
-
+        className: 'margin-left: auto'
     }
 };
-
-export const Dark: Story = {
-    args: {
-            
+Light.decorators = [StoreDecorator({
+    user: {
+        authData: {
+            id: '1',
+            roles: [UserRole.ADMIN],
+            username: 'adminovich',
+            avatar: "https://avatarzo.ru/wp-content/uploads/squid-game-anime.jpg"
+        }
     }
-};
-Dark.decorators = [ThemeDecorator(Theme.DARK)];
+})];

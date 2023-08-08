@@ -5,7 +5,7 @@ import { Theme } from '@/app/providers/ThemeProvider';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
 
 const meta: Meta<typeof RatingCard> = {
-    title: 'shared/RatingCard',
+    title: 'entities/Rating/RatingCard',
     component: RatingCard,
     tags: ['autodocs'],
     argTypes: {
@@ -24,7 +24,10 @@ export const Light: Story = {
 
 export const Dark: Story = {
     args: {
-            
+        hasFeedback: true,
+        feedbackTitle: 'Feedback Title',
+        rate: 3,
+        title: 'Title'
     }
 };
 Dark.decorators = [ThemeDecorator(Theme.DARK)];

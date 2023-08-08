@@ -3,13 +3,14 @@ import type { Meta, StoryObj } from '@storybook/react';
 import ProfileRating from './ProfileRating';
 import { Theme } from '@/app/providers/ThemeProvider';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 
 const meta: Meta<typeof ProfileRating> = {
-    title: 'shared/ProfileRating',
+    title: 'features/ProfileRating',
     component: ProfileRating,
     tags: ['autodocs'],
     argTypes: {
-        
+
     },
 };
 
@@ -18,13 +19,54 @@ type Story = StoryObj<typeof ProfileRating>;
 
 export const Light: Story = {
     args: {
-
+        profileId: '1'
     }
 };
+Light.decorators = [
+    StoreDecorator({
+        user: {
+            authData: {
+                id: '1'
+            }
+        }
+    })
+]
+Light.parameters = {
+    mockData: [
+        {
+            url: `${__API__}/profile-ratings?userId=1&profileId=1`,
+            method: 'GET',
+            status: 200,
+            response: [
+                {
+                    rate: 4,
+                }
+            ],
+        },
+    ],
+}
 
-export const Dark: Story = {
+export const WithoutRate: Story = {
     args: {
-            
+        profileId: '1'
     }
 };
-Dark.decorators = [ThemeDecorator(Theme.DARK)];
+WithoutRate.decorators = [
+    StoreDecorator({
+        user: {
+            authData: {
+                id: '1'
+            }
+        }
+    })
+]
+WithoutRate.parameters = {
+    mockData: [
+        {
+            url: `${__API__}/profile-ratings?userId=1&profileId=1`,
+            method: 'GET',
+            status: 200,
+            response: [],
+        },
+    ],
+}

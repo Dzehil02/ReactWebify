@@ -6,7 +6,7 @@ import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDe
 import { Button } from '../../../Button/Button';
 
 const meta: Meta<typeof Dropdown> = {
-    title: 'shared/Dropdown',
+    title: 'shared/Popus/Dropdown',
     component: Dropdown,
     tags: ['autodocs'],
     argTypes: {

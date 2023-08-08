@@ -1,16 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import ArticleRating from './ArticleRating';
-import { Theme } from '@/app/providers/ThemeProvider';
-import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 
 const meta: Meta<typeof ArticleRating> = {
-    title: 'shared/ArticleRating',
+    title: 'features/ArticleRating',
     component: ArticleRating,
     tags: ['autodocs'],
-    argTypes: {
-        
-    },
+    argTypes: {},
 };
 
 export default meta;
@@ -18,13 +15,54 @@ type Story = StoryObj<typeof ArticleRating>;
 
 export const Light: Story = {
     args: {
-
+        articleId: '1'
     }
 };
+Light.decorators = [
+    StoreDecorator({
+        user: {
+            authData: {
+                id: '1'
+            }
+        }
+    })
+]
+Light.parameters = {
+    mockData: [
+        {
+            url: `${__API__}/article-ratings?userId=1&articleId=1`,
+            method: 'GET',
+            status: 200,
+            response: [
+                {
+                    rate: 2,
+                }
+            ],
+        },
+    ],
+}
 
-export const Dark: Story = {
+export const WithoutRate: Story = {
     args: {
-            
+        articleId: '1'
     }
 };
-Dark.decorators = [ThemeDecorator(Theme.DARK)];
+WithoutRate.decorators = [
+    StoreDecorator({
+        user: {
+            authData: {
+                id: '1'
+            }
+        }
+    })
+]
+WithoutRate.parameters = {
+    mockData: [
+        {
+            url: `${__API__}/article-ratings?userId=1&articleId=1`,
+            method: 'GET',
+            status: 200,
+            response: [],
+        },
+    ],
+}

@@ -5,7 +5,7 @@ import { Theme } from '@/app/providers/ThemeProvider';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
 
 const meta: Meta<typeof Popover> = {
-    title: 'shared/Popover',
+    title: 'shared/Popus/Popover',
     component: Popover,
     tags: ['autodocs'],
     argTypes: {

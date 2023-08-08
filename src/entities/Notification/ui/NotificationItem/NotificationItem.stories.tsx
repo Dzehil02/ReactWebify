@@ -5,12 +5,10 @@ import { Theme } from '@/app/providers/ThemeProvider';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
 
 const meta: Meta<typeof NotificationItem> = {
-    title: 'shared/NotificationItem',
+    title: 'entities/Notification/NotificationItem',
     component: NotificationItem,
     tags: ['autodocs'],
-    argTypes: {
-        
-    },
+    argTypes: {},
 };
 
 export default meta;
@@ -18,13 +16,10 @@ type Story = StoryObj<typeof NotificationItem>;
 
 export const Light: Story = {
     args: {
-
+        item: {
+            id: '1',
+            title: 'Уведомление',
+            description: 'Поставь лайк и оставь комментарий пожалуйста',
+        }
     }
 };
-
-export const Dark: Story = {
-    args: {
-            
-    }
-};
-Dark.decorators = [ThemeDecorator(Theme.DARK)];

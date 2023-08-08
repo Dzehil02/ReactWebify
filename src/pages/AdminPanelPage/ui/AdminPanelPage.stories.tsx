@@ -6,7 +6,7 @@ import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDe
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 
 const meta: Meta<typeof AdminPanelPage> = {
-    title: 'shared/AdminPanelPage',
+    title: 'pages/AdminPanelPage',
     component: AdminPanelPage,
     tags: ['autodocs'],
     argTypes: {

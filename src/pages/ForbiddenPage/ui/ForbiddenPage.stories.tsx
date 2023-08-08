@@ -6,7 +6,7 @@ import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDe
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 
 const meta: Meta<typeof ForbiddenPage> = {
-    title: 'shared/ForbiddenPage',
+    title: 'pages/ForbiddenPage',
     component: ForbiddenPage,
     tags: ['autodocs'],
     argTypes: {
