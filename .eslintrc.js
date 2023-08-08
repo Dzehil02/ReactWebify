@@ -61,7 +61,7 @@ module.exports = {
         "react/display-name": "off",
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "error", 
-        'webify-plugin/path-checker': 'error',
+        'webify-plugin/path-checker': ['error', {alias: '@'}],
 
     },
     globals: {
