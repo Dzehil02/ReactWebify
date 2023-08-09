@@ -691,7 +691,7 @@
       "id": "1",
       "first": "Кевин",
       "lastname": "Spacy",
-      "age": 62,
+      "age": 64,
       "currency": "EUR",
       "country": "France",
       "city": "Roma",
@@ -1320,6 +1320,12 @@
       "articleId": "7",
       "rate": 2,
       "id": "5cdAdhU"
+    },
+    {
+      "userId": "1",
+      "articleId": "7",
+      "rate": 2,
+      "id": "nXtdrzv"
     }
   ],
   "profile-ratings": [

@@ -65,7 +65,11 @@ module.exports = {
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "error", 
         'webify-plugin/path-checker': ['error', {alias: '@'}],
-        'webify-plugin/public-api-imports': ['error', {alias: '@'}],
+        'webify-plugin/public-api-imports': ['error', {
+            alias: '@',
+            testFilesPatterns: ['**/*.test.*', '**/*.testing.*', '**/*.stories.*', '**/StoreDecorator.tsx']
+        },
+        ],
 
     },
     globals: {
