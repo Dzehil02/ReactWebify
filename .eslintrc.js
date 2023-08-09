@@ -39,7 +39,10 @@ module.exports = {
         'no-unused-vars': 'warn',
         'react/require-default-props': 'off',
         'react/react-in-jsx-scope': 'off',
-        'react/jsx-props-no-spreading': 'warn',
+        'react/jsx-props-no-spreading': ['warn', {
+            "custom": "ignore",
+            "exceptions": ["input", "button", "div"]
+        }],
         'react/function-component-definition': 'off',
         'no-shadow': 'off',
         'import/extensions': 'off',
@@ -62,6 +65,7 @@ module.exports = {
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "error", 
         'webify-plugin/path-checker': ['error', {alias: '@'}],
+        'webify-plugin/public-api-imports': ['error', {alias: '@'}],
 
     },
     globals: {
