@@ -1,3 +1,4 @@
+// eslint-disable-next-line webify-plugin/layer-imports
 import '@/app/styles/index.scss';
 import { Decorator } from "@storybook/react";
 

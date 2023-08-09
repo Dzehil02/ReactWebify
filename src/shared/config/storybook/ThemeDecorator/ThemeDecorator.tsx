@@ -1,5 +1,8 @@
 import { Decorator } from "@storybook/react";
-import { Theme, ThemeProvider } from "@/app/providers/ThemeProvider";
+// eslint-disable-next-line webify-plugin/layer-imports
+import { Theme } from "@/shared/const/theme";
+// eslint-disable-next-line webify-plugin/layer-imports
+import { ThemeProvider } from "@/app/providers/ThemeProvider";
 
 export const ThemeDecorator =
     (theme: Theme): Decorator =>

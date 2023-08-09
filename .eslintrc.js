@@ -70,6 +70,11 @@ module.exports = {
             testFilesPatterns: ['**/*.test.*', '**/*.testing.*', '**/*.stories.*', '**/StoreDecorator.tsx']
         },
         ],
+        'webify-plugin/layer-imports': ['error', {
+            alias: '@',
+            ignoreImportPatterns: ['**/StoreProvider', '**/testing']
+        },
+        ],
 
     },
     globals: {
