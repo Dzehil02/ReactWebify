@@ -1,7 +1,7 @@
 ## Запуск проекта ReactWebify
 
 ```
-npm install - устанавливаем зависимости
+npm install - установка зависимостей
 npm run start:dev или npm run start:dev:vite - запуск сервера + frontend проекта в dev режиме
 ```
 

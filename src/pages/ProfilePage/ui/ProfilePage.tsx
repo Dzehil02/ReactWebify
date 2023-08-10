@@ -15,7 +15,7 @@ const ProfilePage: FC<ProfilePageProps> = ({ className }) => {
     const {t} = useTranslation('profile')
     const {id} = useParams<{id: string}>();
 
-    if (!id) {
+    if (!id && __PROJECT__ !== 'storybook') {
         return (
             <Page className={className}>
                 {t('ProfileNotFound')}

@@ -20,7 +20,11 @@ const meta: Meta<typeof ProfilePage> = {
 export default meta;
 type Story = StoryObj<typeof ProfilePage>;
 
-export const Light: Story = {};
+export const Light: Story = {
+    args: {
+        
+    }
+};
 Light.decorators = [StoreDecorator({
     profile: {
         form: {
@@ -31,7 +35,8 @@ Light.decorators = [StoreDecorator({
             country: Country.Armenia,
             city: "Florida",
             currency: Currency.USD,
-            avatar: avatar
+            avatar: avatar,
+            id: '1'
         }
     }
 })];

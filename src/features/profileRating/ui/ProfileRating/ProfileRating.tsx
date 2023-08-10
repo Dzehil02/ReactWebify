@@ -8,11 +8,11 @@ import { Skeleton } from '@/shared/ui/Skeleton';
 
 export interface ProfileRatingProps {
     className?: string;
-    profileId: string;
+    profileId?: string;
 }
 
 const ProfileRating = memo((props: ProfileRatingProps) => {
-    const {className, profileId} = props;
+    const {className, profileId = '1'} = props;
     const { t } = useTranslation()
     const userData = useSelector(getUserAuthData);
 
