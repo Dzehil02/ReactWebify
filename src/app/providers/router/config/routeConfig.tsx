@@ -8,7 +8,6 @@ import { ForbiddenPage } from "@/pages/ForbiddenPage"
 import { MainPage } from "@/pages/MainPage"
 import { NotFoundPage } from "@/pages/NotFoundPage"
 import { ProfilePage } from "@/pages/ProfilePage"
-import { RouteProps } from "react-router-dom"
 import { RoutePath, AppRoutes } from "../../../../shared/const/router"
 import { RouteObj } from "../../../../shared/types/router"
 
