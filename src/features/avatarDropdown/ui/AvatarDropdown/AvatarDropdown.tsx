@@ -2,7 +2,7 @@ import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './AvatarDropdown.module.scss';
-import { RoutePath } from "@/shared/const/router";
+import { getRouteAdminPanel, getRouteProfile } from "@/shared/const/router";
 import { Avatar } from '@/shared/ui/Avatar';
 import { Dropdown } from '@/shared/ui/Popups';
 import { useDispatch, useSelector } from 'react-redux';
@@ -37,11 +37,11 @@ export const AvatarDropdown = memo((props: AvatarDropdownProps) => {
             items={[
                 ...(isAdminPanelAvailable ? [{
                     content: t('admin'),
-                    href: RoutePath.admin_panel
+                    href: getRouteAdminPanel()
                 }] : []),
                 {
                     content: t('profile'),
-                    href: RoutePath.profile + authData.id
+                    href: getRouteProfile(authData.id)
                 },
                 {
                     content: t('Exit'),

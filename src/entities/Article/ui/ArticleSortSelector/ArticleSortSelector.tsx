@@ -1,4 +1,4 @@
-import { memo, useMemo } from 'react';
+import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './ArticleSortSelector.module.scss';
@@ -14,7 +14,7 @@ interface ArticleSortSelectorProps {
     onChangeSort: (newSort: ArticleSortField) => void;
 }
 
-export const ArticleSortSelector = memo((props: ArticleSortSelectorProps) => {
+export const ArticleSortSelector = (props: ArticleSortSelectorProps) => {
     const {className, order, sort, onChangeOrder, onChangeSort} = props;
     const { t } = useTranslation('article-details')
 
@@ -63,4 +63,4 @@ export const ArticleSortSelector = memo((props: ArticleSortSelectorProps) => {
             />
         </div>
     );
-})
+};
