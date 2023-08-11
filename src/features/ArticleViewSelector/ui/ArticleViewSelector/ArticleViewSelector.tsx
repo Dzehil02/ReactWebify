@@ -1,10 +1,10 @@
 import { FC } from 'react'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import cls from './ArticleViewSelector.module.scss'
-import { ArticleView } from "../../model/consts/consts";
 import ListIcon from '@/shared/assets/icons/list.svg'
 import TiledIcon from '@/shared/assets/icons/tiled.svg'
 import { Button, ButtonTheme } from '@/shared/ui/Button';
+import { ArticleView } from '@/entities/Article'
 
 interface ArticleViewSelectorProps {
     className?: string;
