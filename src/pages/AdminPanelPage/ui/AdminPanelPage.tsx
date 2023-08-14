@@ -12,7 +12,7 @@ const AdminPanelPage = memo((props: AdminPanelPageProps) => {
     const { t } = useTranslation('admin-panel')
 
     return (
-        <Page className={classNames('', {}, [className])}>
+        <Page data-testid='AdminPanelPage' className={classNames('', {}, [className])}>
             {t('admin-panel')}
         </Page>
     );
