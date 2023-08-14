@@ -14,7 +14,6 @@ import {
 import { Text, TextAlign, TextSize } from '@/shared/ui/Text';
 import { useTranslation } from 'react-i18next';
 import { Skeleton } from '@/shared/ui/Skeleton';
-import { Avatar } from '@/shared/ui/Avatar';
 import EyeIcon from '@/shared/assets/icons/eye.svg'
 import CalendarIcon from '@/shared/assets/icons/calendar.svg'
 import { ArticleBlock } from '../../model/types/article';
@@ -24,6 +23,8 @@ import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/Articl
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { HStack, VStack } from '@/shared/ui/Stack';
+import { AppImage } from '@/shared/ui/AppImage';
+import NotFoundImg from '@/shared/assets/icons/not_found_img.svg';
 
 interface ArticleDetailsProps {
     className?: string;
@@ -84,10 +85,13 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
         content = (
             <>
                 <HStack justify='center' max className={cls.avatarWrapper}>
-                    <Avatar
-                        size={200} 
+                    <AppImage
+                        width={200}
+                        height={200}
                         src={article?.img} 
                         className={cls.avatar}
+                        fallback={<Skeleton width={200} height={200} border='50%' />}
+                        errorFallback={<NotFoundImg width={200} height={200} />}
                     />
                 </HStack>
                 <VStack gap='4' max>

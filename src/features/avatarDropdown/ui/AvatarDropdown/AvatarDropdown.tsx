@@ -7,6 +7,7 @@ import { Avatar } from '@/shared/ui/Avatar';
 import { Dropdown } from '@/shared/ui/Popups';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUserAuthData, isUserAdmin, isUserManager, userActions } from '@/entities/User';
+import { Button, ButtonTheme } from '@/shared/ui/Button';
 
 interface AvatarDropdownProps {
     className?: string;
@@ -30,6 +31,12 @@ export const AvatarDropdown = memo((props: AvatarDropdownProps) => {
         return null;
     }
 
+    const trigger = (
+        <Button theme={ButtonTheme.CLEAR_INVERTED}>
+            <Avatar size={30} src={authData.avatar} />
+        </Button>
+    )
+
     return (
         <Dropdown
             className={classNames(cls.AvatarDropdown, {}, [className])}
@@ -48,7 +55,7 @@ export const AvatarDropdown = memo((props: AvatarDropdownProps) => {
                     onClick: onLogout,
                 },
             ]}
-            trigger={<Avatar size={30} src={authData.avatar} />}
+            trigger={trigger}
         />
     );
 })
