@@ -23,7 +23,7 @@ const articleArr = {
     "id": "1",
     "title": "Javascript news",
     "subtitle": "Что нового в JS за 2022 год?",
-    "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+    "img": "https://1.bp.blogspot.com/-TGQt5uRcAkg/XuMIJoAhwnI/AAAAAAAAA38/FaJQpUUDsGEYR1zBK1wqLWUA9DTYp5CiQCPcBGAYYCw/s587/js.png",
     "views": 1022,
     "createdAt": "26.02.2022",
     "user": {
