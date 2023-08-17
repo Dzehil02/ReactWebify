@@ -684,6 +684,15 @@
         "MANAGER"
       ],
       "avatar": "https://static.baza.farpost.ru/v/1675754411371_bulletin.jpg"
+    },
+    {
+      "id": "4",
+      "username": "test",
+      "password": "test",
+      "roles": [
+        "USER"
+      ],
+      "avatar": "https://www.amongusavatarcreator.com/assets/img/main/icon.png"
     }
   ],
   "profile": [
@@ -719,6 +728,17 @@
       "city": "Paris",
       "username": "manager",
       "avatar": "https://static.baza.farpost.ru/v/1675754411371_bulletin.jpg"
+    },
+    {
+      "id": "4",
+      "first": "Tester",
+      "lastname": "QA",
+      "age": 12,
+      "currency": "USD",
+      "country": "France",
+      "city": "Lion",
+      "username": "test",
+      "avatar": "https://www.amongusavatarcreator.com/assets/img/main/icon.png"
     }
   ],
   "article-ratings": [
