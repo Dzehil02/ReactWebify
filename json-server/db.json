@@ -1,21 +1,5 @@
 {
-  "posts": [
-    {
-      "id": "1",
-      "title": "json-server",
-      "userId": "typicode"
-    },
-    {
-      "id": "2",
-      "title": "json-server 2",
-      "userId": "typicode 2"
-    },
-    {
-      "id": "3",
-      "title": "json-server 3",
-      "userId": "typicode 3"
-    }
-  ],
+  "posts": [],
   "notifications": [
     {
       "id": "1",

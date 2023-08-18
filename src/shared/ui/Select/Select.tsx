@@ -23,7 +23,8 @@ export const Select = <T extends string>(props: SelectProps<T>) => {
         options,
         value,
         onChange,
-        readonly
+        readonly,
+        ...otherProps
     } = props
 
     const onChangeHandler = (e: ChangeEvent<HTMLSelectElement>) => {
@@ -52,6 +53,7 @@ export const Select = <T extends string>(props: SelectProps<T>) => {
                 className={cls.select}
                 value={value}
                 onChange={onChangeHandler}
+                {...otherProps}
             >
                 {optionsList}
             </select>

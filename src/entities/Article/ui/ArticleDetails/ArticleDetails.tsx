@@ -94,7 +94,7 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
                         errorFallback={<NotFoundImg width={200} height={200} />}
                     />
                 </HStack>
-                <VStack gap='4' max>
+                <VStack gap='4' max data-testid='ArticleDetails.Info' >
                     <Text 
                         className={cls.title}
                         title={article?.title}

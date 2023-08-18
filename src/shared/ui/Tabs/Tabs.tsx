@@ -16,7 +16,7 @@ interface TabsProps {
 }
 
 export const Tabs = memo((props: TabsProps) => {
-    const {className, tabs, onTabClick, value} = props;
+    const {className, tabs, onTabClick, value, ...otherProps} = props;
 
     const clickHandle = useCallback((tab: TabItem) => () => {
         onTabClick(tab)
@@ -26,10 +26,12 @@ export const Tabs = memo((props: TabsProps) => {
         <div className={classNames(cls.Tabs, {}, [className])}>
             {tabs.map(tab => (
                 <Card 
+                    data-testid={`Card.${tab.value}`}
                     key={tab.value} 
                     className={cls.tab}
                     theme={tab.value === value ? CardTheme.NORMAL : CardTheme.OUTLINED}
                     onClick={clickHandle(tab)}
+                    {...otherProps}
                 >
                     {tab.content}
                 </Card>

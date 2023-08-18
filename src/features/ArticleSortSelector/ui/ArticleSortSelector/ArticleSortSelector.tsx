@@ -49,12 +49,14 @@ export const ArticleSortSelector = (props: ArticleSortSelectorProps) => {
     return (
         <div className={classNames(cls.ArticleSortSelector, {}, [className])}>
             <Select
+                data-testid='ArticleSortSelect'
                 options={sortFieldOptions}
                 label={t('Sorted by')}
                 value={sort}
                 onChange={onChangeSort}
             />
             <Select
+                data-testid='ArticleOrderSelect'
                 options={orderOptions}
                 label={t('by')}
                 value={order}
