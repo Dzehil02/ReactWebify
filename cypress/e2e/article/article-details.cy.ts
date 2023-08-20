@@ -37,4 +37,12 @@ describe('Пользователь открывает статью', () => {
         cy.setRating(4, 'feedback');
         cy.get('[data-selected=true]').should('have.length', 4);
     });
+
+    it('и оценивает статью (пример со стабом на фикстурах)', () => {
+        cy.intercept('GET', '**/articles/*', {fixture: 'article-details.json'});
+        cy.getByTestId('ArticleDetails.Info');
+        cy.getByTestId('RatingCard').scrollIntoView();
+        cy.setRating(4, 'feedback');
+        cy.get('[data-selected=true]').should('have.length', 4);
+    });
 });

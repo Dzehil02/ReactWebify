@@ -5,9 +5,15 @@ describe('User заходит на страницу со списком стат
         });
     });
 
-    it('и статьи подгружаются', () => {
+    it('статьи подгружаются', () => {
         cy.getByTestId('ArticleList').should('exist');
         cy.getByTestId('ArticleListItem').should('have.length.greaterThan', 3);
+    })
+
+    it('статьи подгружаются на стабах (фикстурах)', () => {
+        cy.intercept('GET', '**/articles?*', {fixture: 'articles.json'});
+        cy.getByTestId('ArticleList').should('exist');
+        cy.getByTestId('ArticleListItem').should('have.length.greaterThan', 2);
     })
 
     it('поиск статьи по заголовку', () => {
@@ -26,5 +32,9 @@ describe('User заходит на страницу со списком стат
     it('сортировка статей по типу "наука"', () => {
         cy.getByTestId('Card.SCIENCE').click();
         cy.getByTestId('ArticleListItem').should('have.length.at.least', 2);
+    })
+
+    it.skip('Пропуск теста (пример)', () => {
+        cy.getByTestId('NotSkipTestPlease').should('exist');
     })
 })
