@@ -1,4 +1,4 @@
-import {selectByTestId} from '../../helpers/selectByTestId';
+import { selectByTestId } from '../../helpers/selectByTestId';
 
 describe('Routing', () => {
     describe('Пользователь НЕ авторизован', () => {
@@ -19,9 +19,8 @@ describe('Routing', () => {
     describe('Пользователь авторизован', () => {
         beforeEach(() => {
             cy.login();
-        })
+        });
         it('Перейти на страницу профиля', () => {
-
             cy.visit('/profile/4');
             cy.get(selectByTestId('ProfilePage')).should('exist');
         });
@@ -30,5 +29,4 @@ describe('Routing', () => {
             cy.get(selectByTestId('ArticlesPage')).should('exist');
         });
     });
-
-})
+});

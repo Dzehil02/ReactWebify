@@ -16,11 +16,11 @@ interface RateProfileArg {
 const profileRatingApi = rtkApi.injectEndpoints({
     endpoints: (build) => ({
         getProfileRating: build.query<Rating[], GetProfileArg>({
-            query: ({userId, profileId}) => ({
+            query: ({ userId, profileId }) => ({
                 url: '/profile-ratings',
                 params: {
                     userId,
-                    profileId
+                    profileId,
                 },
             }),
         }),

@@ -1,7 +1,7 @@
-import axios from "axios";
-import { loginByUsername } from "./loginByUsername";
-import { userActions } from "@/entities/User";
-import { TestAsyncThunk } from "@/shared/lib/tests/TestAsyncThunk/TestAsyncThunk";
+import axios from 'axios';
+import { loginByUsername } from './loginByUsername';
+import { userActions } from '@/entities/User';
+import { TestAsyncThunk } from '@/shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
 
 jest.mock('axios');
 
@@ -23,7 +23,7 @@ describe('loginByUsername.test', () => {
     //     mockedAxios.post.mockReturnValue(Promise.resolve({data: userValue}));
     //     const action = loginByUsername({username: 'Axeniy', password: '321'});
     //     const result = await action(dispatch, getState, undefined);
-        
+
     //     expect(dispatch).toHaveBeenCalledWith(userActions.setAuthData(userValue));
     //     expect(dispatch).toHaveBeenCalledTimes(3);
     //     expect(mockedAxios.post).toHaveBeenCalled();
@@ -45,13 +45,18 @@ describe('loginByUsername.test', () => {
     //// Second version: with TestAsyncThunk instance
 
     test('success login', async () => {
-        const userValue = {username: 'Axe', id: '1'};
-        
+        const userValue = { username: 'Axe', id: '1' };
+
         const thunk = new TestAsyncThunk(loginByUsername);
-        thunk.api.post.mockReturnValue(Promise.resolve({data: userValue}));
-        const result = await thunk.callThunk({username: 'Axeniy', password: '321'})
-        
-        expect(thunk.dispatch).toHaveBeenCalledWith(userActions.setAuthData(userValue));
+        thunk.api.post.mockReturnValue(Promise.resolve({ data: userValue }));
+        const result = await thunk.callThunk({
+            username: 'Axeniy',
+            password: '321',
+        });
+
+        expect(thunk.dispatch).toHaveBeenCalledWith(
+            userActions.setAuthData(userValue),
+        );
         expect(thunk.dispatch).toHaveBeenCalledTimes(3);
         expect(thunk.api.post).toHaveBeenCalled();
         expect(result.meta.requestStatus).toBe('fulfilled');
@@ -59,10 +64,12 @@ describe('loginByUsername.test', () => {
     });
 
     test('error login', async () => {
-        
         const thunk = new TestAsyncThunk(loginByUsername);
-        thunk.api.post.mockReturnValue(Promise.resolve({status: 403}));
-        const result = await thunk.callThunk({username: 'Axeniy', password: '321'})
+        thunk.api.post.mockReturnValue(Promise.resolve({ status: 403 }));
+        const result = await thunk.callThunk({
+            username: 'Axeniy',
+            password: '321',
+        });
 
         expect(thunk.dispatch).toHaveBeenCalledTimes(2);
         expect(thunk.api.post).toHaveBeenCalled();

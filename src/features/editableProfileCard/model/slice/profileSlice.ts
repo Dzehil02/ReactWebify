@@ -1,4 +1,4 @@
-import { PayloadAction, createSlice } from '@reduxjs/toolkit'
+import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 import { fetchProfileData } from '../services/fetchProfileData/fetchProfileData';
 import { updateProfileData } from '../services/updateProfileData/updateProfileData';
 import { ProfileSchema } from '../types/editableProfileCardSchema';
@@ -9,7 +9,7 @@ const initialState: ProfileSchema = {
     isLoading: false,
     error: undefined,
     data: undefined,
-}
+};
 
 export const profileSlice = createSlice({
     name: 'profile',
@@ -43,13 +43,14 @@ export const profileSlice = createSlice({
                     state.isLoading = false;
                     state.data = action.payload;
                     state.form = action.payload;
-                })
+                },
+            )
 
             .addCase(fetchProfileData.rejected, (state, action) => {
                 state.isLoading = false;
                 state.error = action.payload;
             })
-            
+
             .addCase(updateProfileData.pending, (state) => {
                 state.validateErrors = undefined;
                 state.isLoading = true;
@@ -63,14 +64,15 @@ export const profileSlice = createSlice({
                     state.form = action.payload;
                     state.readonly = true;
                     state.validateErrors = undefined;
-                })
+                },
+            )
 
             .addCase(updateProfileData.rejected, (state, action) => {
                 state.isLoading = false;
                 state.validateErrors = action.payload;
-            })
+            });
     },
-})
+});
 
 // Action creators are generated for each case reducer function
 export const { actions: profileActions } = profileSlice;

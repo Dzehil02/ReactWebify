@@ -14,7 +14,7 @@ export default meta;
 type Story = StoryObj<typeof NotificationList>;
 
 export const Light: Story = {
-    args: {}
+    args: {},
 };
 Light.decorators = [StoreDecorator({})];
 Light.parameters = {
@@ -41,5 +41,5 @@ Light.parameters = {
                 },
             ],
         },
-    ]
-}
+    ],
+};

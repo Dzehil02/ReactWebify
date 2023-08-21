@@ -1,5 +1,5 @@
-import { FC } from 'react'
-import { classNames } from '@/shared/lib/classNames/classNames'
+import { FC } from 'react';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import { VStack } from '@/shared/ui/Stack';
 import { EditableProfileCard } from '@/features/editableProfileCard';
 import { useParams } from 'react-router-dom';
@@ -15,28 +15,27 @@ interface ProfilePageProps {
 }
 
 const ProfilePage: FC<ProfilePageProps> = ({ className }) => {
-    const {t} = useTranslation('profile')
-    const {id} = useParams<{id: string}>();
+    const { t } = useTranslation('profile');
+    const { id } = useParams<{ id: string }>();
     const authData = useSelector(getUserAuthData);
     const profileData = useSelector(getProfileData);
     const canRate = authData?.id !== profileData?.id;
 
     if (!id && __PROJECT__ !== 'storybook') {
-        return (
-            <Page className={className}>
-                {t('ProfileNotFound')}
-            </Page>
-        )
+        return <Page className={className}>{t('ProfileNotFound')}</Page>;
     }
-    
+
     return (
-        <Page data-testid='ProfilePage' className={classNames('', {}, [className])}>
-            <VStack max gap='16'>
+        <Page
+            data-testid="ProfilePage"
+            className={classNames('', {}, [className])}
+        >
+            <VStack max gap="16">
                 <EditableProfileCard id={id} />
-                {canRate && (<ProfileRating profileId={id} />)}
+                {canRate && <ProfileRating profileId={id} />}
             </VStack>
         </Page>
-    )
-}
+    );
+};
 
 export default ProfilePage;

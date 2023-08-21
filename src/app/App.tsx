@@ -17,10 +17,10 @@ const App = () => {
     return (
         <div className={classNames('app', {}, [])}>
             <Suspense fallback="">
-                <Navbar/>
-                <div className='content-page'>
-                    <Sidebar/>
-                    {inited && <AppRouter/>}
+                <Navbar />
+                <div className="content-page">
+                    <Sidebar />
+                    {inited && <AppRouter />}
                 </div>
             </Suspense>
         </div>

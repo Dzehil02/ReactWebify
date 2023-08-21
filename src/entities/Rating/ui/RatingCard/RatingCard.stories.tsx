@@ -8,18 +8,14 @@ const meta: Meta<typeof RatingCard> = {
     title: 'entities/Rating/RatingCard',
     component: RatingCard,
     tags: ['autodocs'],
-    argTypes: {
-        
-    },
+    argTypes: {},
 };
 
 export default meta;
 type Story = StoryObj<typeof RatingCard>;
 
 export const Light: Story = {
-    args: {
-
-    }
+    args: {},
 };
 
 export const Dark: Story = {
@@ -27,7 +23,7 @@ export const Dark: Story = {
         hasFeedback: true,
         feedbackTitle: 'Feedback Title',
         rate: 3,
-        title: 'Title'
-    }
+        title: 'Title',
+    },
 };
 Dark.decorators = [ThemeDecorator(Theme.DARK)];

@@ -19,15 +19,15 @@ const article: Article = {
     img: '',
     createdAt: '26.03.2023',
     views: 12,
-    user: {id: '1', username: 'Petr'},
+    user: { id: '1', username: 'Petr' },
     blocks: [],
     type: [ArticleType.SCIENCE, ArticleType.IT],
     title: 'TITLE',
-    subtitle: 'subtitle subtitle'
-}
+    subtitle: 'subtitle subtitle',
+};
 
-export const Light: Story = {args: {}};
-Light.decorators = [StoreDecorator({})]
+export const Light: Story = { args: {} };
+Light.decorators = [StoreDecorator({})];
 Light.parameters = {
     mockData: [
         {
@@ -35,10 +35,10 @@ Light.parameters = {
             method: 'GET',
             status: 200,
             response: [
-                {...article, id: '1'},
-                {...article, id: '2'},
-                {...article, id: '3'},
-                {...article, id: '4'},
+                { ...article, id: '1' },
+                { ...article, id: '2' },
+                { ...article, id: '3' },
+                { ...article, id: '4' },
             ],
         },
     ],

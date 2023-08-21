@@ -8,23 +8,17 @@ const meta: Meta<typeof Popover> = {
     title: 'shared/Popus/Popover',
     component: Popover,
     tags: ['autodocs'],
-    argTypes: {
-        
-    },
+    argTypes: {},
 };
 
 export default meta;
 type Story = StoryObj<typeof Popover>;
 
 export const Light: Story = {
-    args: {
-
-    }
+    args: {},
 };
 
 export const Dark: Story = {
-    args: {
-            
-    }
+    args: {},
 };
 Dark.decorators = [ThemeDecorator(Theme.DARK)];

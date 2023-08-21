@@ -9,7 +9,7 @@ const meta: Meta<typeof Input> = {
     component: Input,
     tags: ['autodocs'],
     argTypes: {
-    // backgroundColor: { control: 'color' },
+        // backgroundColor: { control: 'color' },
     },
 };
 
@@ -19,31 +19,31 @@ type Story = StoryObj<typeof Input>;
 export const Primary: Story = {
     args: {
         placeholder: 'Enter text',
-        value: 'Text Text Text'
+        value: 'Text Text Text',
     },
 };
 
 export const Secondary: Story = {
     args: {
         placeholder: 'Enter text',
-        value: 'Text Text Text'
+        value: 'Text Text Text',
     },
 };
-Secondary.decorators=[ThemeDecorator(Theme.DARK)]
+Secondary.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const Third: Story = {
     args: {
         placeholder: 'Enter text',
-        value: 'Text Text Text'
+        value: 'Text Text Text',
     },
 };
-Third.decorators=[ThemeDecorator(Theme.BLUE)]
+Third.decorators = [ThemeDecorator(Theme.BLUE)];
 
 export const PrimaryReadonly: Story = {
     args: {
         placeholder: 'Enter text',
         value: 'Text Text Text',
-        readonly: true
+        readonly: true,
     },
 };
 
@@ -51,16 +51,16 @@ export const SecondaryReadonly: Story = {
     args: {
         placeholder: 'Enter text',
         value: 'Text Text Text',
-        readonly: true
+        readonly: true,
     },
 };
-SecondaryReadonly.decorators=[ThemeDecorator(Theme.DARK)]
+SecondaryReadonly.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const ThirdReadonly: Story = {
     args: {
         placeholder: 'Enter text',
         value: 'Text Text Text',
-        readonly: true
+        readonly: true,
     },
 };
-ThirdReadonly.decorators=[ThemeDecorator(Theme.BLUE)]
+ThirdReadonly.decorators = [ThemeDecorator(Theme.BLUE)];

@@ -1,23 +1,27 @@
 import {
     PayloadAction,
     createEntityAdapter,
-    createSlice
-} from '@reduxjs/toolkit'
+    createSlice,
+} from '@reduxjs/toolkit';
 import { StateSchema } from '@/app/providers/StoreProvider';
-import { Article, ArticleView, ArticleType, ArticleSortField } from '@/entities/Article';
+import {
+    Article,
+    ArticleView,
+    ArticleType,
+    ArticleSortField,
+} from '@/entities/Article';
 import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';
 import { ArticlesPageSchema } from '../types/articlesPageSchema';
 import { ARTICLES_VIEW_LOCALSTORAGE_KEY } from '@/shared/const/localstorage';
 import { SortOrder } from '@/shared/types/sort';
 
-
 const articlesAdapter = createEntityAdapter<Article>({
     selectId: (article) => article.id,
 });
 
-export const getArticles = articlesAdapter.getSelectors<StateSchema> (
+export const getArticles = articlesAdapter.getSelectors<StateSchema>(
     (state) => state.articlesPage || articlesAdapter.getInitialState(),
-)
+);
 
 const articlesPageSlice = createSlice({
     name: 'articlesPageSlice',
@@ -39,7 +43,10 @@ const articlesPageSlice = createSlice({
     reducers: {
         setView: (state, action: PayloadAction<ArticleView>) => {
             state.view = action.payload;
-            localStorage.setItem(ARTICLES_VIEW_LOCALSTORAGE_KEY, action.payload);
+            localStorage.setItem(
+                ARTICLES_VIEW_LOCALSTORAGE_KEY,
+                action.payload,
+            );
         },
         setPage: (state, action: PayloadAction<number>) => {
             state.page = action.payload;
@@ -57,7 +64,9 @@ const articlesPageSlice = createSlice({
             state.search = action.payload;
         },
         initState: (state) => {
-            const view = localStorage.getItem(ARTICLES_VIEW_LOCALSTORAGE_KEY) as ArticleView;
+            const view = localStorage.getItem(
+                ARTICLES_VIEW_LOCALSTORAGE_KEY,
+            ) as ArticleView;
             state.view = view;
             state.limit = view === ArticleView.BIG ? 3 : 8;
             state._inited = true;
@@ -70,32 +79,27 @@ const articlesPageSlice = createSlice({
                 state.isLoading = true;
 
                 if (action.meta.arg.replace) {
-                    articlesAdapter.removeAll(state)
+                    articlesAdapter.removeAll(state);
                 }
             })
 
-            .addCase(
-                fetchArticlesList.fulfilled,
-                (state, action) => {
-                    state.isLoading = false;
-                    state.hasMore = action.payload.length >= state.limit;
+            .addCase(fetchArticlesList.fulfilled, (state, action) => {
+                state.isLoading = false;
+                state.hasMore = action.payload.length >= state.limit;
 
-                    if (action.meta.arg.replace) {
-                        articlesAdapter.setAll(state, action.payload)
-                    } else {
-                        articlesAdapter.addMany(state, action.payload);
-                    }
-
-                })
+                if (action.meta.arg.replace) {
+                    articlesAdapter.setAll(state, action.payload);
+                } else {
+                    articlesAdapter.addMany(state, action.payload);
+                }
+            })
 
             .addCase(fetchArticlesList.rejected, (state, action) => {
                 state.isLoading = false;
                 state.error = action.payload;
-            })
+            });
     },
 });
 
-export const {
-    reducer: articlesPageReducer,
-    actions: articlePageActions,
-} = articlesPageSlice;
+export const { reducer: articlesPageReducer, actions: articlePageActions } =
+    articlesPageSlice;

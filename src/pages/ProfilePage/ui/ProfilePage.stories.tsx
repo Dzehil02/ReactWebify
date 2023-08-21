@@ -4,7 +4,7 @@ import ProfilePage from './ProfilePage';
 import { Theme } from '@/shared/const/theme';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
-import avatar from '@/shared/assets/tests/storybook.jpg'
+import avatar from '@/shared/assets/tests/storybook.jpg';
 import { Country } from '@/entities/Country';
 import { Currency } from '@/entities/Currency';
 
@@ -21,59 +21,65 @@ export default meta;
 type Story = StoryObj<typeof ProfilePage>;
 
 export const Light: Story = {
-    args: {
-        
-    }
+    args: {},
 };
-Light.decorators = [StoreDecorator({
-    user: {
-        authData: {
-            id: '1'
-        }
-    },
-    profile: {
-        form: {
-            first: "Pit",
-            lastname: "Bred",
-            age: 55,
-            username: "BredPit",
-            country: Country.Armenia,
-            city: "Florida",
-            currency: Currency.USD,
-            avatar: avatar,
-            id: '1'
-        }
-    }
-})];
+Light.decorators = [
+    StoreDecorator({
+        user: {
+            authData: {
+                id: '1',
+            },
+        },
+        profile: {
+            form: {
+                first: 'Pit',
+                lastname: 'Bred',
+                age: 55,
+                username: 'BredPit',
+                country: Country.Armenia,
+                city: 'Florida',
+                currency: Currency.USD,
+                avatar: avatar,
+                id: '1',
+            },
+        },
+    }),
+];
 
 export const Dark: Story = {};
-Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({
-    profile: {
-        form: {
-            first: "Pit",
-            lastname: "Bred",
-            age: 55,
-            username: "BredPit",
-            country: Country.Armenia,
-            city: "Florida",
-            currency: Currency.USD,
-            avatar: avatar,
-        }
-    }
-})];
+Dark.decorators = [
+    ThemeDecorator(Theme.DARK),
+    StoreDecorator({
+        profile: {
+            form: {
+                first: 'Pit',
+                lastname: 'Bred',
+                age: 55,
+                username: 'BredPit',
+                country: Country.Armenia,
+                city: 'Florida',
+                currency: Currency.USD,
+                avatar: avatar,
+            },
+        },
+    }),
+];
 
 export const Blue: Story = {};
-Blue.decorators = [ThemeDecorator(Theme.BLUE), StoreDecorator({
-    profile: {
-        form: {
-            first: "Pit",
-            lastname: "Bred",
-            age: 55,
-            username: "BredPit",
-            country: Country.Armenia,
-            city: "Florida",
-            currency: Currency.USD,
-            avatar: avatar
-        }
-    }
-})];
+Blue.decorators = [
+    ThemeDecorator(Theme.BLUE),
+    StoreDecorator({
+        profile: {
+            form: {
+                first: 'Pit',
+                lastname: 'Bred',
+                age: 55,
+                username: 'BredPit',
+                country: Country.Armenia,
+                city: 'Florida',
+                currency: Currency.USD,
+                avatar: avatar,
+            },
+        },
+    }),
+];

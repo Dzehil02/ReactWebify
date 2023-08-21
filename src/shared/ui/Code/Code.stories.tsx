@@ -8,9 +8,7 @@ const meta: Meta<typeof Code> = {
     title: 'shared/Code',
     component: Code,
     tags: ['autodocs'],
-    argTypes: {
-        
-    },
+    argTypes: {},
 };
 
 export default meta;
@@ -40,8 +38,8 @@ export const Light: Story = {
                 text: 
             }
         };
-        ` 
-    }
+        `,
+    },
 };
 
 export const Dark: Story = {
@@ -68,8 +66,8 @@ export const Dark: Story = {
                 text: 
             }
         };
-        `  
-    }
+        `,
+    },
 };
 Dark.decorators = [ThemeDecorator(Theme.DARK)];
 
@@ -97,7 +95,7 @@ export const Blue: Story = {
                 text: 
             }
         };
-        `  
-    }
+        `,
+    },
 };
 Blue.decorators = [ThemeDecorator(Theme.BLUE)];

@@ -2,7 +2,7 @@ import { memo, useCallback } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './Code.module.scss';
 import { Button, ButtonTheme } from '../Button/Button';
-import CopyIcon from '@/shared/assets/icons/copy.svg'
+import CopyIcon from '@/shared/assets/icons/copy.svg';
 
 interface CodeProps {
     className?: string;
@@ -10,11 +10,11 @@ interface CodeProps {
 }
 
 export const Code = memo((props: CodeProps) => {
-    const {className, text} = props;
+    const { className, text } = props;
 
     const onCopy = useCallback(() => {
         navigator.clipboard.writeText(text);
-    }, [text])
+    }, [text]);
 
     return (
         <pre className={classNames(cls.Code, {}, [className])}>
@@ -23,11 +23,9 @@ export const Code = memo((props: CodeProps) => {
                 theme={ButtonTheme.CLEAR}
                 onClick={onCopy}
             >
-                <CopyIcon/>
+                <CopyIcon />
             </Button>
-            <code>
-                {text}
-            </code>
+            <code>{text}</code>
         </pre>
     );
-})
+});

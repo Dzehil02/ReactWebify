@@ -9,7 +9,7 @@ const meta: Meta<typeof LoginForm> = {
     component: LoginForm,
     tags: ['autodocs'],
     argTypes: {
-    // backgroundColor: { control: 'color' },
+        // backgroundColor: { control: 'color' },
     },
 };
 
@@ -17,46 +17,52 @@ export default meta;
 type Story = StoryObj<typeof LoginForm>;
 
 export const Primary: Story = {
-    args: {
-
-    },
+    args: {},
 };
-Primary.decorators = [StoreDecorator({
-    loginForm: {username: 'root', password: 'root'}
-})]
+Primary.decorators = [
+    StoreDecorator({
+        loginForm: { username: 'root', password: 'root' },
+    }),
+];
 
 export const Secondary: Story = {
-    args: {
-
-    },
+    args: {},
 };
-Secondary.decorators = [StoreDecorator({
-    loginForm: {username: 'root', password: 'root'}
-}), ThemeDecorator(Theme.DARK)]
+Secondary.decorators = [
+    StoreDecorator({
+        loginForm: { username: 'root', password: 'root' },
+    }),
+    ThemeDecorator(Theme.DARK),
+];
 
 export const Third: Story = {
-    args: {
-
-    },
+    args: {},
 };
-Third.decorators = [StoreDecorator({
-    loginForm: {username: 'root', password: 'root'}
-}), ThemeDecorator(Theme.BLUE)]
+Third.decorators = [
+    StoreDecorator({
+        loginForm: { username: 'root', password: 'root' },
+    }),
+    ThemeDecorator(Theme.BLUE),
+];
 
 export const Error: Story = {
-    args: {
-
-    },
+    args: {},
 };
-Error.decorators = [StoreDecorator({
-    loginForm: {username: 'root', password: 'root', error: 'TEXT ERROR TEXT'}
-})]
+Error.decorators = [
+    StoreDecorator({
+        loginForm: {
+            username: 'root',
+            password: 'root',
+            error: 'TEXT ERROR TEXT',
+        },
+    }),
+];
 
 export const IsLoading: Story = {
-    args: {
-
-    },
+    args: {},
 };
-IsLoading.decorators = [StoreDecorator({
-    loginForm: {username: 'root', password: 'root', isLoading: true}
-})]
+IsLoading.decorators = [
+    StoreDecorator({
+        loginForm: { username: 'root', password: 'root', isLoading: true },
+    }),
+];

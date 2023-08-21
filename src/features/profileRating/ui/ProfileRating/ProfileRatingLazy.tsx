@@ -9,5 +9,5 @@ export const ProfileRatingAsync = (props: ProfileRatingProps) => {
         <Suspense fallback={<Skeleton width={'100%'} height={120} />}>
             <ProfileRatingLazy {...props} />
         </Suspense>
-    )
-}
+    );
+};

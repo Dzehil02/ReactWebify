@@ -8,30 +8,22 @@ const meta: Meta<typeof ArticleSortSelector> = {
     title: 'entities/Article/ArticleSortSelector',
     component: ArticleSortSelector,
     tags: ['autodocs'],
-    argTypes: {
-        
-    },
+    argTypes: {},
 };
 
 export default meta;
 type Story = StoryObj<typeof ArticleSortSelector>;
 
 export const Light: Story = {
-    args: {
-
-    }
+    args: {},
 };
 
 export const Dark: Story = {
-    args: {
-        
-    }
+    args: {},
 };
 Dark.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const Blue: Story = {
-    args: {
-        
-    }
+    args: {},
 };
 Blue.decorators = [ThemeDecorator(Theme.BLUE)];

@@ -1,46 +1,47 @@
-import { fetchArticleById } from "../services/fetchArticleById/fetchArticleById";
-import { Article } from "../types/article";
-import { ArticleBlockType, ArticleType } from "../consts/consts";
-import { ArticleDetailsSchema } from "../types/articleDetailsSchema";
-import { articleDetailsReducer } from "./articleDetailsSlice";
+import { fetchArticleById } from '../services/fetchArticleById/fetchArticleById';
+import { Article } from '../types/article';
+import { ArticleBlockType, ArticleType } from '../consts/consts';
+import { ArticleDetailsSchema } from '../types/articleDetailsSchema';
+import { articleDetailsReducer } from './articleDetailsSlice';
 
 const article: Article = {
-    id: "1",
-    title: "Javascript news",
-    subtitle: "Что нового в JS за 2022 год?",
-    img: "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+    id: '1',
+    title: 'Javascript news',
+    subtitle: 'Что нового в JS за 2022 год?',
+    img: 'https://teknotower.com/wp-content/uploads/2020/11/js.png',
     views: 1022,
-    createdAt: "26.02.2022",
+    createdAt: '26.02.2022',
     type: [ArticleType.IT],
     user: {
-        id: "1",
-        username: "Entoni",
-        avatar: "https://avatarzo.ru/wp-content/uploads/squid-game-anime.jpg"
+        id: '1',
+        username: 'Entoni',
+        avatar: 'https://avatarzo.ru/wp-content/uploads/squid-game-anime.jpg',
     },
     blocks: [
         {
-            id: "1",
+            id: '1',
             type: ArticleBlockType.TEXT,
-            title: "Заголовок этого блока",
+            title: 'Заголовок этого блока',
             paragraphs: [
-                "Программа, которую по традиции называют «Hello, world!», очень проста. "
-            ]
-        }
-    ]
-}
+                'Программа, которую по традиции называют «Hello, world!», очень проста. ',
+            ],
+        },
+    ],
+};
 
 describe('articleDetailsSlice.test', () => {
-    
     test('test fetchArticleById pending', () => {
         const state: DeepPartial<ArticleDetailsSchema> = {
             isLoading: false,
-            error: undefined
+            error: undefined,
         };
 
-        expect(articleDetailsReducer(
-            state as ArticleDetailsSchema,
-            fetchArticleById.pending
-        )).toEqual({
+        expect(
+            articleDetailsReducer(
+                state as ArticleDetailsSchema,
+                fetchArticleById.pending,
+            ),
+        ).toEqual({
             isLoading: true,
             error: undefined,
         });
@@ -49,15 +50,17 @@ describe('articleDetailsSlice.test', () => {
     test('test fetchArticleById fulfilled', () => {
         const state: DeepPartial<ArticleDetailsSchema> = {
             isLoading: true,
-            data: article
+            data: article,
         };
 
-        expect(articleDetailsReducer(
-            state as ArticleDetailsSchema,
-            fetchArticleById.fulfilled(article, '', '')
-        )).toEqual({
+        expect(
+            articleDetailsReducer(
+                state as ArticleDetailsSchema,
+                fetchArticleById.fulfilled(article, '', ''),
+            ),
+        ).toEqual({
             isLoading: false,
-            data: article
+            data: article,
         });
     });
 
@@ -66,13 +69,14 @@ describe('articleDetailsSlice.test', () => {
             isLoading: true,
         };
 
-        expect(articleDetailsReducer(
-            state as ArticleDetailsSchema,
-            fetchArticleById.rejected
-        )).toEqual({
+        expect(
+            articleDetailsReducer(
+                state as ArticleDetailsSchema,
+                fetchArticleById.rejected,
+            ),
+        ).toEqual({
             isLoading: false,
-            error: undefined
+            error: undefined,
         });
     });
-
-})
+});

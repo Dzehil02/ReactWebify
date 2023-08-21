@@ -1,27 +1,27 @@
-import type { StorybookConfig } from "@storybook/react-webpack5";
+import type { StorybookConfig } from '@storybook/react-webpack5';
 const config: StorybookConfig = {
-    stories: ["../../src/**/*.stories.@(js|jsx|ts|tsx)"],
+    stories: ['../../src/**/*.stories.@(js|jsx|ts|tsx)'],
     addons: [
-        "@storybook/addon-links",
+        '@storybook/addon-links',
         {
             name: '@storybook/addon-essentials',
             options: {
                 backgrounds: false,
             },
         },
-        "@storybook/addon-interactions",
-        "storybook-addon-mock",
-        "storybook-addon-themes",
+        '@storybook/addon-interactions',
+        'storybook-addon-mock',
+        'storybook-addon-themes',
     ],
     framework: {
-        name: "@storybook/react-webpack5",
+        name: '@storybook/react-webpack5',
         options: {},
     },
     docs: {
-        autodocs: "tag",
+        autodocs: 'tag',
     },
     features: {
-        storyStoreV7: false
-    }
+        storyStoreV7: false,
+    },
 };
 export default config;

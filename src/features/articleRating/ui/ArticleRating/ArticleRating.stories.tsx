@@ -15,18 +15,18 @@ type Story = StoryObj<typeof ArticleRating>;
 
 export const Light: Story = {
     args: {
-        articleId: '1'
-    }
+        articleId: '1',
+    },
 };
 Light.decorators = [
     StoreDecorator({
         user: {
             authData: {
-                id: '1'
-            }
-        }
-    })
-]
+                id: '1',
+            },
+        },
+    }),
+];
 Light.parameters = {
     mockData: [
         {
@@ -36,26 +36,26 @@ Light.parameters = {
             response: [
                 {
                     rate: 2,
-                }
+                },
             ],
         },
     ],
-}
+};
 
 export const WithoutRate: Story = {
     args: {
-        articleId: '1'
-    }
+        articleId: '1',
+    },
 };
 WithoutRate.decorators = [
     StoreDecorator({
         user: {
             authData: {
-                id: '1'
-            }
-        }
-    })
-]
+                id: '1',
+            },
+        },
+    }),
+];
 WithoutRate.parameters = {
     mockData: [
         {
@@ -65,4 +65,4 @@ WithoutRate.parameters = {
             response: [],
         },
     ],
-}
+};

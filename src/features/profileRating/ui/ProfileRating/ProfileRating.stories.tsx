@@ -7,9 +7,7 @@ const meta: Meta<typeof ProfileRating> = {
     title: 'features/ProfileRating',
     component: ProfileRating,
     tags: ['autodocs'],
-    argTypes: {
-
-    },
+    argTypes: {},
 };
 
 export default meta;
@@ -17,18 +15,18 @@ type Story = StoryObj<typeof ProfileRating>;
 
 export const Light: Story = {
     args: {
-        profileId: '1'
-    }
+        profileId: '1',
+    },
 };
 Light.decorators = [
     StoreDecorator({
         user: {
             authData: {
-                id: '1'
-            }
-        }
-    })
-]
+                id: '1',
+            },
+        },
+    }),
+];
 Light.parameters = {
     mockData: [
         {
@@ -38,26 +36,26 @@ Light.parameters = {
             response: [
                 {
                     rate: 4,
-                }
+                },
             ],
         },
     ],
-}
+};
 
 export const WithoutRate: Story = {
     args: {
-        profileId: '1'
-    }
+        profileId: '1',
+    },
 };
 WithoutRate.decorators = [
     StoreDecorator({
         user: {
             authData: {
-                id: '1'
-            }
-        }
-    })
-]
+                id: '1',
+            },
+        },
+    }),
+];
 WithoutRate.parameters = {
     mockData: [
         {
@@ -67,4 +65,4 @@ WithoutRate.parameters = {
             response: [],
         },
     ],
-}
+};

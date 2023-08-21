@@ -9,7 +9,7 @@ const meta: Meta<typeof Text> = {
     component: Text,
     tags: ['autodocs'],
     argTypes: {
-    // backgroundColor: { control: 'color' },
+        // backgroundColor: { control: 'color' },
     },
 };
 
@@ -19,7 +19,7 @@ type Story = StoryObj<typeof Text>;
 export const Primary: Story = {
     args: {
         title: 'Title Title Title',
-        text: 'Text Text Text'
+        text: 'Text Text Text',
     },
 };
 
@@ -46,46 +46,46 @@ export const OnlyText: Story = {
 export const PrimaryDark: Story = {
     args: {
         title: 'Title Title Title',
-        text: 'Text Text Text'
+        text: 'Text Text Text',
     },
 };
-PrimaryDark.decorators = [ThemeDecorator(Theme.DARK)]
+PrimaryDark.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const OnlyTitleDark: Story = {
     args: {
         title: 'Title Title Title',
     },
 };
-OnlyTitleDark.decorators = [ThemeDecorator(Theme.DARK)]
+OnlyTitleDark.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const OnlyTextDark: Story = {
     args: {
         text: 'Text Text Text',
     },
 };
-OnlyTextDark.decorators = [ThemeDecorator(Theme.DARK)]
+OnlyTextDark.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const PrimaryBlue: Story = {
     args: {
         title: 'Title Title Title',
-        text: 'Text Text Text'
+        text: 'Text Text Text',
     },
 };
-PrimaryBlue.decorators = [ThemeDecorator(Theme.BLUE)]
+PrimaryBlue.decorators = [ThemeDecorator(Theme.BLUE)];
 
 export const OnlyTitleBlue: Story = {
     args: {
         title: 'Title Title Title',
     },
 };
-OnlyTitleBlue.decorators = [ThemeDecorator(Theme.BLUE)]
+OnlyTitleBlue.decorators = [ThemeDecorator(Theme.BLUE)];
 
 export const OnlyTextBlue: Story = {
     args: {
         text: 'Text Text Text',
     },
 };
-OnlyTextBlue.decorators = [ThemeDecorator(Theme.BLUE)]
+OnlyTextBlue.decorators = [ThemeDecorator(Theme.BLUE)];
 
 export const SizeS: Story = {
     args: {

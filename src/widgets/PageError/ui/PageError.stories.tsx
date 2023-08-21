@@ -9,7 +9,7 @@ const meta: Meta<typeof PageError> = {
     component: PageError,
     tags: ['autodocs'],
     argTypes: {
-    // backgroundColor: { control: 'color' },
+        // backgroundColor: { control: 'color' },
     },
 };
 

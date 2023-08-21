@@ -8,9 +8,7 @@ const meta: Meta<typeof CommentCard> = {
     title: 'entities/Comment/CommentCard',
     component: CommentCard,
     tags: ['autodocs'],
-    argTypes: {
-        
-    },
+    argTypes: {},
 };
 
 export default meta;
@@ -19,54 +17,51 @@ type Story = StoryObj<typeof CommentCard>;
 export const Light: Story = {
     args: {
         comment: {
-            id: "1",
-            text: "Text commenta 1",
-            user: {id: "1", username: "Kevin"}
-        }
-    }
+            id: '1',
+            text: 'Text commenta 1',
+            user: { id: '1', username: 'Kevin' },
+        },
+    },
 };
 
 export const Dark: Story = {
     args: {
         comment: {
-            id: "1",
-            text: "Text commenta 1",
-            user: {id: "1", username: "Kevin"}
-        }
-    }
+            id: '1',
+            text: 'Text commenta 1',
+            user: { id: '1', username: 'Kevin' },
+        },
+    },
 };
 Dark.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const Blue: Story = {
     args: {
         comment: {
-            id: "1",
-            text: "Text commenta 1",
-            user: {id: "1", username: "Kevin"}
-        }
-    }
+            id: '1',
+            text: 'Text commenta 1',
+            user: { id: '1', username: 'Kevin' },
+        },
+    },
 };
 Blue.decorators = [ThemeDecorator(Theme.BLUE)];
 
 export const LoadingLight: Story = {
     args: {
-        isLoading: true
-
-    }
+        isLoading: true,
+    },
 };
 
 export const LoadingDark: Story = {
     args: {
-        isLoading: true
-
-    }
+        isLoading: true,
+    },
 };
 LoadingDark.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const LoadingBlue: Story = {
     args: {
-        isLoading: true
-
-    }
+        isLoading: true,
+    },
 };
 LoadingBlue.decorators = [ThemeDecorator(Theme.BLUE)];

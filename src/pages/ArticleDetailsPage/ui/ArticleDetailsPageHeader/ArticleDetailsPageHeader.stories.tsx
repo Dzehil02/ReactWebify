@@ -9,89 +9,90 @@ const meta: Meta<typeof ArticleDetailsPageHeader> = {
     title: 'pages/ArticleDetailsPage/ArticleDetailsPageHeader',
     component: ArticleDetailsPageHeader,
     tags: ['autodocs'],
-    argTypes: {
-        
-    },
+    argTypes: {},
 };
 
 export default meta;
 type Story = StoryObj<typeof ArticleDetailsPageHeader>;
 
 export const Light: Story = {
-    args: {
-        
-    }
+    args: {},
 };
-Light.decorators=[StoreDecorator({
-    articleDetails: {
-        data: {
-            id: '1',
-            user: {
-                id: '1'
-            }
+Light.decorators = [
+    StoreDecorator({
+        articleDetails: {
+            data: {
+                id: '1',
+                user: {
+                    id: '1',
+                },
+            },
         },
-    },
-    user: {
-        authData: {
-            id: '1'
-        }
-    }
-})]
+        user: {
+            authData: {
+                id: '1',
+            },
+        },
+    }),
+];
 
 export const Dark: Story = {
-    args: {
-            
-    }
+    args: {},
 };
-Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({
-    articleDetails: {
-        data: {
-            id: '1',
-            user: {
-                id: '1'
-            }
+Dark.decorators = [
+    ThemeDecorator(Theme.DARK),
+    StoreDecorator({
+        articleDetails: {
+            data: {
+                id: '1',
+                user: {
+                    id: '1',
+                },
+            },
         },
-    },
-    user: {
-        authData: {
-            id: '1'
-        }
-    }
-})];
+        user: {
+            authData: {
+                id: '1',
+            },
+        },
+    }),
+];
 
 export const Blue: Story = {
-    args: {
-            
-    }
+    args: {},
 };
-Blue.decorators = [ThemeDecorator(Theme.BLUE), StoreDecorator({
-    articleDetails: {
-        data: {
-            id: '1',
-            user: {
-                id: '1'
-            }
+Blue.decorators = [
+    ThemeDecorator(Theme.BLUE),
+    StoreDecorator({
+        articleDetails: {
+            data: {
+                id: '1',
+                user: {
+                    id: '1',
+                },
+            },
         },
-    },
-    user: {
-        authData: {
-            id: '1'
-        }
-    }
-})];
+        user: {
+            authData: {
+                id: '1',
+            },
+        },
+    }),
+];
 
 export const BlueNotAuth: Story = {
-    args: {
-            
-    }
+    args: {},
 };
-BlueNotAuth.decorators = [ThemeDecorator(Theme.BLUE), StoreDecorator({
-    articleDetails: {
-        data: {
-            id: '1',
-            user: {
-                id: '1'
-            }
+BlueNotAuth.decorators = [
+    ThemeDecorator(Theme.BLUE),
+    StoreDecorator({
+        articleDetails: {
+            data: {
+                id: '1',
+                user: {
+                    id: '1',
+                },
+            },
         },
-    }
-})];
+    }),
+];

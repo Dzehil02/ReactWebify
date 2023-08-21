@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import {ListBox} from './ListBox';
+import { ListBox } from './ListBox';
 import { Theme } from '@/shared/const/theme';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
 
@@ -8,12 +8,14 @@ const meta: Meta<typeof ListBox> = {
     title: 'shared/Popus/ListBox',
     component: ListBox,
     tags: ['autodocs'],
-    argTypes: {
-        
-    },
+    argTypes: {},
     decorators: [
-        (Story) => <div style={{padding: 100}}><Story/></div>
-    ]
+        (Story) => (
+            <div style={{ padding: 100 }}>
+                <Story />
+            </div>
+        ),
+    ],
 };
 
 export default meta;
@@ -24,16 +26,20 @@ export const Light: Story = {
         value: 'click me',
         items: [
             {
-                content: 'text text text', value: '123'
+                content: 'text text text',
+                value: '123',
             },
             {
-                content: 'text text text 4', value: '1234', disabled: true
+                content: 'text text text 4',
+                value: '1234',
+                disabled: true,
             },
             {
-                content: 'text text text 5', value: '12345'
+                content: 'text text text 5',
+                value: '12345',
             },
-        ]
-    }
+        ],
+    },
 };
 
 export const Dark: Story = {
@@ -41,16 +47,20 @@ export const Dark: Story = {
         value: 'click me',
         items: [
             {
-                content: 'text text text', value: '123'
+                content: 'text text text',
+                value: '123',
             },
             {
-                content: 'text text text 4', value: '1234', disabled: true
+                content: 'text text text 4',
+                value: '1234',
+                disabled: true,
             },
             {
-                content: 'text text text 5', value: '12345'
+                content: 'text text text 5',
+                value: '12345',
             },
-        ]   
-    }
+        ],
+    },
 };
 Dark.decorators = [ThemeDecorator(Theme.DARK)];
 
@@ -59,16 +69,20 @@ export const Blue: Story = {
         value: 'click me',
         items: [
             {
-                content: 'text text text', value: '123'
+                content: 'text text text',
+                value: '123',
             },
             {
-                content: 'text text text 4', value: '1234', disabled: true
+                content: 'text text text 4',
+                value: '1234',
+                disabled: true,
             },
             {
-                content: 'text text text 5', value: '12345'
+                content: 'text text text 5',
+                value: '12345',
             },
-        ]   
-    }
+        ],
+    },
 };
 Blue.decorators = [ThemeDecorator(Theme.BLUE)];
 
@@ -78,16 +92,19 @@ export const TopLeft: Story = {
         value: 'click me',
         items: [
             {
-                content: 'text text text', value: '123'
+                content: 'text text text',
+                value: '123',
             },
             {
-                content: 'text text text 4', value: '1234'
+                content: 'text text text 4',
+                value: '1234',
             },
             {
-                content: 'text text text 5', value: '12345'
+                content: 'text text text 5',
+                value: '12345',
             },
-        ]
-    }
+        ],
+    },
 };
 
 export const TopRight: Story = {
@@ -96,16 +113,19 @@ export const TopRight: Story = {
         value: 'click me',
         items: [
             {
-                content: 'text text text', value: '123'
+                content: 'text text text',
+                value: '123',
             },
             {
-                content: 'text text text 4', value: '1234'
+                content: 'text text text 4',
+                value: '1234',
             },
             {
-                content: 'text text text 5', value: '12345'
+                content: 'text text text 5',
+                value: '12345',
             },
-        ]
-    }
+        ],
+    },
 };
 
 export const BottomLeft: Story = {
@@ -114,16 +134,19 @@ export const BottomLeft: Story = {
         value: 'click me',
         items: [
             {
-                content: 'text text text', value: '123'
+                content: 'text text text',
+                value: '123',
             },
             {
-                content: 'text text text 4', value: '1234'
+                content: 'text text text 4',
+                value: '1234',
             },
             {
-                content: 'text text text 5', value: '12345'
+                content: 'text text text 5',
+                value: '12345',
             },
-        ]
-    }
+        ],
+    },
 };
 
 export const BottomRight: Story = {
@@ -132,14 +155,17 @@ export const BottomRight: Story = {
         value: 'click me',
         items: [
             {
-                content: 'text text text', value: '123'
+                content: 'text text text',
+                value: '123',
             },
             {
-                content: 'text text text 4', value: '1234'
+                content: 'text text text 4',
+                value: '1234',
             },
             {
-                content: 'text text text 5', value: '12345'
+                content: 'text text text 5',
+                value: '12345',
             },
-        ]
-    }
+        ],
+    },
 };

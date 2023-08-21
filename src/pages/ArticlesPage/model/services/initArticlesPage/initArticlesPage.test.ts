@@ -1,9 +1,8 @@
-import { getQueryParams } from "@/shared/lib/url/addQueryParams/addQueryParams";
+import { getQueryParams } from '@/shared/lib/url/addQueryParams/addQueryParams';
 
-jest.mock('../fetchArticlesList/fetchArticlesList')
+jest.mock('../fetchArticlesList/fetchArticlesList');
 
 describe('initArticlesPage.test', () => {
-
     // test('success', async () => {
     //     const thunk = new TestAsyncThunk(initArticlesPage, {
     //         articlesPage: {
@@ -11,7 +10,7 @@ describe('initArticlesPage.test', () => {
     //             search: 'python'
     //         }
     //     });
-        
+
     //     await thunk.callThunk();
     //     expect(thunk.dispatch).toBeCalledTimes(4);
     //     expect(fetchArticlesList).toBeCalled();
@@ -23,7 +22,7 @@ describe('initArticlesPage.test', () => {
     //             _inited: true,
     //         }
     //     });
-        
+
     //     await thunk.callThunk();
     //     expect(thunk.dispatch).toBeCalledTimes(2);
     //     expect(fetchArticlesList).not.toHaveBeenCalled();
@@ -41,6 +40,5 @@ describe('initArticlesPage.test', () => {
         });
 
         expect(params).toBe('?abc=1&second=2');
-    }); 
-
+    });
 });

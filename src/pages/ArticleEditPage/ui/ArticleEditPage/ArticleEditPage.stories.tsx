@@ -9,31 +9,23 @@ const meta: Meta<typeof ArticleEditPage> = {
     title: 'pages/ArticleEditPage/ArticleEditPage',
     component: ArticleEditPage,
     tags: ['autodocs'],
-    argTypes: {
-        
-    },
+    argTypes: {},
 };
 
 export default meta;
 type Story = StoryObj<typeof ArticleEditPage>;
 
 export const LightNewArticle: Story = {
-    args: {
-
-    }
+    args: {},
 };
 LightNewArticle.decorators = [StoreDecorator({})];
 
 export const DarkNewArticle: Story = {
-    args: {
-            
-    }
+    args: {},
 };
 DarkNewArticle.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({})];
 
 export const BlueNewArticle: Story = {
-    args: {
-            
-    }
+    args: {},
 };
 BlueNewArticle.decorators = [ThemeDecorator(Theme.BLUE), StoreDecorator({})];

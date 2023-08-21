@@ -8,23 +8,17 @@ const meta: Meta<typeof ArticleViewSelector> = {
     title: 'features/ArticleViewSelector',
     component: ArticleViewSelector,
     tags: ['autodocs'],
-    argTypes: {
-        
-    },
+    argTypes: {},
 };
 
 export default meta;
 type Story = StoryObj<typeof ArticleViewSelector>;
 
 export const Light: Story = {
-    args: {
-        
-    }
+    args: {},
 };
 
 export const Dark: Story = {
-    args: {
-            
-    }
+    args: {},
 };
-Dark.decorators = [ThemeDecorator(Theme.DARK)]
+Dark.decorators = [ThemeDecorator(Theme.DARK)];

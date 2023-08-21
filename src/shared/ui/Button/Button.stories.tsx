@@ -9,7 +9,7 @@ const meta: Meta<typeof Button> = {
     component: Button,
     tags: ['autodocs'],
     argTypes: {
-    // backgroundColor: { control: 'color' },
+        // backgroundColor: { control: 'color' },
     },
 };
 
@@ -18,20 +18,20 @@ type Story = StoryObj<typeof Button>;
 
 export const Primary: Story = {
     args: {
-        children: 'Text'
+        children: 'Text',
     },
 };
 
 export const PrimaryDark: Story = {
     args: {
-        children: 'Text'
+        children: 'Text',
     },
 };
 PrimaryDark.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const PrimaryBlue: Story = {
     args: {
-        children: 'Text'
+        children: 'Text',
     },
 };
 PrimaryBlue.decorators = [ThemeDecorator(Theme.BLUE)];
@@ -93,7 +93,7 @@ export const OutlineSizeL: Story = {
     args: {
         children: 'Text',
         theme: ButtonTheme.OUTLINE,
-        size: ButtonSize.L
+        size: ButtonSize.L,
     },
 };
 
@@ -101,7 +101,7 @@ export const OutlineSizeXL: Story = {
     args: {
         children: 'Text',
         theme: ButtonTheme.OUTLINE,
-        size: ButtonSize.XL
+        size: ButtonSize.XL,
     },
 };
 
@@ -117,7 +117,7 @@ export const OutlineDarkSizeL: Story = {
     args: {
         children: 'Text',
         theme: ButtonTheme.OUTLINE,
-        size: ButtonSize.L
+        size: ButtonSize.L,
     },
 };
 OutlineDarkSizeL.decorators = [ThemeDecorator(Theme.DARK)];
@@ -126,7 +126,7 @@ export const OutlineDarkSizeXL: Story = {
     args: {
         children: 'Text',
         theme: ButtonTheme.OUTLINE,
-        size: ButtonSize.XL
+        size: ButtonSize.XL,
     },
 };
 OutlineDarkSizeXL.decorators = [ThemeDecorator(Theme.DARK)];
@@ -143,7 +143,7 @@ export const OutlineBlueSizeL: Story = {
     args: {
         children: 'Text',
         theme: ButtonTheme.OUTLINE,
-        size: ButtonSize.L
+        size: ButtonSize.L,
     },
 };
 OutlineBlueSizeL.decorators = [ThemeDecorator(Theme.BLUE)];
@@ -152,7 +152,7 @@ export const OutlineBlueSizeXL: Story = {
     args: {
         children: 'Text',
         theme: ButtonTheme.OUTLINE,
-        size: ButtonSize.XL
+        size: ButtonSize.XL,
     },
 };
 OutlineBlueSizeXL.decorators = [ThemeDecorator(Theme.BLUE)];

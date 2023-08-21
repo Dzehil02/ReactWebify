@@ -1,12 +1,16 @@
-import { componentRender } from "@/shared/lib/tests/componentRender/componentRender";
-import AppRouter from "./AppRouter";
-import { getRouteAbout, getRouteAdminPanel, getRouteProfile } from "@/shared/const/router";
-import { screen } from "@testing-library/react";
-import { UserRole } from "@/entities/User";
+import { componentRender } from '@/shared/lib/tests/componentRender/componentRender';
+import AppRouter from './AppRouter';
+import {
+    getRouteAbout,
+    getRouteAdminPanel,
+    getRouteProfile,
+} from '@/shared/const/router';
+import { screen } from '@testing-library/react';
+import { UserRole } from '@/entities/User';
 
 describe('app/router/AppRouter', () => {
     test('Проверка рендера страницы', async () => {
-        componentRender(<AppRouter/>, {
+        componentRender(<AppRouter />, {
             route: getRouteAbout(),
         });
 
@@ -15,7 +19,7 @@ describe('app/router/AppRouter', () => {
     });
 
     test('Страница не найдена', async () => {
-        componentRender(<AppRouter/>, {
+        componentRender(<AppRouter />, {
             route: '/notfoundpage',
         });
 
@@ -24,7 +28,7 @@ describe('app/router/AppRouter', () => {
     });
 
     test('Редирект неавторизованного пользователя на главную страницу', async () => {
-        componentRender(<AppRouter/>, {
+        componentRender(<AppRouter />, {
             route: getRouteProfile('1'),
         });
 
@@ -33,12 +37,12 @@ describe('app/router/AppRouter', () => {
     });
 
     test('Доступ к странице для авторизованного пользователя', async () => {
-        componentRender(<AppRouter/>, {
+        componentRender(<AppRouter />, {
             route: getRouteProfile('1'),
             initialState: {
                 user: {
                     _inited: true,
-                    authData: {}
+                    authData: {},
                 },
             },
         });
@@ -48,12 +52,12 @@ describe('app/router/AppRouter', () => {
     });
 
     test('Доступ к странице запрещён (отсутствует роль)', async () => {
-        componentRender(<AppRouter/>, {
+        componentRender(<AppRouter />, {
             route: getRouteAdminPanel(),
             initialState: {
                 user: {
                     _inited: true,
-                    authData: {}
+                    authData: {},
                 },
             },
         });
@@ -63,12 +67,12 @@ describe('app/router/AppRouter', () => {
     });
 
     test('Доступ к странице разрешён (присутствует роль)', async () => {
-        componentRender(<AppRouter/>, {
+        componentRender(<AppRouter />, {
             route: getRouteAdminPanel(),
             initialState: {
                 user: {
                     _inited: true,
-                    authData: {roles: [UserRole.ADMIN]}
+                    authData: { roles: [UserRole.ADMIN] },
                 },
             },
         });

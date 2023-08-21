@@ -7,18 +7,14 @@ const meta: Meta<typeof NotificationButton> = {
     title: 'features/NotificationButton',
     component: NotificationButton,
     tags: ['autodocs'],
-    argTypes: {
-        
-    },
+    argTypes: {},
 };
 
 export default meta;
 type Story = StoryObj<typeof NotificationButton>;
 
 export const Light: Story = {
-    args: {
-
-    }
+    args: {},
 };
 Light.decorators = [StoreDecorator({})];
 Light.parameters = {
@@ -50,5 +46,5 @@ Light.parameters = {
                 },
             ],
         },
-    ]
-}
+    ],
+};

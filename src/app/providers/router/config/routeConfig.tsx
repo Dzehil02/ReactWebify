@@ -1,13 +1,13 @@
-import { UserRole } from "@/entities/User"
-import { AboutPage } from "@/pages/AboutPage"
-import { AdminPanelPage } from "@/pages/AdminPanelPage"
-import { ArticleDetailsPage } from "@/pages/ArticleDetailsPage"
-import { ArticleEditPage } from "@/pages/ArticleEditPage"
-import { ArticlesPage } from "@/pages/ArticlesPage"
-import { ForbiddenPage } from "@/pages/ForbiddenPage"
-import { MainPage } from "@/pages/MainPage"
-import { NotFoundPage } from "@/pages/NotFoundPage"
-import { ProfilePage } from "@/pages/ProfilePage"
+import { UserRole } from '@/entities/User';
+import { AboutPage } from '@/pages/AboutPage';
+import { AdminPanelPage } from '@/pages/AdminPanelPage';
+import { ArticleDetailsPage } from '@/pages/ArticleDetailsPage';
+import { ArticleEditPage } from '@/pages/ArticleEditPage';
+import { ArticlesPage } from '@/pages/ArticlesPage';
+import { ForbiddenPage } from '@/pages/ForbiddenPage';
+import { MainPage } from '@/pages/MainPage';
+import { NotFoundPage } from '@/pages/NotFoundPage';
+import { ProfilePage } from '@/pages/ProfilePage';
 import {
     getRouteMain,
     getRouteAbout,
@@ -17,9 +17,9 @@ import {
     getRouteArticleCreate,
     getRouteArticleEdit,
     getRouteAdminPanel,
-    getRouteForbidden
-} from "../../../../shared/const/router"
-import { RouteObj } from "../../../../shared/types/router"
+    getRouteForbidden,
+} from '../../../../shared/const/router';
+import { RouteObj } from '../../../../shared/types/router';
 
 export const routeConfig: RouteObj[] = [
     {
@@ -28,7 +28,7 @@ export const routeConfig: RouteObj[] = [
     },
     {
         path: getRouteAbout(),
-        element: <AboutPage />
+        element: <AboutPage />,
     },
     {
         path: getRouteProfile(':id'),
@@ -68,6 +68,6 @@ export const routeConfig: RouteObj[] = [
     //last
     {
         path: '*',
-        element: <NotFoundPage />
+        element: <NotFoundPage />,
     },
-]
+];

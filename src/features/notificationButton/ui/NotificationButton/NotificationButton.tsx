@@ -13,27 +13,30 @@ interface NotificationButtonProps {
 }
 
 export const NotificationButton = memo((props: NotificationButtonProps) => {
-    const {className} = props;
+    const { className } = props;
     const [isOpen, setisOpen] = useState(false);
 
     const onOpenDrawer = useCallback(() => {
-        setisOpen(true)
-    }, [])
+        setisOpen(true);
+    }, []);
 
     const onCloseDrawer = useCallback(() => {
-        setisOpen(false)
-    }, [])
+        setisOpen(false);
+    }, []);
 
     const trigger = (
         <Button onClick={onOpenDrawer} theme={ButtonTheme.CLEAR_INVERTED}>
             <NotificationIcon />
         </Button>
-    )
+    );
 
     return (
         <div>
             <BrowserView>
-                <Popover className={classNames(cls.NotificationButton, {}, [className])}
+                <Popover
+                    className={classNames(cls.NotificationButton, {}, [
+                        className,
+                    ])}
                     trigger={trigger}
                     direction="bottom left"
                 >
@@ -48,4 +51,4 @@ export const NotificationButton = memo((props: NotificationButtonProps) => {
             </MobileView>
         </div>
     );
-})
+});

@@ -1,6 +1,6 @@
-import { ButtonHTMLAttributes, ReactNode, memo } from 'react'
-import { classNames } from '@/shared/lib/classNames/classNames'
-import cls from './Button.module.scss'
+import { ButtonHTMLAttributes, ReactNode, memo } from 'react';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import cls from './Button.module.scss';
 
 export enum ButtonTheme {
     CLEAR = 'clear',
@@ -8,7 +8,7 @@ export enum ButtonTheme {
     OUTLINE = 'outline',
     OUTLINE_RED = 'outline_red',
     BACKGROUND = 'background',
-    BACKGROUND_INVERTED = 'backgroundInverted'
+    BACKGROUND_INVERTED = 'backgroundInverted',
 }
 
 export enum ButtonSize {
@@ -21,23 +21,22 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     className?: string;
     theme?: ButtonTheme;
     /**
-    * Флаг, делающий кнопку квадратной
-    */
+     * Флаг, делающий кнопку квадратной
+     */
     square?: boolean;
     /**
-    * Размер кнопки
-    */
+     * Размер кнопки
+     */
     size?: ButtonSize;
     disabled?: boolean;
     children?: ReactNode;
     /**
-    * Флаг, делающий кнопку шириной 100%
-    */
+     * Флаг, делающий кнопку шириной 100%
+     */
     fullWidth?: boolean;
 }
 
 export const Button = memo((props: ButtonProps) => {
-
     const {
         className,
         children,
@@ -50,18 +49,20 @@ export const Button = memo((props: ButtonProps) => {
     } = props;
 
     return (
-        <button 
-            className={
-                classNames(
-                    cls.Button,
-                    {[cls.square] :square, [cls.disabled] :disabled, [cls.fullWidth] :fullWidth},
-                    [className, cls[theme], cls[size]]
-                )
-            }
+        <button
+            className={classNames(
+                cls.Button,
+                {
+                    [cls.square]: square,
+                    [cls.disabled]: disabled,
+                    [cls.fullWidth]: fullWidth,
+                },
+                [className, cls[theme], cls[size]],
+            )}
             disabled={disabled}
             {...otherProps}
         >
             {children}
         </button>
-    )
-})
+    );
+});

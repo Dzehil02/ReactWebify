@@ -1,1 +1,1 @@
-export {ProfileRatingAsync as ProfileRating} from './ui/ProfileRating/ProfileRatingLazy';
+export { ProfileRatingAsync as ProfileRating } from './ui/ProfileRating/ProfileRatingLazy';

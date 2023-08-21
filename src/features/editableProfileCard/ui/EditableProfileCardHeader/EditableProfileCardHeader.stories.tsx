@@ -9,42 +9,36 @@ const meta: Meta<typeof EditableProfileCardHeader> = {
     title: 'features/EditableProfileCard/editableProfileCardHeader',
     component: EditableProfileCardHeader,
     tags: ['autodocs'],
-    argTypes: {
-        
-    },
+    argTypes: {},
 };
 
 export default meta;
 type Story = StoryObj<typeof EditableProfileCardHeader>;
 
 export const Light: Story = {
-    args: {
-
-    }
+    args: {},
 };
-Light.decorators = [StoreDecorator({
-    user: {
-        authData: {
-            id: '1'
-        }
-    },
-    profile: {
-        data: {
-            id: '1'
-        }
-    }
-})];
+Light.decorators = [
+    StoreDecorator({
+        user: {
+            authData: {
+                id: '1',
+            },
+        },
+        profile: {
+            data: {
+                id: '1',
+            },
+        },
+    }),
+];
 
 export const Dark: Story = {
-    args: {
-          
-    }
+    args: {},
 };
 Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({})];
 
 export const Blue: Story = {
-    args: {
-            
-    }
+    args: {},
 };
 Blue.decorators = [ThemeDecorator(Theme.BLUE), StoreDecorator({})];

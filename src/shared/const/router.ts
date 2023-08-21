@@ -1,4 +1,3 @@
-
 export enum AppRoutes {
     MAIN = 'main',
     ABOUT = 'about',
@@ -10,8 +9,7 @@ export enum AppRoutes {
     ADMIN_PANEL = 'admin_panel',
     FORBIDDEN = 'forbidden',
     //last
-    NOT_FOUND = 'not_found'
-
+    NOT_FOUND = 'not_found',
 }
 
 export const getRouteMain = () => '/';

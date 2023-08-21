@@ -9,8 +9,7 @@ const meta: Meta<typeof Dropdown> = {
     title: 'shared/Popus/Dropdown',
     component: Dropdown,
     tags: ['autodocs'],
-    argTypes: {
-    },
+    argTypes: {},
 };
 
 export default meta;
@@ -21,16 +20,16 @@ export const Light: Story = {
         trigger: <Button>Open menu</Button>,
         items: [
             {
-                content: 'first'
+                content: 'first',
             },
             {
-                content: 'second'
+                content: 'second',
             },
             {
-                content: 'third'
+                content: 'third',
             },
-        ]
-    }
+        ],
+    },
 };
 
 export const Dark: Story = {
@@ -38,16 +37,16 @@ export const Dark: Story = {
         trigger: <Button>Open menu</Button>,
         items: [
             {
-                content: 'first'
+                content: 'first',
             },
             {
-                content: 'second'
+                content: 'second',
             },
             {
-                content: 'third'
+                content: 'third',
             },
-        ]    
-    }
+        ],
+    },
 };
 Dark.decorators = [ThemeDecorator(Theme.DARK)];
 
@@ -56,15 +55,15 @@ export const Blue: Story = {
         trigger: <Button>Open menu</Button>,
         items: [
             {
-                content: 'first'
+                content: 'first',
             },
             {
-                content: 'second'
+                content: 'second',
             },
             {
-                content: 'third'
+                content: 'third',
             },
-        ]    
-    }
+        ],
+    },
 };
 Blue.decorators = [ThemeDecorator(Theme.BLUE)];

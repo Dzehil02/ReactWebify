@@ -9,7 +9,7 @@ const meta: Meta<typeof ThemeSwitcher> = {
     component: ThemeSwitcher,
     tags: ['autodocs'],
     argTypes: {
-    // backgroundColor: { control: 'color' },
+        // backgroundColor: { control: 'color' },
     },
 };
 

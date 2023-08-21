@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import  { Modal } from './Modal';
+import { Modal } from './Modal';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from '@/shared/const/theme';
 
@@ -8,7 +8,7 @@ const meta: Meta<typeof Modal> = {
     component: Modal,
     tags: ['autodocs'],
     argTypes: {
-    // backgroundColor: { control: 'color' },
+        // backgroundColor: { control: 'color' },
     },
 };
 
@@ -18,14 +18,16 @@ type Story = StoryObj<typeof Modal>;
 export const Primary: Story = {
     args: {
         isOpen: true,
-        children: 'Modal Text Modal Text Modal Text Modal Text Modal Text Modal Text'
+        children:
+            'Modal Text Modal Text Modal Text Modal Text Modal Text Modal Text',
     },
 };
 
 export const Dark: Story = {
     args: {
         isOpen: true,
-        children: 'Modal Text Modal Text Modal Text Modal Text Modal Text Modal Text'
+        children:
+            'Modal Text Modal Text Modal Text Modal Text Modal Text Modal Text',
     },
 };
 Dark.decorators = [ThemeDecorator(Theme.DARK)];
@@ -33,7 +35,8 @@ Dark.decorators = [ThemeDecorator(Theme.DARK)];
 export const Blue: Story = {
     args: {
         isOpen: true,
-        children: 'Modal Text Modal Text Modal Text Modal Text Modal Text Modal Text'
+        children:
+            'Modal Text Modal Text Modal Text Modal Text Modal Text Modal Text',
     },
 };
 Blue.decorators = [ThemeDecorator(Theme.BLUE)];

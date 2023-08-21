@@ -11,7 +11,7 @@ const meta: Meta<typeof ProfileCard> = {
     component: ProfileCard,
     tags: ['autodocs'],
     argTypes: {
-    // backgroundColor: { control: 'color' },
+        // backgroundColor: { control: 'color' },
     },
 };
 
@@ -21,59 +21,59 @@ type Story = StoryObj<typeof ProfileCard>;
 export const Primary: Story = {
     args: {
         data: {
-            first: "Pit",
-            lastname: "Bred",
+            first: 'Pit',
+            lastname: 'Bred',
             age: 55,
-            username: "BredPit",
+            username: 'BredPit',
             country: Country.Armenia,
-            city: "Florida",
+            city: 'Florida',
             currency: Currency.USD,
-            avatar: avatar
-        }
+            avatar: avatar,
+        },
     },
 };
 
 export const Secondary: Story = {
     args: {
         data: {
-            first: "Pit",
-            lastname: "Bred",
+            first: 'Pit',
+            lastname: 'Bred',
             age: 55,
-            username: "BredPit",
+            username: 'BredPit',
             country: Country.Armenia,
-            city: "Florida",
+            city: 'Florida',
             currency: Currency.USD,
-            avatar: avatar
-        }
+            avatar: avatar,
+        },
     },
 };
-Secondary.decorators = [ThemeDecorator(Theme.DARK)]
+Secondary.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const ThirdReadonly: Story = {
     args: {
         data: {
-            first: "Pit",
-            lastname: "Bred",
+            first: 'Pit',
+            lastname: 'Bred',
             age: 55,
-            username: "BredPit",
+            username: 'BredPit',
             country: Country.Armenia,
-            city: "Florida",
+            city: 'Florida',
             currency: Currency.USD,
-            avatar: avatar
+            avatar: avatar,
         },
-        readonly: true
+        readonly: true,
     },
 };
-ThirdReadonly.decorators = [ThemeDecorator(Theme.BLUE)]
+ThirdReadonly.decorators = [ThemeDecorator(Theme.BLUE)];
 
 export const Error: Story = {
     args: {
-        error: "ProfileError"
+        error: 'ProfileError',
     },
 };
 
 export const IsLoading: Story = {
     args: {
-        isLoading: true
+        isLoading: true,
     },
 };

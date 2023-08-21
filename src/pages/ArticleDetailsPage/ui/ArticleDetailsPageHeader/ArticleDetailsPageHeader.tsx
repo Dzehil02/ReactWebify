@@ -2,7 +2,7 @@ import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { useNavigate } from 'react-router-dom';
-import { getRouteArticleEdit, getRouteArticles } from "@/shared/const/router";
+import { getRouteArticleEdit, getRouteArticles } from '@/shared/const/router';
 import { Button, ButtonTheme } from '@/shared/ui/Button';
 import { useSelector } from 'react-redux';
 import { getArticleDetailsData } from '@/entities/Article';
@@ -13,37 +13,39 @@ interface ArticleDetailsPageHeaderProps {
     className?: string;
 }
 
-export const ArticleDetailsPageHeader = memo((props: ArticleDetailsPageHeaderProps) => {
-    const {className} = props;
-    const { t } = useTranslation('article-details')
-    const navigate = useNavigate();
-    const canEdit = useSelector(getCanEditArticle);
-    const article = useSelector(getArticleDetailsData);
+export const ArticleDetailsPageHeader = memo(
+    (props: ArticleDetailsPageHeaderProps) => {
+        const { className } = props;
+        const { t } = useTranslation('article-details');
+        const navigate = useNavigate();
+        const canEdit = useSelector(getCanEditArticle);
+        const article = useSelector(getArticleDetailsData);
 
-    const onBackToList = useCallback(() => {
-        navigate(getRouteArticles())
-    }, [navigate])
+        const onBackToList = useCallback(() => {
+            navigate(getRouteArticles());
+        }, [navigate]);
 
-    const onEditArticle = useCallback(() => {
-        if (article) {            
-            navigate(getRouteArticleEdit(article.id))
-        }
-    }, [article, navigate])
+        const onEditArticle = useCallback(() => {
+            if (article) {
+                navigate(getRouteArticleEdit(article.id));
+            }
+        }, [article, navigate]);
 
-    return (
-        <HStack max justify={'between'} className={classNames('', {}, [className])}>
-            <Button 
-                theme={ButtonTheme.OUTLINE} 
-                onClick={onBackToList}
+        return (
+            <HStack
+                max
+                justify={'between'}
+                className={classNames('', {}, [className])}
             >
-                {t('Back to articles')}
-            </Button>
-            {canEdit && (<Button 
-                theme={ButtonTheme.OUTLINE} 
-                onClick={onEditArticle}
-            >
-                {t('Edit')}
-            </Button>)}
-        </HStack>
-    );
-})
+                <Button theme={ButtonTheme.OUTLINE} onClick={onBackToList}>
+                    {t('Back to articles')}
+                </Button>
+                {canEdit && (
+                    <Button theme={ButtonTheme.OUTLINE} onClick={onEditArticle}>
+                        {t('Edit')}
+                    </Button>
+                )}
+            </HStack>
+        );
+    },
+);

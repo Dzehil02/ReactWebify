@@ -12,27 +12,30 @@ const justifyClasses: Record<FlexJustify, string> = {
     center: cls.justifyCenter,
     end: cls.justifyEnd,
     between: cls.justifyBetween,
-}
+};
 
 const alignClasses: Record<FlexAlign, string> = {
     start: cls.alignStart,
     center: cls.alignCenter,
     end: cls.alignEnd,
-}
+};
 
 const directionClasses: Record<FlexDirection, string> = {
     row: cls.directionRow,
     column: cls.directionColumn,
-}
+};
 
 const gapClasses: Record<FlexGap, string> = {
     4: cls.gap4,
     8: cls.gap8,
     16: cls.gap16,
     32: cls.gap32,
-}
+};
 
-type DivProps = DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>;
+type DivProps = DetailedHTMLProps<
+    HTMLAttributes<HTMLDivElement>,
+    HTMLDivElement
+>;
 
 export interface FlexProps extends DivProps {
     className?: string;
@@ -46,10 +49,10 @@ export interface FlexProps extends DivProps {
 
 export const Flex = (props: FlexProps) => {
     const {
-        className, 
-        children, 
-        justify = 'start', 
-        align = 'center', 
+        className,
+        children,
+        justify = 'start',
+        align = 'center',
         direction = 'row',
         gap,
         max,
@@ -61,16 +64,16 @@ export const Flex = (props: FlexProps) => {
         justifyClasses[justify],
         alignClasses[align],
         directionClasses[direction],
-        gap && gapClasses[gap]
-    ]
+        gap && gapClasses[gap],
+    ];
 
     const mods: Mods = {
         [cls.max]: max,
-    }
+    };
 
     return (
         <div className={classNames(cls.Flex, mods, classes)} {...otherProps}>
             {children}
         </div>
     );
-}
+};

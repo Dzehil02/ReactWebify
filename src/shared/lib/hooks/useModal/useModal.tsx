@@ -1,4 +1,10 @@
-import { useState, useRef, MutableRefObject, useEffect, useCallback } from "react";
+import {
+    useState,
+    useRef,
+    MutableRefObject,
+    useEffect,
+    useCallback,
+} from 'react';
 
 interface UseModalProps {
     onClose?: () => void;
@@ -8,22 +14,20 @@ interface UseModalProps {
 
 /**
  * Переиспользуемый хук для модальных компонентов (drawer/modal)
- * @param animationDelay 
- * @param isOpen 
- * @param onClose 
+ * @param animationDelay
+ * @param isOpen
+ * @param onClose
  * @returns {isClosing, isMounted, close}
  */
 
 export function useModal(props: UseModalProps) {
-    const {
-        onClose,
-        isOpen,
-        animationDelay
-    } = props
+    const { onClose, isOpen, animationDelay } = props;
 
     const [isClosing, setIsClosing] = useState(false);
     const [isMounted, setIsMounted] = useState(false);
-    const timerRef = useRef() as MutableRefObject<ReturnType<typeof setTimeout>>;
+    const timerRef = useRef() as MutableRefObject<
+        ReturnType<typeof setTimeout>
+    >;
 
     useEffect(() => {
         if (isOpen) {
@@ -37,16 +41,19 @@ export function useModal(props: UseModalProps) {
             timerRef.current = setTimeout(() => {
                 onClose();
                 setIsClosing(false);
-            }, animationDelay)
+            }, animationDelay);
         }
     }, [animationDelay, onClose]);
 
     // useCallback - для сохранения ОДНОЙ ссылки для функции
-    const onKeyDown = useCallback((e: KeyboardEvent) => {
-        if (e.key === 'Escape') {
-            close();
-        }
-    }, [close])
+    const onKeyDown = useCallback(
+        (e: KeyboardEvent) => {
+            if (e.key === 'Escape') {
+                close();
+            }
+        },
+        [close],
+    );
 
     useEffect(() => {
         if (isOpen) {
@@ -58,11 +65,9 @@ export function useModal(props: UseModalProps) {
         };
     }, [isOpen, onKeyDown]);
 
-
     return {
         isClosing,
         isMounted,
         close,
-    }
-
+    };
 }

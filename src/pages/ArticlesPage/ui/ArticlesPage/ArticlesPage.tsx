@@ -1,7 +1,10 @@
 import { FC, memo, useCallback } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './ArticlesPage.module.scss';
-import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import {
+    DynamicModuleLoader,
+    ReducersList,
+} from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { articlesPageReducer } from '../../model/slices/articlesPageSlice';
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
@@ -20,31 +23,30 @@ const reducers: ReducersList = {
     articlesPage: articlesPageReducer,
 };
 
-const ArticlesPage: FC<ArticlesPageProps> = ({className}) => {
+const ArticlesPage: FC<ArticlesPageProps> = ({ className }) => {
     const dispatch = useAppDispatch();
     const [searchParams] = useSearchParams();
 
-
     const onLoadNextPart = useCallback(() => {
         dispatch(fetchNextArticlesPage());
-    }, [dispatch])  
+    }, [dispatch]);
 
     useInitialEffect(() => {
         dispatch(initArticlesPage(searchParams));
-    })
+    });
 
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount={false}>
-            <Page 
-                data-testid='ArticlesPage' 
-                onScrollEnd={onLoadNextPart} 
+            <Page
+                data-testid="ArticlesPage"
+                onScrollEnd={onLoadNextPart}
                 className={classNames(cls.ArticlesPage, {}, [className])}
             >
-                <ArticlesPageFilters/>
+                <ArticlesPageFilters />
                 <ArticleInfiniteList className={cls.list} />
             </Page>
         </DynamicModuleLoader>
     );
-}
+};
 
 export default memo(ArticlesPage);

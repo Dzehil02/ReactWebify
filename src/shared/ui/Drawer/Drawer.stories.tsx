@@ -8,23 +8,17 @@ const meta: Meta<typeof Drawer> = {
     title: 'shared/Drawer',
     component: Drawer,
     tags: ['autodocs'],
-    argTypes: {
-        
-    },
+    argTypes: {},
 };
 
 export default meta;
 type Story = StoryObj<typeof Drawer>;
 
 export const Light: Story = {
-    args: {
-
-    }
+    args: {},
 };
 
 export const Dark: Story = {
-    args: {
-            
-    }
+    args: {},
 };
 Dark.decorators = [ThemeDecorator(Theme.DARK)];

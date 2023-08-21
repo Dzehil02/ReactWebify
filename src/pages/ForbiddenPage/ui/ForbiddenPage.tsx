@@ -8,12 +8,15 @@ interface ForbiddenPageProps {
 }
 
 export const ForbiddenPage = memo((props: ForbiddenPageProps) => {
-    const {className} = props;
-    const { t } = useTranslation()
+    const { className } = props;
+    const { t } = useTranslation();
 
     return (
-        <Page data-testid='ForbiddenPage' className={classNames('', {}, [className])}>
+        <Page
+            data-testid="ForbiddenPage"
+            className={classNames('', {}, [className])}
+        >
             {t('access')}
         </Page>
     );
-})
+});

@@ -8,9 +8,7 @@ const meta: Meta<typeof CommentList> = {
     title: 'entities/Comment/CommentList',
     component: CommentList,
     tags: ['autodocs'],
-    argTypes: {
-        
-    },
+    argTypes: {},
 };
 
 export default meta;
@@ -20,34 +18,34 @@ export const Light: Story = {
     args: {
         comments: [
             {
-                id: "1",
-                text: "Text commenta 1",
-                user: {id: "1", username: "Kevin"}
+                id: '1',
+                text: 'Text commenta 1',
+                user: { id: '1', username: 'Kevin' },
             },
             {
-                id: "2",
-                text: "Text commenta 2",
-                user: {id: "2", username: "Tom"}
+                id: '2',
+                text: 'Text commenta 2',
+                user: { id: '2', username: 'Tom' },
             },
-        ]
-    }
+        ],
+    },
 };
 
 export const Dark: Story = {
     args: {
         comments: [
             {
-                id: "1",
-                text: "Text commenta 1",
-                user: {id: "1", username: "Kevin"}
+                id: '1',
+                text: 'Text commenta 1',
+                user: { id: '1', username: 'Kevin' },
             },
             {
-                id: "2",
-                text: "Text commenta 2",
-                user: {id: "2", username: "Tom"}
+                id: '2',
+                text: 'Text commenta 2',
+                user: { id: '2', username: 'Tom' },
             },
-        ]
-    }
+        ],
+    },
 };
 Dark.decorators = [ThemeDecorator(Theme.DARK)];
 
@@ -55,40 +53,39 @@ export const Blue: Story = {
     args: {
         comments: [
             {
-                id: "1",
-                text: "Text commenta 1",
-                user: {id: "1", username: "Kevin"}
+                id: '1',
+                text: 'Text commenta 1',
+                user: { id: '1', username: 'Kevin' },
             },
             {
-                id: "2",
-                text: "Text commenta 2",
-                user: {id: "2", username: "Tom"}
+                id: '2',
+                text: 'Text commenta 2',
+                user: { id: '2', username: 'Tom' },
             },
-        ]
-    }
+        ],
+    },
 };
 Blue.decorators = [ThemeDecorator(Theme.BLUE)];
 
 export const LoadingLight: Story = {
     args: {
         isLoading: true,
-        comments: []
-    }
+        comments: [],
+    },
 };
 
 export const LoadingDark: Story = {
     args: {
         isLoading: true,
-        comments: []
-    }
+        comments: [],
+    },
 };
 LoadingDark.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const LoadingBlue: Story = {
     args: {
         isLoading: true,
-        comments: []
-    }
+        comments: [],
+    },
 };
 LoadingBlue.decorators = [ThemeDecorator(Theme.BLUE)];
-

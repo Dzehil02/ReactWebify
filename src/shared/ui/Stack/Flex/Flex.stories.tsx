@@ -8,9 +8,7 @@ const meta: Meta<typeof Flex> = {
     title: 'shared/Flex',
     component: Flex,
     tags: ['autodocs'],
-    argTypes: {
-        
-    },
+    argTypes: {},
 };
 
 export default meta;
@@ -25,8 +23,8 @@ export const Row: Story = {
                 <div>third</div>
                 <div>fourth</div>
             </>
-        )
-    }
+        ),
+    },
 };
 
 export const RowGap4: Story = {
@@ -39,8 +37,8 @@ export const RowGap4: Story = {
                 <div>third</div>
                 <div>fourth</div>
             </>
-        )
-    }
+        ),
+    },
 };
 
 export const RowGap8: Story = {
@@ -53,8 +51,8 @@ export const RowGap8: Story = {
                 <div>third</div>
                 <div>fourth</div>
             </>
-        )
-    }
+        ),
+    },
 };
 
 export const RowGap16: Story = {
@@ -67,8 +65,8 @@ export const RowGap16: Story = {
                 <div>third</div>
                 <div>fourth</div>
             </>
-        )
-    }
+        ),
+    },
 };
 
 export const RowGap32: Story = {
@@ -82,8 +80,8 @@ export const RowGap32: Story = {
                 <div>third</div>
                 <div>fourth</div>
             </>
-        )
-    }
+        ),
+    },
 };
 
 export const RowGap32Dark: Story = {
@@ -97,10 +95,10 @@ export const RowGap32Dark: Story = {
                 <div>third</div>
                 <div>fourth</div>
             </>
-        )
-    }
+        ),
+    },
 };
-RowGap32Dark.decorators=[ThemeDecorator(Theme.DARK)]
+RowGap32Dark.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const RowGap32Blue: Story = {
     args: {
@@ -113,10 +111,10 @@ export const RowGap32Blue: Story = {
                 <div>third</div>
                 <div>fourth</div>
             </>
-        )
-    }
+        ),
+    },
 };
-RowGap32Blue.decorators=[ThemeDecorator(Theme.BLUE)]
+RowGap32Blue.decorators = [ThemeDecorator(Theme.BLUE)];
 
 export const Column: Story = {
     args: {
@@ -128,8 +126,8 @@ export const Column: Story = {
                 <div>third</div>
                 <div>fourth</div>
             </>
-        )   
-    }
+        ),
+    },
 };
 
 export const ColumnGap4: Story = {
@@ -143,8 +141,8 @@ export const ColumnGap4: Story = {
                 <div>third</div>
                 <div>fourth</div>
             </>
-        )   
-    }
+        ),
+    },
 };
 
 export const ColumnGap8: Story = {
@@ -158,8 +156,8 @@ export const ColumnGap8: Story = {
                 <div>third</div>
                 <div>fourth</div>
             </>
-        )   
-    }
+        ),
+    },
 };
 
 export const ColumnGap16: Story = {
@@ -173,8 +171,8 @@ export const ColumnGap16: Story = {
                 <div>third</div>
                 <div>fourth</div>
             </>
-        )   
-    }
+        ),
+    },
 };
 
 export const ColumnGap32: Story = {
@@ -188,8 +186,8 @@ export const ColumnGap32: Story = {
                 <div>third</div>
                 <div>fourth</div>
             </>
-        )   
-    }
+        ),
+    },
 };
 
 export const ColumnGap32Dark: Story = {
@@ -203,10 +201,10 @@ export const ColumnGap32Dark: Story = {
                 <div>third</div>
                 <div>fourth</div>
             </>
-        )   
-    }
+        ),
+    },
 };
-ColumnGap32Dark.decorators=[ThemeDecorator(Theme.DARK)]
+ColumnGap32Dark.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const ColumnGap32Blue: Story = {
     args: {
@@ -219,7 +217,7 @@ export const ColumnGap32Blue: Story = {
                 <div>third</div>
                 <div>fourth</div>
             </>
-        )   
-    }
+        ),
+    },
 };
-ColumnGap32Blue.decorators=[ThemeDecorator(Theme.BLUE)]
+ColumnGap32Blue.decorators = [ThemeDecorator(Theme.BLUE)];

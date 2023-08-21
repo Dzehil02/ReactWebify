@@ -1,113 +1,100 @@
 [
     {
-      "id": "10",
-      "title": "Javascript news 4 SCIENCE",
-      "subtitle": "SCIENCE в JS за 2020 год?",
-      "img": "https://1.bp.blogspot.com/-TGQt5uRcAkg/XuMIJoAhwnI/AAAAAAAAA38/FaJQpUUDsGEYR1zBK1wqLWUA9DTYp5CiQCPcBGAYYCw/s587/js.png",
-      "views": 8000,
-      "createdAt": "01.01.2020",
-      "userId": "1",
-      "type": [
-        "SCIENCE"
-      ],
-      "blocks": [
-        {
-          "id": "1",
-          "type": "TEXT",
-          "title": "Заголовок этого блока",
-          "paragraphs": [
-            "Программа, которую по традиции называют «Hello, world!», очень проста. Она выводит куда-либо фразу «Hello, world!», или другую подобную, средствами некоего языка.",
-            "JavaScript — это язык, программы на котором можно выполнять в разных средах. В нашем случае речь идёт о браузерах и о серверной платформе Node.js. Если до сих пор вы не написали ни строчки кода на JS и читаете этот текст в браузере, на настольном компьютере, это значит, что вы буквально в считанных секундах от своей первой JavaScript-программы.",
-            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном использовании программ на JavaScript, они загружаются в браузер для обеспечения работы веб-страниц. Как правило, код оформляют в виде отдельных файлов с расширением .js, которые подключают к веб-страницам, но программный код можно включать и непосредственно в код страницы. Всё это делается с помощью тега <script>. Когда браузер обнаруживает такой код, он выполняет его. Подробности о теге script можно посмотреть на сайте w3school.com. В частности, рассмотрим пример, демонстрирующий работу с веб-страницей средствами JavaScript, приведённый на этом ресурсе. Этот пример можно запустить и средствами данного ресурса (ищите кнопку Try it Yourself), но мы поступим немного иначе. А именно, создадим в каком-нибудь текстовом редакторе (например — в VS Code или в Notepad++) новый файл, который назовём hello.html, и добавим в него следующий код:"
-          ]
-        },
-        {
-          "id": "2",
-          "type": "CODE",
-          "code": "<!DOCTYPE html>\n<html>\n  <body>\n    <p id=\"hello\"></p>\n\n    <script>\n      document.getElementById(\"hello\").innerHTML = \"Hello, world!\";\n    </script>\n  </body>\n</html>;"
-        }
-      ],
-      "user": {
-        "id": "1",
-        "username": "admin",
-        "password": "1234",
-        "roles": [
-          "ADMIN"
+        "id": "10",
+        "title": "Javascript news 4 SCIENCE",
+        "subtitle": "SCIENCE в JS за 2020 год?",
+        "img": "https://1.bp.blogspot.com/-TGQt5uRcAkg/XuMIJoAhwnI/AAAAAAAAA38/FaJQpUUDsGEYR1zBK1wqLWUA9DTYp5CiQCPcBGAYYCw/s587/js.png",
+        "views": 8000,
+        "createdAt": "01.01.2020",
+        "userId": "1",
+        "type": ["SCIENCE"],
+        "blocks": [
+            {
+                "id": "1",
+                "type": "TEXT",
+                "title": "Заголовок этого блока",
+                "paragraphs": [
+                    "Программа, которую по традиции называют «Hello, world!», очень проста. Она выводит куда-либо фразу «Hello, world!», или другую подобную, средствами некоего языка.",
+                    "JavaScript — это язык, программы на котором можно выполнять в разных средах. В нашем случае речь идёт о браузерах и о серверной платформе Node.js. Если до сих пор вы не написали ни строчки кода на JS и читаете этот текст в браузере, на настольном компьютере, это значит, что вы буквально в считанных секундах от своей первой JavaScript-программы.",
+                    "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном использовании программ на JavaScript, они загружаются в браузер для обеспечения работы веб-страниц. Как правило, код оформляют в виде отдельных файлов с расширением .js, которые подключают к веб-страницам, но программный код можно включать и непосредственно в код страницы. Всё это делается с помощью тега <script>. Когда браузер обнаруживает такой код, он выполняет его. Подробности о теге script можно посмотреть на сайте w3school.com. В частности, рассмотрим пример, демонстрирующий работу с веб-страницей средствами JavaScript, приведённый на этом ресурсе. Этот пример можно запустить и средствами данного ресурса (ищите кнопку Try it Yourself), но мы поступим немного иначе. А именно, создадим в каком-нибудь текстовом редакторе (например — в VS Code или в Notepad++) новый файл, который назовём hello.html, и добавим в него следующий код:"
+                ]
+            },
+            {
+                "id": "2",
+                "type": "CODE",
+                "code": "<!DOCTYPE html>\n<html>\n  <body>\n    <p id=\"hello\"></p>\n\n    <script>\n      document.getElementById(\"hello\").innerHTML = \"Hello, world!\";\n    </script>\n  </body>\n</html>;"
+            }
         ],
-        "avatar": "https://avatarzo.ru/wp-content/uploads/squid-game-anime.jpg"
-      }
+        "user": {
+            "id": "1",
+            "username": "admin",
+            "password": "1234",
+            "roles": ["ADMIN"],
+            "avatar": "https://avatarzo.ru/wp-content/uploads/squid-game-anime.jpg"
+        }
     },
     {
-      "id": "15",
-      "title": "Node JS news Economics",
-      "subtitle": "Экономика Node JS в 2023",
-      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png",
-      "views": 1160,
-      "createdAt": "04.02.2023",
-      "userId": "2",
-      "type": [
-        "ECONOMICS"
-      ],
-      "blocks": [
-        {
-          "id": "1",
-          "type": "TEXT",
-          "title": "История создания языка программирования JAVA",
-          "paragraphs": [
-            "История JAVA началась еще в 1991 году, когда Патрик Ноутон, Билл Джой и Джеймс Гослинг начали работу над собственным проектом. Основной целью проекта было создание аппаратно-программной платформы нового поколения, использование которой не требовало бы специальных знаний. Речь шла о создании «компьютера для людей», максимально надежного и при этом простого в управлении. Проект получил название «Green». В ходе работ возникла потребность в новом языке программирования, который был бы максимально универсальным и мог бы применяться на любых платформах. Так появился «Oak»."
-          ]
-        },
-        {
-          "id": "2",
-          "type": "CODE",
-          "code": "<!DOCTYPE html>\n<html>\n  <body>\n    <p id=\"hello\"></p>\n\n    <script>\n      document.getElementById(\"hello\").innerHTML = \"Hello, world!\";\n    </script>\n  </body>\n</html>;"
-        }
-      ],
-      "user": {
-        "id": "2",
-        "username": "user",
-        "password": "4321",
-        "roles": [
-          "USER"
+        "id": "15",
+        "title": "Node JS news Economics",
+        "subtitle": "Экономика Node JS в 2023",
+        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png",
+        "views": 1160,
+        "createdAt": "04.02.2023",
+        "userId": "2",
+        "type": ["ECONOMICS"],
+        "blocks": [
+            {
+                "id": "1",
+                "type": "TEXT",
+                "title": "История создания языка программирования JAVA",
+                "paragraphs": [
+                    "История JAVA началась еще в 1991 году, когда Патрик Ноутон, Билл Джой и Джеймс Гослинг начали работу над собственным проектом. Основной целью проекта было создание аппаратно-программной платформы нового поколения, использование которой не требовало бы специальных знаний. Речь шла о создании «компьютера для людей», максимально надежного и при этом простого в управлении. Проект получил название «Green». В ходе работ возникла потребность в новом языке программирования, который был бы максимально универсальным и мог бы применяться на любых платформах. Так появился «Oak»."
+                ]
+            },
+            {
+                "id": "2",
+                "type": "CODE",
+                "code": "<!DOCTYPE html>\n<html>\n  <body>\n    <p id=\"hello\"></p>\n\n    <script>\n      document.getElementById(\"hello\").innerHTML = \"Hello, world!\";\n    </script>\n  </body>\n</html>;"
+            }
         ],
-        "avatar": "https://avatarzo.ru/wp-content/uploads/naruto-figure.jpg"
-      }
+        "user": {
+            "id": "2",
+            "username": "user",
+            "password": "4321",
+            "roles": ["USER"],
+            "avatar": "https://avatarzo.ru/wp-content/uploads/naruto-figure.jpg"
+        }
     },
     {
-      "id": "14",
-      "title": "Ruby news 2023",
-      "subtitle": "Что нового в Ruby за 2023 год?",
-      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Ruby_logo.svg/640px-Ruby_logo.svg.png",
-      "views": 122,
-      "createdAt": "08.05.2023",
-      "userId": "2",
-      "type": [
-        "IT",
-        "ECONOMICS"
-      ],
-      "blocks": [
-        {
-          "id": "1",
-          "type": "TEXT",
-          "title": "Заголовок этого блока",
-          "paragraphs": [
-            "Python — высокоуровневый язык программирования общего назначения с динамической строгой типизацией и автоматическим управлением памятью, ориентированный на повышение производительности разработчика, читаемости кода и его качества, а также на обеспечение переносимости написанных на нём программ."
-          ]
-        },
-        {
-          "id": "2",
-          "type": "CODE",
-          "code": "<!DOCTYPE html>\n<html>\n  <body>\n    <p id=\"hello\"></p>\n\n    <script>\n      document.getElementById(\"hello\").innerHTML = \"Hello, world!\";\n    </script>\n  </body>\n</html>;"
-        }
-      ],
-      "user": {
-        "id": "2",
-        "username": "user",
-        "password": "4321",
-        "roles": [
-          "USER"
+        "id": "14",
+        "title": "Ruby news 2023",
+        "subtitle": "Что нового в Ruby за 2023 год?",
+        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Ruby_logo.svg/640px-Ruby_logo.svg.png",
+        "views": 122,
+        "createdAt": "08.05.2023",
+        "userId": "2",
+        "type": ["IT", "ECONOMICS"],
+        "blocks": [
+            {
+                "id": "1",
+                "type": "TEXT",
+                "title": "Заголовок этого блока",
+                "paragraphs": [
+                    "Python — высокоуровневый язык программирования общего назначения с динамической строгой типизацией и автоматическим управлением памятью, ориентированный на повышение производительности разработчика, читаемости кода и его качества, а также на обеспечение переносимости написанных на нём программ."
+                ]
+            },
+            {
+                "id": "2",
+                "type": "CODE",
+                "code": "<!DOCTYPE html>\n<html>\n  <body>\n    <p id=\"hello\"></p>\n\n    <script>\n      document.getElementById(\"hello\").innerHTML = \"Hello, world!\";\n    </script>\n  </body>\n</html>;"
+            }
         ],
-        "avatar": "https://avatarzo.ru/wp-content/uploads/naruto-figure.jpg"
-      }
+        "user": {
+            "id": "2",
+            "username": "user",
+            "password": "4321",
+            "roles": ["USER"],
+            "avatar": "https://avatarzo.ru/wp-content/uploads/naruto-figure.jpg"
+        }
     }
-  ]
+]

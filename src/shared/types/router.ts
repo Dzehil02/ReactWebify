@@ -1,6 +1,6 @@
 // eslint-disable-next-line webify-plugin/layer-imports
-import { UserRole } from "@/entities/User";
-import { RouteObject } from "react-router-dom";
+import { UserRole } from '@/entities/User';
+import { RouteObject } from 'react-router-dom';
 
 export type AppRoutesProps = RouteObj & {
     authOnly?: boolean;

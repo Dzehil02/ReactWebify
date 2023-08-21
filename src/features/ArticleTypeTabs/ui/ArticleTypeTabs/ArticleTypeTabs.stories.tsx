@@ -9,9 +9,7 @@ const meta: Meta<typeof ArticleTypeTabs> = {
     title: 'entities/Article/ArticleTypeTabs',
     component: ArticleTypeTabs,
     tags: ['autodocs'],
-    argTypes: {
-        
-    },
+    argTypes: {},
 };
 
 export default meta;
@@ -19,20 +17,20 @@ type Story = StoryObj<typeof ArticleTypeTabs>;
 
 export const Light: Story = {
     args: {
-        value: ArticleType.IT
-    }
+        value: ArticleType.IT,
+    },
 };
 
 export const Dark: Story = {
     args: {
-        value: ArticleType.IT     
-    }
+        value: ArticleType.IT,
+    },
 };
 Dark.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const Blue: Story = {
     args: {
-        value: ArticleType.IT
-    }
+        value: ArticleType.IT,
+    },
 };
 Blue.decorators = [ThemeDecorator(Theme.BLUE)];

@@ -36,59 +36,67 @@ export const RatingCard = memo((props: RatingCardProps) => {
     const [starsCount, setStarsCount] = useState(rate);
     const [feedback, setfeedback] = useState('');
 
-    const onSelectStars = useCallback((selectedStarsCount: number) => {
-        setStarsCount(selectedStarsCount);
-        if (hasFeedback) {
-            setIsModalOpen(true)
-        } else {
-            onAccept?.(selectedStarsCount);
-        }
-        setIsModalOpen(true);
-    }, [hasFeedback, onAccept])
+    const onSelectStars = useCallback(
+        (selectedStarsCount: number) => {
+            setStarsCount(selectedStarsCount);
+            if (hasFeedback) {
+                setIsModalOpen(true);
+            } else {
+                onAccept?.(selectedStarsCount);
+            }
+            setIsModalOpen(true);
+        },
+        [hasFeedback, onAccept],
+    );
 
     const acceptHandler = useCallback(() => {
         setIsModalOpen(false);
         onAccept?.(starsCount, feedback);
-    }, [feedback, onAccept, starsCount])
+    }, [feedback, onAccept, starsCount]);
 
     const cancelHandler = useCallback(() => {
         setIsModalOpen(false);
         onCancel?.(starsCount);
-    }, [onCancel, starsCount])
+    }, [onCancel, starsCount]);
 
     const modalContent = (
         <>
-            <Text 
-                title={feedbackTitle} 
-            />
-            <Input 
-                data-testid='RatingCard.Input' 
-                value={feedback} 
-                onChange={setfeedback} 
-                placeholder={t('feedback')} 
+            <Text title={feedbackTitle} />
+            <Input
+                data-testid="RatingCard.Input"
+                value={feedback}
+                onChange={setfeedback}
+                placeholder={t('feedback')}
             />
         </>
-    )
+    );
 
     return (
-        <Card data-testid='RatingCard' className={className} max>
-            <VStack align='center' gap='8'>
+        <Card data-testid="RatingCard" className={className} max>
+            <VStack align="center" gap="8">
                 <Text title={starsCount ? t('ratingThanks') : title} />
-                <StarRating selectedStars={starsCount} size={40} onSelect={onSelectStars} />
+                <StarRating
+                    selectedStars={starsCount}
+                    size={40}
+                    onSelect={onSelectStars}
+                />
             </VStack>
             <BrowserView>
                 <Modal isOpen={isModalOpen} lazy>
-                    <VStack max gap='32'>
+                    <VStack max gap="32">
                         {modalContent}
-                        <HStack max gap='16' justify='end'>
-                            <Button 
-                                data-testid='RatingCard.Close' 
-                                onClick={cancelHandler} 
+                        <HStack max gap="16" justify="end">
+                            <Button
+                                data-testid="RatingCard.Close"
+                                onClick={cancelHandler}
                                 theme={ButtonTheme.OUTLINE_RED}
                             >
                                 {t('close')}
                             </Button>
-                            <Button data-testid='RatingCard.Send' onClick={acceptHandler}>
+                            <Button
+                                data-testid="RatingCard.Send"
+                                onClick={acceptHandler}
+                            >
                                 {t('send')}
                             </Button>
                         </HStack>
@@ -97,9 +105,13 @@ export const RatingCard = memo((props: RatingCardProps) => {
             </BrowserView>
             <MobileView>
                 <Drawer isOpen={isModalOpen} lazy onClose={cancelHandler}>
-                    <VStack max gap='32'>
+                    <VStack max gap="32">
                         {modalContent}
-                        <Button fullWidth onClick={acceptHandler} size={ButtonSize.L}>
+                        <Button
+                            fullWidth
+                            onClick={acceptHandler}
+                            size={ButtonSize.L}
+                        >
                             {t('send')}
                         </Button>
                     </VStack>
@@ -107,4 +119,4 @@ export const RatingCard = memo((props: RatingCardProps) => {
             </MobileView>
         </Card>
     );
-})
+});

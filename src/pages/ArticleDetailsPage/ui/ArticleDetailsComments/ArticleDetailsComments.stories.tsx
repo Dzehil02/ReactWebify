@@ -9,9 +9,7 @@ const meta: Meta<typeof ArticleDetailsComments> = {
     title: 'pages/ArticleDetailsPage/ArticleDetailsComments',
     component: ArticleDetailsComments,
     tags: ['autodocs'],
-    argTypes: {
-        
-    },
+    argTypes: {},
 };
 
 export default meta;
@@ -19,21 +17,21 @@ type Story = StoryObj<typeof ArticleDetailsComments>;
 
 export const Light: Story = {
     args: {
-        id: '1'
-    }
+        id: '1',
+    },
 };
 Light.decorators = [StoreDecorator({})];
 
 export const Dark: Story = {
     args: {
-        id: '1'     
-    }
+        id: '1',
+    },
 };
 Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({})];
 
 export const Blue: Story = {
     args: {
-        id: '1'     
-    }
+        id: '1',
+    },
 };
 Blue.decorators = [ThemeDecorator(Theme.BLUE), StoreDecorator({})];

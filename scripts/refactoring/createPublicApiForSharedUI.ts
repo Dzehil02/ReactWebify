@@ -1,4 +1,4 @@
-import {Project} from 'ts-morph';
+import { Project } from 'ts-morph';
 import path from 'path';
 
 const project = new Project({});
@@ -12,11 +12,18 @@ const sharedUiDirectory = project.getDirectory(uiPath);
 const componentsDirectories = sharedUiDirectory?.getDirectories();
 
 function isAbsolute(value: string) {
-    const layers = ['app', 'entities', 'features', 'pages', 'shared', 'widgets']
-    return layers.some(layer => value.startsWith(layer));
+    const layers = [
+        'app',
+        'entities',
+        'features',
+        'pages',
+        'shared',
+        'widgets',
+    ];
+    return layers.some((layer) => value.startsWith(layer));
 }
 
-componentsDirectories?.forEach(directory => {
+componentsDirectories?.forEach((directory) => {
     const indexFilePath = `${directory.getPath()}/index.ts`;
     const isIndexFile = directory.getSourceFile(indexFilePath);
 
@@ -26,11 +33,11 @@ componentsDirectories?.forEach(directory => {
 
         file.save();
     }
-})
+});
 
-files.forEach(sourceFile => {
+files.forEach((sourceFile) => {
     const importDeclarations = sourceFile.getImportDeclarations();
-    importDeclarations.forEach(importDeclaration => {
+    importDeclarations.forEach((importDeclaration) => {
         const value = importDeclaration.getModuleSpecifierValue();
         const valueWithoutAlias = value.replace('@/', '');
 
