@@ -612,6 +612,10 @@
             "username": "admin",
             "password": "1234",
             "roles": ["ADMIN"],
+            "features": {
+                "isArticleRatingEnabled": true,
+                "isCounterEnabled": false
+            },
             "avatar": "https://avatarzo.ru/wp-content/uploads/squid-game-anime.jpg"
         },
         {
@@ -619,6 +623,10 @@
             "username": "user",
             "password": "4321",
             "roles": ["USER"],
+            "features": {
+                "isArticleRatingEnabled": true,
+                "isCounterEnabled": false
+            },
             "avatar": "https://avatarzo.ru/wp-content/uploads/naruto-figure.jpg"
         },
         {
@@ -626,6 +634,10 @@
             "username": "manager",
             "password": "manager",
             "roles": ["MANAGER"],
+            "features": {
+                "isArticleRatingEnabled": false,
+                "isCounterEnabled": false
+            },
             "avatar": "https://static.baza.farpost.ru/v/1675754411371_bulletin.jpg"
         },
         {
@@ -633,6 +645,10 @@
             "username": "test",
             "password": "test",
             "roles": ["USER"],
+            "features": {
+                "isArticleRatingEnabled": true,
+                "isCounterEnabled": true
+            },
             "avatar": "https://www.amongusavatarcreator.com/assets/img/main/icon.png"
         }
     ],
