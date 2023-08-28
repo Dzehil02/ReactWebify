@@ -13,6 +13,8 @@
     "Exit": "Выйти",
     "increment": "Увеличить",
     "decrement": "Уменьшить",
+    "multiplyFive": "Умножить на 5",
+    "divideFive": "Разделить на 5",
     "Enter name": "Введите имя",
     "Enter password": "Введите пароль",
     "Authorization form": "Форма авторизации",

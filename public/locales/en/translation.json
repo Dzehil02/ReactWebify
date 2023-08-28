@@ -13,6 +13,8 @@
     "Exit": "Log out",
     "increment": "Increment",
     "decrement": "Decrement",
+    "multiplyFive": "Multiply 5",
+    "divideFive": "Divide 5",
     "Enter name": "Enter name",
     "Enter password": "Enter password",
     "Authorization form": "Authorization form",

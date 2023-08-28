@@ -19,6 +19,12 @@ export const counterSlice = buildSlice({
         decrement: (state) => {
             state.value -= 1;
         },
+        multiply: (state, { payload }: PayloadAction<number>) => {
+            state.value *= payload;
+        },
+        divide: (state, { payload }: PayloadAction<number>) => {
+            state.value /= payload;
+        },
     },
 });
 
