@@ -24,5 +24,7 @@
     "Loading": "Loading ...",
     "ErrorRecommends": "Error loading recommendations",
     "ErrorArticles": "Error loading articles",
-    "RateWillBeSoon": "Rating will be soon"
+    "RateWillBeSoon": "Rating will be soon",
+    "Greeting_1": "Welcome to Article's page",
+    "Greeting_2": "Here you will find a lot of interesting articles!"
 }

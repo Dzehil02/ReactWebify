@@ -654,9 +654,10 @@
         "isCounterEnabled": false
       },
       "jsonSettings": {
-        "theme": "app_blue_theme",
+        "theme": "app_dark_theme",
         "isFirstVisit": true,
-        "settingsPageHasBeenOpen": false
+        "settingsPageHasBeenOpen": false,
+        "isArticlesPageWasOpened": true
       },
       "avatar": "https://avatarzo.ru/wp-content/uploads/squid-game-anime.jpg"
     },
@@ -672,9 +673,10 @@
         "isCounterEnabled": false
       },
       "jsonSettings": {
-        "theme": "app_blue_theme",
+        "theme": "app_dark_theme",
         "isFirstVisit": true,
-        "settingsPageHasBeenOpen": false
+        "settingsPageHasBeenOpen": false,
+        "isArticlesPageWasOpened": true
       },
       "avatar": "https://avatarzo.ru/wp-content/uploads/naruto-figure.jpg"
     },
@@ -692,7 +694,8 @@
       "jsonSettings": {
         "theme": "app_light_theme",
         "isFirstVisit": true,
-        "settingsPageHasBeenOpen": false
+        "settingsPageHasBeenOpen": false,
+        "isArticlesPageWasOpened": false
       },
       "avatar": "https://static.baza.farpost.ru/v/1675754411371_bulletin.jpg"
     },
