@@ -15,8 +15,7 @@ import { VStack } from '@/shared/ui/Stack';
 import { ArticleRecommendationsList } from '@/features/articleRecommendationsList';
 import { ArticleDetailsComments } from '../ArticleDetailsComments/ArticleDetailsComments';
 import { ArticleRating } from '@/features/articleRating';
-import { getFeatureFlags, toggleFeatures } from '@/shared/lib/features';
-import { Counter, CounterRedisegned } from '@/entities/Counter';
+import { ToggleFeatures, getFeatureFlags } from '@/shared/lib/features';
 import { Card } from '@/shared/ui/Card';
 
 interface ArticleDetailsPageProps {
@@ -32,7 +31,6 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
     const { id } = useParams<{ id: string }>();
 
     const isArticleRatingEnabled = getFeatureFlags('isArticleRatingEnabled')
-    const isCounterEnabled = getFeatureFlags('isCounterEnabled')
 
     if (!id) {
         return (
@@ -44,17 +42,11 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
         );
     }
 
-    const counter = toggleFeatures({
-        name: 'isCounterEnabled',
-        on: () => <CounterRedisegned />,
-        off: () => <Counter/>
-    });
-
-    const articleRatingCard = toggleFeatures({
-        name: 'isArticleRatingEnabled',
-        on: () => <ArticleRating articleId={id}/>,
-        off: () => <Card max>{t('RateWillBeSoon')}</Card>
-    });
+    // const articleRatingCard = toggleFeatures({
+    //     name: 'isArticleRatingEnabled',
+    //     on: () => <ArticleRating articleId={id}/>,
+    //     off: () => <Card max>{t('RateWillBeSoon')}</Card>
+    // });
 
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
@@ -64,8 +56,12 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
                 <VStack gap={'16'} max>
                     <ArticleDetailsPageHeader />
                     <ArticleDetails id={id} />
-                    {counter}
-                    {articleRatingCard}
+                    {/* {articleRatingCard} */}
+                    <ToggleFeatures 
+                        feature={'isArticleRatingEnabled'} 
+                        on={<ArticleRating articleId={id}/>} 
+                        off={<Card max>{t('RateWillBeSoon')}</Card>}
+                    />
                     <ArticleRecommendationsList />
                     <ArticleDetailsComments id={id} />
                 </VStack>
