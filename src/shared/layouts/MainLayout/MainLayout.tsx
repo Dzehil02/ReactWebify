@@ -1,4 +1,4 @@
-import { ReactElement, memo } from "react";
+import { ReactElement } from "react";
 import cls from './MainLayout.module.scss';
 import { classNames } from "@/shared/lib/classNames/classNames";
 
@@ -10,7 +10,7 @@ interface MainLayoutProps {
     toolbar?: ReactElement;
 }
 
-export const MainLayout = memo((props: MainLayoutProps) => {
+export const MainLayout = (props: MainLayoutProps) => {
     const {className, header, content, sidebar, toolbar} = props;
 
     return (
@@ -25,4 +25,4 @@ export const MainLayout = memo((props: MainLayoutProps) => {
         </div>
     )
 
-});
+};
