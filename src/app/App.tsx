@@ -43,6 +43,7 @@ const App = () => {
                         header={<Navbar />}
                         content={<AppRouter />}
                         sidebar={<Sidebar />}
+                        // eslint-disable-next-line i18next/no-literal-string
                         toolbar={<div>TOOLBAR</div>}
                     />
                     </Suspense>

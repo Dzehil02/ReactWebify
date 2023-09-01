@@ -34,5 +34,8 @@
     "rateProfile": "Rate this Profile",
     "close": "Close",
     "send": "Send",
-    "ratingThanks": "Thanks for rating!"
+    "ratingThanks": "Thanks for rating!",
+    "testLogin": "login: user",
+    "testPassword": "password: 4321",
+    "canTestApp": "You can login and test the app"
 }

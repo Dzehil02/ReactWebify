@@ -4,7 +4,7 @@ import { Modal } from '@/shared/ui/Modal';
 import { Text } from '@/shared/ui/Text';
 import { saveJsonSettings, useJsonSettings } from '@/entities/User';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { BrowserView, MobileView, isMobile } from 'react-device-detect';
+import { BrowserView, MobileView } from 'react-device-detect';
 import { Drawer } from '@/shared/ui/Drawer';
 
 export const ArticlePageGreeting = memo(() => {
