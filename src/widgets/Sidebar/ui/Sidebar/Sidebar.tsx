@@ -8,12 +8,16 @@ import { SidebarItem } from '../SidebarItem/SidebarItem';
 import { useSelector } from 'react-redux';
 import { getSidebarItems } from '../../model/selectors/getSidebarItems';
 import { VStack } from '@/shared/ui/Stack';
+import { ToggleFeatures } from '@/shared/lib/features';
+import { AppLogo } from '@/shared/ui/AppLogo';
 
 interface SidebarProps {
     className?: string;
 }
 
-export const Sidebar = memo(({ className }: SidebarProps) => {
+// Старый дизайн сайдбара
+const DeprecatedSidebar = memo(({ className }: SidebarProps) => {
+
     const [collapsed, setCollapsed] = useState(false);
     const sidebarItemsList = useSelector(getSidebarItems);
 
@@ -58,5 +62,68 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
                 <LangSwitcher short={collapsed} />
             </div>
         </section>
+    )
+})
+
+// Новый дизайн сайдбара
+const SidebarRedesigned = memo(({ className }: SidebarProps) => {
+
+    const [collapsed, setCollapsed] = useState(false);
+    const sidebarItemsList = useSelector(getSidebarItems);
+
+    const onToggle = () => {
+        setCollapsed((prev) => !prev);
+    };
+
+    const itemsList = useMemo(
+        () =>
+            sidebarItemsList.map((item) => (
+                <SidebarItem
+                    item={item}
+                    collapsed={collapsed}
+                    key={item.path}
+                />
+            )),
+        [collapsed, sidebarItemsList],
     );
+
+    return (
+        <section
+            data-testid="sidebar"
+            className={classNames(cls.SidebarRedesigned, { [cls.collapsed]: collapsed }, [
+                className,
+            ])}
+        >
+            <AppLogo className={cls.appLogo}/>
+            <Button
+                data-testid="sidebar-toggle"
+                onClick={onToggle}
+                className={cls.collapseBtn}
+                theme={ButtonTheme.BACKGROUND_INVERTED}
+                size={ButtonSize.L}
+                square
+            >
+                {collapsed ? '>' : '<'}
+            </Button>
+            <VStack role="navigation" gap="8" className={cls.items}>
+                {itemsList}
+            </VStack>
+            <div className={cls.switchers}>
+                <ThemeSwitcher />
+                <LangSwitcher short={collapsed} />
+            </div>
+        </section>
+    )
+})
+
+export const Sidebar = memo(() => {
+
+    return (
+        <ToggleFeatures
+            feature={'isAppRedesigned'}
+            on={<SidebarRedesigned/>}
+            off={<DeprecatedSidebar/>}
+        />
+    )
+
 });

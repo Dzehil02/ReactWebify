@@ -10,6 +10,7 @@ import { StateSchema } from '@/app/providers/StoreProvider';
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { useThrottle } from '@/shared/lib/hooks/useThrottle/useThrottle';
 import { TestProps } from '@/shared/types/tests';
+import { toggleFeatures } from '@/shared/lib/features';
 
 interface PageProps extends TestProps {
     className?: string;
@@ -46,10 +47,16 @@ export const Page = (props: PageProps) => {
         );
     }, 500);
 
+    const clsStyle = toggleFeatures({
+        name: 'isAppRedesigned',
+        on: () => cls.PageRedesigned,
+        off: () => cls.Page,
+    })
+
     return (
         <main
             ref={wrapperRef}
-            className={classNames(cls.Page, {}, [className])}
+            className={classNames(clsStyle, {}, [className])}
             onScroll={onScroll}
             data-testid={props['data-testid'] ?? 'Page'}
         >

@@ -12,9 +12,46 @@ import { getRouteArticleCreate } from '@/shared/const/router';
 import { HStack } from '@/shared/ui/Stack';
 import { NotificationButton } from '@/features/notificationButton';
 import { AvatarDropdown } from '@/features/avatarDropdown';
+import { ToggleFeatures } from '@/shared/lib/features';
 
 interface NavbarProps {
     className?: string;
+}
+
+const AuthNavbar = ({ className }: NavbarProps) => {
+    const { t } = useTranslation();
+    return (
+        <header className={classNames(cls.Navbar, {}, [className])}>
+            <Text
+                className={cls.appName}
+                title={t('ReactWebify')}
+                theme={TextTheme.INVERTED}
+            />
+            <AppLink
+                to={getRouteArticleCreate()}
+                theme={AppLinkTheme.INVERTED}
+                className={cls.createLink}
+            >
+                {t('Create article')}
+            </AppLink>
+            <HStack gap="16" className={cls.actions}>
+                <NotificationButton />
+                <AvatarDropdown />
+            </HStack>
+        </header>
+    );
+}
+
+const AuthRedesignedNavbar = ({ className }: NavbarProps) => {
+    const { t } = useTranslation();
+    return (
+        <header className={classNames(cls.NavbarRedesigned, {}, [className])}>
+            <HStack gap="16" className={cls.actions}>
+                <NotificationButton />
+                <AvatarDropdown />
+            </HStack>
+        </header>
+    );
 }
 
 export const Navbar = memo(({ className }: NavbarProps) => {
@@ -31,26 +68,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
     }, []);
 
     if (authData) {
-        return (
-            <header className={classNames(cls.Navbar, {}, [className])}>
-                <Text
-                    className={cls.appName}
-                    title={t('ReactWebify')}
-                    theme={TextTheme.INVERTED}
-                />
-                <AppLink
-                    to={getRouteArticleCreate()}
-                    theme={AppLinkTheme.INVERTED}
-                    className={cls.createLink}
-                >
-                    {t('Create article')}
-                </AppLink>
-                <HStack gap="16" className={cls.actions}>
-                    <NotificationButton />
-                    <AvatarDropdown />
-                </HStack>
-            </header>
-        );
+        return(<ToggleFeatures feature={'isAppRedesigned'} on={<AuthRedesignedNavbar/>} off={<AuthNavbar/>} />)
     }
 
     return (
