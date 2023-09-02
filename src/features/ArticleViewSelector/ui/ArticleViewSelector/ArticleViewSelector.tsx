@@ -42,6 +42,8 @@ export const ArticleViewSelector: FC<ArticleViewSelectorProps> = ({
                 >
                     {
                         <viewType.icon
+                            width={24}
+                            height={24}
                             className={classNames('', {
                                 [cls.selected]: viewType.view === view,
                             })}
