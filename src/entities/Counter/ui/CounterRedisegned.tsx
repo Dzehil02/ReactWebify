@@ -1,4 +1,4 @@
-import { Button } from '@/shared/ui/Button';
+import { Button } from '@/shared/ui/deprecated/Button';
 import { useCounterActions } from '../model/slice/counterSlice';
 import { useCounterValue } from '../model/selectors/getCounterValue/getCounterValue';
 import { useTranslation } from 'react-i18next';
@@ -33,7 +33,10 @@ export const CounterRedisegned = () => {
             <Button data-testid="decrement-btn" onClick={decrementHandler}>
                 {t('decrement')}
             </Button>
-            <Button data-testid="multuplyFive-btn" onClick={multiplyFiveHandler}>
+            <Button
+                data-testid="multuplyFive-btn"
+                onClick={multiplyFiveHandler}
+            >
                 {t('multiplyFive')}
             </Button>
             <Button data-testid="divieFive-btn" onClick={divideFiveHandler}>

@@ -1,18 +1,18 @@
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './Navbar.module.scss';
 import { useTranslation } from 'react-i18next';
-import { Button, ButtonTheme } from '@/shared/ui/Button';
 import { memo, useCallback, useState } from 'react';
 import { LoginModal } from '@/features/AuthByUsername';
 import { useSelector } from 'react-redux';
 import { getUserAuthData } from '@/entities/User';
-import { Text, TextTheme } from '@/shared/ui/Text';
-import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink';
+import { AppLink, AppLinkTheme } from '@/shared/ui/deprecated/AppLink';
 import { getRouteArticleCreate } from '@/shared/const/router';
-import { HStack } from '@/shared/ui/Stack';
+import { HStack } from '@/shared/ui/redesigned/Stack';
 import { NotificationButton } from '@/features/notificationButton';
 import { AvatarDropdown } from '@/features/avatarDropdown';
 import { ToggleFeatures } from '@/shared/lib/features';
+import { Text, TextTheme } from '@/shared/ui/deprecated/Text';
+import { Button, ButtonTheme } from '@/shared/ui/deprecated/Button';
 
 interface NavbarProps {
     className?: string;
@@ -40,7 +40,7 @@ const AuthNavbar = ({ className }: NavbarProps) => {
             </HStack>
         </header>
     );
-}
+};
 
 const AuthRedesignedNavbar = ({ className }: NavbarProps) => {
     const { t } = useTranslation();
@@ -52,7 +52,7 @@ const AuthRedesignedNavbar = ({ className }: NavbarProps) => {
             </HStack>
         </header>
     );
-}
+};
 
 export const Navbar = memo(({ className }: NavbarProps) => {
     const { t } = useTranslation();
@@ -68,7 +68,13 @@ export const Navbar = memo(({ className }: NavbarProps) => {
     }, []);
 
     if (authData) {
-        return(<ToggleFeatures feature={'isAppRedesigned'} on={<AuthRedesignedNavbar/>} off={<AuthNavbar/>} />)
+        return (
+            <ToggleFeatures
+                feature={'isAppRedesigned'}
+                on={<AuthRedesignedNavbar />}
+                off={<AuthNavbar />}
+            />
+        );
     }
 
     return (

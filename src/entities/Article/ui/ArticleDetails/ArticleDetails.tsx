@@ -14,9 +14,9 @@ import {
     getArticleDetailsError,
     getArticleDetailsIsLoading,
 } from '../../model/selectors/articleDetails';
-import { Text, TextAlign, TextSize } from '@/shared/ui/Text';
+import { Text, TextAlign, TextSize } from '@/shared/ui/deprecated/Text';
 import { useTranslation } from 'react-i18next';
-import { Skeleton } from '@/shared/ui/Skeleton';
+import { Skeleton } from '@/shared/ui/deprecated/Skeleton';
 import EyeIcon from '@/shared/assets/icons/eye.svg';
 import CalendarIcon from '@/shared/assets/icons/calendar.svg';
 import { ArticleBlock } from '../../model/types/article';
@@ -25,8 +25,8 @@ import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleC
 import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
-import { HStack, VStack } from '@/shared/ui/Stack';
-import { AppImage } from '@/shared/ui/AppImage';
+import { HStack, VStack } from '@/shared/ui/redesigned/Stack';
+import { AppImage } from '@/shared/ui/deprecated/AppImage';
 import NotFoundImg from '@/shared/assets/icons/not_found_img.svg';
 
 interface ArticleDetailsProps {
