@@ -18,7 +18,7 @@ interface NavbarProps {
     className?: string;
 }
 
-const AuthNavbar = ({ className }: NavbarProps) => {
+const AuthNavbarDeprecated = ({ className }: NavbarProps) => {
     const { t } = useTranslation();
     return (
         <header className={classNames(cls.Navbar, {}, [className])}>
@@ -42,7 +42,7 @@ const AuthNavbar = ({ className }: NavbarProps) => {
     );
 };
 
-const AuthRedesignedNavbar = ({ className }: NavbarProps) => {
+const AuthNavbarRedesigned = ({ className }: NavbarProps) => {
     const { t } = useTranslation();
     return (
         <header className={classNames(cls.NavbarRedesigned, {}, [className])}>
@@ -71,8 +71,8 @@ export const Navbar = memo(({ className }: NavbarProps) => {
         return (
             <ToggleFeatures
                 feature={'isAppRedesigned'}
-                on={<AuthRedesignedNavbar />}
-                off={<AuthNavbar />}
+                on={<AuthNavbarRedesigned />}
+                off={<AuthNavbarDeprecated />}
             />
         );
     }

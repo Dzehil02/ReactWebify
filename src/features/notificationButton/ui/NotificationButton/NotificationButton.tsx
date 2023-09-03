@@ -4,9 +4,12 @@ import cls from './NotificationButton.module.scss';
 import { NotificationList } from '@/entities/Notification';
 import { Button, ButtonTheme } from '@/shared/ui/deprecated/Button';
 import { Popover } from '@/shared/ui/deprecated/Popups';
-import NotificationIcon from '@/shared/assets/icons/notification.svg';
+import NotificationIconDeprecated from '@/shared/assets/icons/notification.svg';
+import NotificationIconRedesigned from '@/shared/assets/icons/notificationNew.svg';
 import { Drawer } from '@/shared/ui/deprecated/Drawer';
 import { BrowserView, MobileView } from 'react-device-detect';
+import { ToggleFeatures } from '@/shared/lib/features';
+import { Icon } from '@/shared/ui/redesigned/Icon';
 
 interface NotificationButtonProps {
     className?: string;
@@ -26,7 +29,12 @@ export const NotificationButton = memo((props: NotificationButtonProps) => {
 
     const trigger = (
         <Button onClick={onOpenDrawer} theme={ButtonTheme.CLEAR_INVERTED}>
-            <NotificationIcon />
+            <ToggleFeatures
+                feature='isAppRedesigned'
+                off={<NotificationIconDeprecated width={20} height={20} />}
+                on={<Icon Svg={NotificationIconRedesigned} />}
+            />
+            
         </Button>
     );
 
