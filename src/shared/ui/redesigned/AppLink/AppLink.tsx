@@ -1,7 +1,7 @@
 import { ReactNode, memo } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './AppLink.module.scss';
-import { Link, LinkProps } from 'react-router-dom';
+import { LinkProps } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 
 export type AppLinkVariant = 'primary' | 'red';
