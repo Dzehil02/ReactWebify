@@ -4,6 +4,7 @@ import cls from './Avatar.module.scss';
 import { AppImage } from '../../redesigned/AppImage';
 import UserAvatar from '../../../assets/icons/user-avatar.svg';
 import { Skeleton } from '../Skeleton';
+import { Icon } from '../Icon';
 
 interface AvatarProps {
     className?: string;
@@ -11,10 +12,7 @@ interface AvatarProps {
     size?: number;
     alt?: string;
 }
-/**
- * Устарел, используем новые компоненты из папки redesigned
- * @deprecated
- */
+
 export const Avatar = ({ className, src, size = 100, alt }: AvatarProps) => {
     const mods: Mods = {};
     const styles = useMemo<CSSProperties>(() => {
@@ -25,7 +23,13 @@ export const Avatar = ({ className, src, size = 100, alt }: AvatarProps) => {
     }, [size]);
 
     const fallback = <Skeleton width={size} height={size} border={'50%'} />;
-    const errorFallback = <UserAvatar width={size} height={size} />;
+    const errorFallback = (
+        <Icon
+            width={size}
+            height={size}
+            Svg={UserAvatar}
+        />
+    );
 
     return (
         <AppImage

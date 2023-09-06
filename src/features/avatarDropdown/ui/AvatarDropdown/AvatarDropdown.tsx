@@ -3,8 +3,9 @@ import { useTranslation } from 'react-i18next';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './AvatarDropdown.module.scss';
 import { getRouteAdminPanel, getRouteProfile } from '@/shared/const/router';
-import { Avatar } from '@/shared/ui/deprecated/Avatar';
-import { Dropdown } from '@/shared/ui/deprecated/Popups';
+import { Avatar as AvatarDeprecated } from '@/shared/ui/deprecated/Avatar';
+import { Dropdown as DropdownDeprecated } from '@/shared/ui/deprecated/Popups';
+import { Dropdown } from '@/shared/ui/redesigned/Popups';
 import { useDispatch, useSelector } from 'react-redux';
 import {
     getUserAuthData,
@@ -13,6 +14,8 @@ import {
     userActions,
 } from '@/entities/User';
 import { Button, ButtonTheme } from '@/shared/ui/deprecated/Button';
+import { ToggleFeatures } from '@/shared/lib/features';
+import { Avatar } from '@/shared/ui/redesigned/Avatar';
 
 interface AvatarDropdownProps {
     className?: string;
@@ -38,33 +41,52 @@ export const AvatarDropdown = memo((props: AvatarDropdownProps) => {
 
     const trigger = (
         <Button theme={ButtonTheme.CLEAR_INVERTED}>
-            <Avatar size={30} src={authData.avatar} />
+            <AvatarDeprecated size={30} src={authData.avatar} />
         </Button>
     );
 
+    const items = [
+        ...(isAdminPanelAvailable
+            ? [
+                  {
+                      content: t('admin'),
+                      href: getRouteAdminPanel(),
+                  },
+              ]
+            : []),
+        {
+            content: t('profile'),
+            href: getRouteProfile(authData.id),
+        },
+        {
+            content: t('Exit'),
+            onClick: onLogout,
+        },
+    ]
+
     return (
-        <Dropdown
-            className={classNames(cls.AvatarDropdown, {}, [className])}
-            direction={'bottom left'}
-            items={[
-                ...(isAdminPanelAvailable
-                    ? [
-                          {
-                              content: t('admin'),
-                              href: getRouteAdminPanel(),
-                          },
-                      ]
-                    : []),
-                {
-                    content: t('profile'),
-                    href: getRouteProfile(authData.id),
-                },
-                {
-                    content: t('Exit'),
-                    onClick: onLogout,
-                },
-            ]}
-            trigger={trigger}
+        <ToggleFeatures
+            feature="isAppRedesigned"
+            off={
+                <DropdownDeprecated
+                    className={classNames(cls.AvatarDropdown, {}, [className])}
+                    direction={'bottom left'}
+                    items={items}
+                    trigger={
+                        <AvatarDeprecated size={30} src={authData.avatar} />
+                    }
+                />
+            }
+            on={
+                <Dropdown
+                    className={classNames(cls.AvatarDropdown, {}, [className])}
+                    direction={'bottom left'}
+                    items={items}
+                    trigger={
+                        <Avatar size={40} src={authData.avatar} />
+                    }
+                />
+            }
         />
     );
 });
