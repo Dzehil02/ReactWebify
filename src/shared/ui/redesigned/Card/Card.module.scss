@@ -1,6 +1,5 @@
 .Card {
     padding: 24px;
-    border-radius: 12px;
 }
 
 .gap_0 {
@@ -21,6 +20,11 @@
 
 .normal {
     background: var(--dark-bg-redesigned);
+    border-radius: 12px;
+}
+
+.round {
+    border-radius: 40px;
 }
 
 .light {

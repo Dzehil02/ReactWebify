@@ -1,6 +1,19 @@
-.selected {
-    fill: var(--secondary-color);
-    stroke: var(--secondary-color);
-    width: 34px;
-    height: 34px;
+.ArticleViewSelector {
+    .selected {
+        fill: var(--secondary-color);
+        stroke: var(--secondary-color);
+        width: 34px;
+        height: 34px;
+    }
+}
+
+.ArticleViewSelectorRedesigned {
+    .notSelectedRedesigned {
+        color: var(--light-bg-redesigned);
+    }
+
+    .selectedRedesigned {
+        width: 34px;
+        height: 34px;
+    }
 }
