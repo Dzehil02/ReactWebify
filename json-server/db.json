@@ -675,7 +675,7 @@
         "isAppRedesigned": false
       },
       "jsonSettings": {
-        "theme": "app_blue_theme",
+        "theme": "app_dark_theme",
         "isFirstVisit": true,
         "settingsPageHasBeenOpen": false,
         "isArticlesPageWasOpened": true
@@ -727,10 +727,10 @@
       "id": "1",
       "first": "Kevin",
       "lastname": "Spacy",
-      "age": 64,
+      "age": 65,
       "currency": "EUR",
       "country": "France",
-      "city": "Roma",
+      "city": "Monaco",
       "username": "admin",
       "avatar": "https://avatarzo.ru/wp-content/uploads/squid-game-anime.jpg"
     },
@@ -739,8 +739,8 @@
       "first": "Том",
       "lastname": "Круз",
       "age": 64,
-      "currency": "EUR",
-      "country": "France",
+      "currency": "USD",
+      "country": "Armenia",
       "city": "Milan",
       "username": "user",
       "avatar": "https://avatarzo.ru/wp-content/uploads/naruto-figure.jpg"

@@ -8,10 +8,6 @@ export type TextAlign = 'right' | 'left' | 'center';
 
 export type TextSize = 's' | 'm' | 'l';
 
-// S = 'size_S',
-// M = 'size_m',
-// L = 'size_l',
-
 interface TextProps {
     className?: string;
     title?: string;
