@@ -109,4 +109,44 @@
         overflow: hidden;
         text-overflow: ellipsis;
     }
+
+    // Redesigned styles
+
+    .card {
+        width: 240px;
+        height: 350px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .imgRedesigned {
+        width: 100%;
+        object-fit: cover;
+        min-height: 140px;
+        max-height: 140px;
+
+    }
+
+    .info {
+        padding: 4px 4px 8px 4px;
+        height: 100%;
+    }
+
+    .footer {
+        height: 100%;
+        justify-content: flex-end;
+    }
+}
+
+.ArticleListItemRedesigned {
+    &.BIG {
+        width: 100%;
+    }
+
+    &.SMALL {
+        width: 240px;
+        height: 350px;
+    }
 }

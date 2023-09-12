@@ -7,6 +7,8 @@ import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
 import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton';
 import { Text, TextSize } from '@/shared/ui/deprecated/Text';
 import { useTranslation } from 'react-i18next';
+import { ToggleFeatures } from '@/shared/lib/features';
+import { HStack } from '@/shared/ui/redesigned/Stack';
 
 interface ArticleListProps {
     className?: string;
@@ -58,12 +60,29 @@ export const ArticleList = memo((props: ArticleListProps) => {
     }
 
     return (
-        <div
-            data-testid="ArticleList"
-            className={classNames(cls.ArticleList, {}, [className, cls[view]])}
-        >
-            {articles.length > 0 ? articles.map(renderArticle) : null}
-            {isLoading && getSkeletons(view)}
-        </div>
+        <ToggleFeatures
+            feature="isAppRedesigned"
+            off={
+                <div
+                    data-testid="ArticleList"
+                    className={classNames(cls.ArticleList, {}, [
+                        className,
+                        cls[view],
+                    ])}
+                >
+                    {articles.length > 0 ? articles.map(renderArticle) : null}
+                    {isLoading && getSkeletons(view)}
+                </div>
+            }
+            on={
+                <HStack gap={'24'} wrap='wrap'
+                    data-testid="ArticleListRedesigned"
+                    className={classNames(cls.ArticleList, {}, [])}
+                >
+                    {articles.length > 0 ? articles.map(renderArticle) : null}
+                    {isLoading && getSkeletons(view)}
+                </HStack>
+            }
+        />
     );
 });

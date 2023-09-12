@@ -55,7 +55,8 @@ module.exports = {
                 'to', 'fallback', 'onClick', 'data-testid',
                 'placeholder', 'name', 'target', 'justify',
                 'align', 'direction', 'gap', 'role', 'as',
-                'border', 'feature', 'color', 'variant', 'size'
+                'border', 'feature', 'color', 'variant', 'size',
+                'wrap',
             ]
         }],
         'max-len': ['error', {
