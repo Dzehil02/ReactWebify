@@ -112,6 +112,10 @@
 
     // Redesigned styles
 
+    .subtitle {
+        font-size: 12px;
+    }
+
     .card {
         width: 240px;
         height: 350px;
@@ -126,11 +130,10 @@
         object-fit: cover;
         min-height: 140px;
         max-height: 140px;
-
     }
 
     .info {
-        padding: 4px 4px 8px 4px;
+        padding: 4px 4px 8px;
         height: 100%;
     }
 

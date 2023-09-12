@@ -37,5 +37,10 @@
     "ratingThanks": "Thanks for rating!",
     "testLogin": "login: user",
     "testPassword": "password: 4321",
-    "canTestApp": "You can login and test the app"
+    "canTestApp": "You can login and test the app",
+    "User_settings": "User settings",
+    "new": "New",
+    "old": "Old",
+    "interface": "Interface",
+    "settings": "Settings"
 }

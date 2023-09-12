@@ -112,7 +112,7 @@ export const ArticleListItemRedesigned = memo((props: ArticleListItemProps) => {
                     errorFallback={<NotFoundImg width={200} height={200} />}
                 />
                 <VStack gap="4" className={cls.info}>
-                    <Text text={article.title} className={cls.title} />
+                    <Text title={article.title} className={cls.title} size='s' />
                     <VStack max gap="4" className={cls.footer}>
                         <HStack max justify="between">
                             <Text

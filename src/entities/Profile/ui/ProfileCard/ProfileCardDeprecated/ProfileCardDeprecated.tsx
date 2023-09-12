@@ -75,6 +75,13 @@ export const ProfileCardDeprecated = (props: ProfileCardProps) => {
                     <AvatarDeprecated src={data?.avatar} />
                 </HStack>
             )}
+            <VStack
+                max
+                gap="16"
+                className={classNames(cls.EditInfo, mods, [className])}
+            >
+
+            
             <InputDeprecated
                 value={data?.first}
                 placeholder={t('Firstname')}
@@ -132,6 +139,9 @@ export const ProfileCardDeprecated = (props: ProfileCardProps) => {
                 onChange={onChangeCountry}
                 readonly={readonly}
             />
+
+</VStack>
+
         </VStack>
     );
 };

@@ -18,8 +18,10 @@ import {
     getRouteArticleEdit,
     getRouteAdminPanel,
     getRouteForbidden,
+    getRouteSettings,
 } from '../../../../shared/const/router';
 import { RouteObj } from '../../../../shared/types/router';
+import { SettingsPage } from '@/pages/SettingsPage';
 
 export const routeConfig: RouteObj[] = [
     {
@@ -64,6 +66,10 @@ export const routeConfig: RouteObj[] = [
     {
         path: getRouteForbidden(),
         element: <ForbiddenPage />,
+    },
+    {
+        path: getRouteSettings(),
+        element: <SettingsPage />,
     },
     //last
     {

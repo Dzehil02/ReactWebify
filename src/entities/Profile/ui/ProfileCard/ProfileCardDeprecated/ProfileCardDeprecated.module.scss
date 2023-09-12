@@ -1,6 +1,8 @@
 .ProfileCardDeprecated {
     padding: 20px;
     border: 2px solid var(--inverted-bg-color);
+    display: flex;
+    align-items: center;
 }
 
 .loading,
@@ -10,4 +12,8 @@
 
 .editing {
     border: 2px solid var(--inverted-primary-color);
+}
+
+.EditInfo {
+    max-width: 800px;
 }
