@@ -26,5 +26,7 @@
     "ErrorArticles": "Error loading articles",
     "RateWillBeSoon": "Rating will be soon",
     "Greeting_1": "Welcome to Article's page",
-    "Greeting_2": "Here you will find a lot of interesting articles!"
+    "Greeting_2": "Here you will find a lot of interesting articles!",
+    "{{count}} views_one": "{{count}} view",
+    "{{count}} views_other": "{{count}} views"
 }
