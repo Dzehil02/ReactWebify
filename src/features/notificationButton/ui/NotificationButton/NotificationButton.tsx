@@ -2,11 +2,14 @@ import { memo, useCallback, useState } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './NotificationButton.module.scss';
 import { NotificationList } from '@/entities/Notification';
-import { Button as ButtonDeprecated, ButtonTheme } from '@/shared/ui/deprecated/Button';
+import {
+    Button as ButtonDeprecated,
+    ButtonTheme,
+} from '@/shared/ui/deprecated/Button';
 import { Popover as PopoverDeprecated } from '@/shared/ui/deprecated/Popups';
 import NotificationIconDeprecated from '@/shared/assets/icons/notification.svg';
 import NotificationIconRedesigned from '@/shared/assets/icons/notificationNew.svg';
-import { Drawer } from '@/shared/ui/deprecated/Drawer';
+import { Drawer } from '@/shared/ui/redesigned/Drawer';
 import { BrowserView, MobileView } from 'react-device-detect';
 import { ToggleFeatures } from '@/shared/lib/features';
 import { Icon } from '@/shared/ui/redesigned/Icon';
