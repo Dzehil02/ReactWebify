@@ -24,7 +24,7 @@ export const ArticleListItemRedesigned = memo((props: ArticleListItemProps) => {
 
     const userInfo = (
         <>
-            <Avatar size={32} src={article.user.avatar} />
+            <Avatar size={32} src={article.user.avatar} className={cls.avatar} />
             <Text bold text={article.user.username} />
         </>
     );
@@ -61,8 +61,8 @@ export const ArticleListItemRedesigned = memo((props: ArticleListItemProps) => {
                         </HStack>
                         {types}
                     </HStack>
-                    <Text bold title={article.title} />
-                    <Text title={article.subtitle} size="s" />
+                    <Text bold title={article.title} size='l' />
+                    <Text title={article.subtitle} />
                     <AppImage
                         fallback={<Skeleton width={'100%'} height={250} />}
                         errorFallback={
@@ -103,16 +103,16 @@ export const ArticleListItemRedesigned = memo((props: ArticleListItemProps) => {
                 cls[view],
             ])}
         >
-            <Card className={cls.card} border="round">
+            <Card className={cls.card} border="round" padding='0'>
                 <AppImage
-                    fallback={<Skeleton width={200} height={200} />}
+                    fallback={<Skeleton width={'100%'} height={200} />}
                     alt={article.title}
                     src={article.img}
                     className={cls.imgRedesigned}
-                    errorFallback={<NotFoundImg width={200} height={200} />}
+                    errorFallback={<NotFoundImg width={'100%'} height={200} />}
                 />
                 <VStack gap="4" className={cls.info}>
-                    <Text title={article.title} className={cls.title} size='s' />
+                    <Text title={article.title} className={cls.title} size='m' />
                     <VStack max gap="4" className={cls.footer}>
                         <HStack max justify="between">
                             <Text
