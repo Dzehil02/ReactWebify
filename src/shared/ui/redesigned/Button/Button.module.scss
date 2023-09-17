@@ -45,11 +45,22 @@
 
 .outline {
     background: none;
-    border: 1px solid var(--icon-redesigned);
     border-radius: 34px;
 
-    &.hover {
+    &:hover {
         border: 1px solid var(--accent-redesigned);
+    }
+
+    &.normal {
+        border: 1px solid var(--icon-redesigned);
+    }
+
+    &.success {
+        border: 1px solid var(--save-redesigned);
+    }
+
+    &.error {
+        border: 1px solid var(--cancel-redesigned);
     }
 }
 

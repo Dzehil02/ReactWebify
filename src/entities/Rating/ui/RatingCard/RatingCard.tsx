@@ -203,7 +203,7 @@ export const RatingCard = memo((props: RatingCardProps) => {
                 </CardDeprecated>
             }
             on={
-                <Card data-testid="RatingCard" max padding='24' border='round'>
+                <Card data-testid="RatingCard" max padding='24' border='partial'>
                     {content}
                 </Card>
             }

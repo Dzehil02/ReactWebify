@@ -5,14 +5,15 @@ import { memo, useCallback, useState } from 'react';
 import { LoginModal } from '@/features/AuthByUsername';
 import { useSelector } from 'react-redux';
 import { getUserAuthData } from '@/entities/User';
-import { AppLink, AppLinkTheme } from '@/shared/ui/deprecated/AppLink';
+import { AppLink as AppLinkDeprecated, AppLinkTheme } from '@/shared/ui/deprecated/AppLink';
 import { getRouteArticleCreate } from '@/shared/const/router';
 import { HStack } from '@/shared/ui/redesigned/Stack';
 import { NotificationButton } from '@/features/notificationButton';
 import { AvatarDropdown } from '@/features/avatarDropdown';
-import { ToggleFeatures } from '@/shared/lib/features';
-import { Text, TextTheme } from '@/shared/ui/deprecated/Text';
-import { Button, ButtonTheme } from '@/shared/ui/deprecated/Button';
+import { ToggleFeatures, toggleFeatures } from '@/shared/lib/features';
+import { Text as TextDeprecated, TextTheme } from '@/shared/ui/deprecated/Text';
+import { Button as ButtonDeprecated, ButtonTheme } from '@/shared/ui/deprecated/Button';
+import { Button } from '@/shared/ui/redesigned/Button';
 
 interface NavbarProps {
     className?: string;
@@ -22,18 +23,18 @@ const AuthNavbarDeprecated = ({ className }: NavbarProps) => {
     const { t } = useTranslation();
     return (
         <header className={classNames(cls.Navbar, {}, [className])}>
-            <Text
+            <TextDeprecated
                 className={cls.appName}
                 title={t('ReactWebify')}
                 theme={TextTheme.INVERTED}
             />
-            <AppLink
+            <AppLinkDeprecated
                 to={getRouteArticleCreate()}
                 theme={AppLinkTheme.INVERTED}
                 className={cls.createLink}
             >
                 {t('Create article')}
-            </AppLink>
+            </AppLinkDeprecated>
             <HStack gap="16" className={cls.actions}>
                 <NotificationButton />
                 <AvatarDropdown />
@@ -67,6 +68,12 @@ export const Navbar = memo(({ className }: NavbarProps) => {
         setIsAuthModal(true);
     }, []);
 
+    const mainClass = toggleFeatures({
+        name: 'isAppRedesigned',
+        off: () => cls.Navbar,
+        on: () => cls.NavbarRedesigned,
+    })
+
     if (authData) {
         return (
             <ToggleFeatures
@@ -78,14 +85,28 @@ export const Navbar = memo(({ className }: NavbarProps) => {
     }
 
     return (
-        <header className={classNames(cls.Navbar, {}, [className])}>
-            <Button
-                theme={ButtonTheme.CLEAR_INVERTED}
-                className={cls.links}
-                onClick={onShowModal}
-            >
-                {t('Enter')}
-            </Button>
+        <header className={classNames(mainClass, {}, [className])}>
+            <ToggleFeatures
+                feature="isAppRedesigned"
+                off={
+                    <ButtonDeprecated
+                        theme={ButtonTheme.CLEAR_INVERTED}
+                        className={cls.links}
+                        onClick={onShowModal}
+                    >
+                        {t('Enter')}
+                    </ButtonDeprecated>
+                }
+                on={
+                    <Button
+                        variant="clear"
+                        onClick={onShowModal}
+                    >
+                        {t('Enter')}
+                    </Button>
+                }
+            />
+
             {isAuthModal && (
                 <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />
             )}

@@ -78,7 +78,7 @@ export const ProfileCardDeprecated = (props: ProfileCardProps) => {
             <VStack
                 max
                 gap="16"
-                className={classNames(cls.EditInfo, mods, [className])}
+                className={classNames(cls.EditInfo, {}, [className])}
             >
 
             
