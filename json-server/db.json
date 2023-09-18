@@ -664,7 +664,7 @@
       "features": {
         "isArticleRatingEnabled": true,
         "isCounterEnabled": false,
-        "isAppRedesigned": false
+        "isAppRedesigned": true
       },
       "jsonSettings": {
         "theme": "app_blue_theme",

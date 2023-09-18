@@ -4,12 +4,12 @@
 @import "themes/light";
 @import "themes/blue";
 
-body {
-    font: var(--font-m);
-    color: var(--primary-color);
-    scrollbar-color: var(--inverted-bg-color) var(--card-bg);
-    scrollbar-width: thin;
-}
+// body {
+//     font: var(--font-m);
+//     color: var(--primary-color);
+//     scrollbar-color: var(--inverted-bg-color) var(--card-bg);
+//     scrollbar-width: thin;
+// }
 
 .app {
     font: var(--font-m);
