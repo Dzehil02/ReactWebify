@@ -664,10 +664,10 @@
       "features": {
         "isArticleRatingEnabled": true,
         "isCounterEnabled": false,
-        "isAppRedesigned": true
+        "isAppRedesigned": false
       },
       "jsonSettings": {
-        "theme": "app_light_theme",
+        "theme": "app_blue_theme",
         "isFirstVisit": true,
         "settingsPageHasBeenOpen": false,
         "isArticlesPageWasOpened": true
@@ -684,10 +684,10 @@
       "features": {
         "isArticleRatingEnabled": true,
         "isCounterEnabled": false,
-        "isAppRedesigned": false
+        "isAppRedesigned": true
       },
       "jsonSettings": {
-        "theme": "app_dark_theme",
+        "theme": "app_blue_theme",
         "isFirstVisit": true,
         "settingsPageHasBeenOpen": false,
         "isArticlesPageWasOpened": true
@@ -724,12 +724,13 @@
       "features": {
         "isArticleRatingEnabled": true,
         "isCounterEnabled": true,
-        "isAppRedesigned": false
+        "isAppRedesigned": true
       },
       "jsonSettings": {
         "theme": "app_light_theme",
         "isFirstVisit": true,
-        "settingsPageHasBeenOpen": false
+        "settingsPageHasBeenOpen": false,
+        "isArticlesPageWasOpened": true
       },
       "avatar": "https://www.amongusavatarcreator.com/assets/img/main/icon.png"
     }

@@ -103,6 +103,10 @@
         margin-top: 8px;
     }
 
+    .titleSkeleton {
+        margin-left: 8px;
+    }
+
     .title p {
         width: 200px;
         white-space: nowrap;
@@ -153,7 +157,9 @@
     }
 
     &.SMALL {
-        width: 240px;
-        height: 350px;
+        .card {
+            height: 350px;
+            width: 240px;
+        }
     }
 }
