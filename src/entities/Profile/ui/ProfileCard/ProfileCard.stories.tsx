@@ -5,6 +5,7 @@ import { ProfileCard } from './ProfileCard';
 import { Country } from '@/entities/Country';
 import { Currency } from '@/entities/Currency';
 import avatar from '@/shared/assets/tests/storybook.jpg';
+import { NewDesignDecorator } from '@/shared/config/storybook/NewDesignDecorator/NewDesignDecorator';
 
 const meta: Meta<typeof ProfileCard> = {
     title: 'entities/ProfileCard',
@@ -18,53 +19,47 @@ const meta: Meta<typeof ProfileCard> = {
 export default meta;
 type Story = StoryObj<typeof ProfileCard>;
 
-export const Primary: Story = {
-    args: {
-        data: {
-            first: 'Pit',
-            lastname: 'Bred',
-            age: 55,
-            username: 'BredPit',
-            country: Country.Armenia,
-            city: 'Florida',
-            currency: Currency.USD,
-            avatar: avatar,
-        },
+const primaryArgs = {
+    data: {
+        first: 'Pit',
+        lastname: 'Bred',
+        age: 55,
+        username: 'BredPit',
+        country: Country.Armenia,
+        city: 'Florida',
+        currency: Currency.USD,
+        avatar: avatar,
     },
 };
 
+export const Primary: Story = {
+    args: primaryArgs
+};
+
+export const PrimaryRedesign: Story = {
+    args: primaryArgs
+};
+PrimaryRedesign.decorators = [NewDesignDecorator];
+
 export const Secondary: Story = {
-    args: {
-        data: {
-            first: 'Pit',
-            lastname: 'Bred',
-            age: 55,
-            username: 'BredPit',
-            country: Country.Armenia,
-            city: 'Florida',
-            currency: Currency.USD,
-            avatar: avatar,
-        },
-    },
+    args: primaryArgs
 };
 Secondary.decorators = [ThemeDecorator(Theme.DARK)];
 
+export const SecondaryRedesign: Story = {
+    args: primaryArgs
+};
+SecondaryRedesign.decorators = [NewDesignDecorator, ThemeDecorator(Theme.DARK)];
+
 export const ThirdReadonly: Story = {
-    args: {
-        data: {
-            first: 'Pit',
-            lastname: 'Bred',
-            age: 55,
-            username: 'BredPit',
-            country: Country.Armenia,
-            city: 'Florida',
-            currency: Currency.USD,
-            avatar: avatar,
-        },
-        readonly: true,
-    },
+    args: primaryArgs
 };
 ThirdReadonly.decorators = [ThemeDecorator(Theme.BLUE)];
+
+export const ThirdReadonlyRedesign: Story = {
+    args: primaryArgs
+};
+ThirdReadonlyRedesign.decorators = [NewDesignDecorator, ThemeDecorator(Theme.BLUE)];
 
 export const Error: Story = {
     args: {

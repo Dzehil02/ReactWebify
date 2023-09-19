@@ -3,6 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { CommentCard } from './CommentCard';
 import { Theme } from '@/shared/const/theme';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import { FeaturesFlagsDecorator } from '@/shared/config/storybook/FeaturesFlagsDecorator/FeaturesFlagsDecorator';
 
 const meta: Meta<typeof CommentCard> = {
     title: 'entities/Comment/CommentCard',
@@ -14,35 +15,30 @@ const meta: Meta<typeof CommentCard> = {
 export default meta;
 type Story = StoryObj<typeof CommentCard>;
 
-export const Light: Story = {
-    args: {
-        comment: {
-            id: '1',
-            text: 'Text commenta 1',
-            user: { id: '1', username: 'Kevin' },
-        },
+const normalArgs = {
+    comment: {
+        id: '1',
+        text: 'Text commenta 1',
+        user: { id: '1', username: 'Kevin' },
     },
+}
+
+export const Light: Story = {
+    args: normalArgs
 };
 
+export const LightRedesign: Story = {
+    args: normalArgs
+};
+LightRedesign.decorators = [FeaturesFlagsDecorator({isAppRedesigned: true})]
+
 export const Dark: Story = {
-    args: {
-        comment: {
-            id: '1',
-            text: 'Text commenta 1',
-            user: { id: '1', username: 'Kevin' },
-        },
-    },
+    args: normalArgs
 };
 Dark.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const Blue: Story = {
-    args: {
-        comment: {
-            id: '1',
-            text: 'Text commenta 1',
-            user: { id: '1', username: 'Kevin' },
-        },
-    },
+    args: normalArgs
 };
 Blue.decorators = [ThemeDecorator(Theme.BLUE)];
 
