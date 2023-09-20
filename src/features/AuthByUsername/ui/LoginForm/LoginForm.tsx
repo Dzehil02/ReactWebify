@@ -17,11 +17,6 @@ import {
     ReducersList,
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { ToggleFeatures } from '@/shared/lib/features';
-import { Text } from '@/shared/ui/redesigned/Text';
-import { Input } from '@/shared/ui/redesigned/Input';
-import { Button } from '@/shared/ui/redesigned/Button';
-import { VStack } from '@/shared/ui/redesigned/Stack';
 import { useForceUpdate } from '@/shared/lib/render/forceUpdate';
 
 export interface LoginFormProps {
@@ -69,71 +64,36 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
             removeAfterUnmount={true}
             reducers={initialReducers}
         >
-            <ToggleFeatures
-                feature="isAppRedesigned"
-                off={
-                    <div className={classNames(cls.LoginForm, {}, [className])}>
-                        <TextDeprecated title={t('Authorization form')} />
-                        {error && (
-                            <TextDeprecated
-                                text={t('Error in LoginForm')}
-                                theme={TextTheme.ERROR}
-                            />
-                        )}
-                        <InputDeprecated
-                            value={username}
-                            onChange={onChangeUsername}
-                            type="text"
-                            className={cls.input}
-                            placeholder={t('Enter name')}
-                        />
-                        <InputDeprecated
-                            value={password}
-                            onChange={onChangePassword}
-                            type="text"
-                            className={cls.input}
-                            placeholder={t('Enter password')}
-                        />
-                        <ButtonDeprecated
-                            onClick={onLoginClick}
-                            className={cls.loginBtn}
-                            disabled={isLoading}
-                        >
-                            {t('Enter')}
-                        </ButtonDeprecated>
-                    </div>
-                }
-                on={
-                    <VStack gap='16' className={classNames(cls.LoginForm, {}, [className])}>
-                        <Text title={t('Authorization form')} />
-                        {error && (
-                            <Text
-                                text={t('Error in LoginForm')}
-                                variant='error'
-                            />
-                        )}
-                        <Input
-                            value={username}
-                            onChange={onChangeUsername}
-                            type="text"
-                            placeholder={t('Enter name')}
-                        />
-                        <Input
-                            value={password}
-                            onChange={onChangePassword}
-                            type="text"
-                            placeholder={t('Enter password')}
-                        />
-                        <Button
-                            onClick={onLoginClick}
-                            className={cls.loginBtnRedesigned}
-                            disabled={isLoading}
-                        >
-                            {t('Enter')}
-                        </Button>
-                    </VStack>
-                }
-            />
+            <div className={classNames(cls.LoginForm, {}, [className])}>
+                <TextDeprecated title={t('Authorization form')} />
+                {error && (
+                    <TextDeprecated
+                        text={t('Error in LoginForm')}
+                        theme={TextTheme.ERROR}
+                    />
+                )}
+                <InputDeprecated
+                    value={username}
+                    onChange={onChangeUsername}
+                    type="text"
+                    className={cls.input}
+                    placeholder={t('Enter name')}
+                />
+                <InputDeprecated
+                    value={password}
+                    onChange={onChangePassword}
+                    type="text"
+                    className={cls.input}
+                    placeholder={t('Enter password')}
+                />
+                <ButtonDeprecated
+                    onClick={onLoginClick}
+                    className={cls.loginBtn}
+                    disabled={isLoading}
+                >
+                    {t('Enter')}
+                </ButtonDeprecated>
+            </div>
         </DynamicModuleLoader>
     );
 });

@@ -5,8 +5,6 @@ import { useTranslation } from 'react-i18next';
 import { CommentCard } from '../CommentCard/CommentCard';
 import { Comment } from '../../model/types/comment';
 import { VStack } from '@/shared/ui/redesigned/Stack';
-import { ToggleFeatures } from '@/shared/lib/features';
-import { Text } from '@/shared/ui/redesigned/Text';
 
 interface CommentListProps {
     className?: string;
@@ -29,46 +27,18 @@ export const CommentList = memo((props: CommentListProps) => {
     }
 
     return (
-        <ToggleFeatures
-            feature="isAppRedesigned"
-            off={
-                <VStack
-                    gap="16"
-                    max
-                    className={classNames('', {}, [className])}
-                >
-                    {comments?.length ? (
-                        comments.map((comment) => (
-                            <CommentCard
-                                isLoading={isLoading}
-                                key={comment.id}
-                                comment={comment}
-                            />
-                        ))
-                    ) : (
-                        <TextDeprecated text={t('Comments is not found')} />
-                    )}
-                </VStack>
-            }
-            on={
-                <VStack
-                    gap="16"
-                    max
-                    className={classNames('', {}, [className])}
-                >
-                    {comments?.length ? (
-                        comments.map((comment) => (
-                            <CommentCard
-                                isLoading={isLoading}
-                                key={comment.id}
-                                comment={comment}
-                            />
-                        ))
-                    ) : (
-                        <Text text={t('Comments is not found')} />
-                    )}
-                </VStack>
-            }
-        />
+        <VStack gap="16" max className={classNames('', {}, [className])}>
+            {comments?.length ? (
+                comments.map((comment) => (
+                    <CommentCard
+                        isLoading={isLoading}
+                        key={comment.id}
+                        comment={comment}
+                    />
+                ))
+            ) : (
+                <TextDeprecated text={t('Comments is not found')} />
+            )}
+        </VStack>
     );
 });

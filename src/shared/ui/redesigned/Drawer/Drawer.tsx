@@ -8,7 +8,6 @@ import {
     useAnimationLibs,
 } from '@/shared/lib/components/AnimationProvider';
 import { useTheme } from '@/shared/lib/hooks/useTheme/useTheme';
-import { toggleFeatures } from '@/shared/lib/features';
 
 interface DrawerProps {
     className?: string;
@@ -23,7 +22,7 @@ const height = window.innerHeight - 100;
 export const DrawerContent = memo((props: DrawerProps) => {
     const { Spring, Gesture } = useAnimationLibs();
     const [{ y }, api] = Spring.useSpring(() => ({ y: height }));
-    const { className, children, isOpen, onClose, lazy } = props;
+    const { className, children, isOpen, onClose } = props;
     const { theme } = useTheme();
 
     const openDrawer = useCallback(() => {
@@ -85,11 +84,7 @@ export const DrawerContent = memo((props: DrawerProps) => {
                 className={classNames(cls.Drawer, {}, [
                     className,
                     theme,
-                    toggleFeatures({
-                        name: 'isAppRedesigned',
-                        off: () => cls.drawerOld,
-                        on: () => cls.drawerNew,
-                    }),
+                    cls.drawerOld,
                 ])}
             >
                 <Overlay onClick={close} />

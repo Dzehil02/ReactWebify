@@ -18,10 +18,7 @@ import { useTranslation } from 'react-i18next';
 
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { VStack } from '@/shared/ui/redesigned/Stack';
-import { ToggleFeatures } from '@/shared/lib/features';
-import { Text } from '@/shared/ui/redesigned/Text';
 import { ArticleDetailsDeprecated } from './ArticleDetailsDeprecated';
-import { ArticleDetailsRedesigned } from './ArticleDetailsRedesigned';
 import { ArticleDetailsSkeleton } from './ArticleDetailsSkeleton';
 
 interface ArticleDetailsProps {
@@ -52,25 +49,13 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
         content = <ArticleDetailsSkeleton />;
     } else if (error) {
         content = (
-            <ToggleFeatures
-                feature="isAppRedesigned"
-                off={
-                    <TextDeprecated
-                        align={TextAlign.CENTER}
-                        title={t('Error Article')}
-                    />
-                }
-                on={<Text align="center" title={t('Error Article')} />}
+            <TextDeprecated
+                align={TextAlign.CENTER}
+                title={t('Error Article')}
             />
         );
     } else {
-        content = (
-            <ToggleFeatures
-                feature="isAppRedesigned"
-                off={<ArticleDetailsDeprecated />}
-                on={<ArticleDetailsRedesigned />}
-            />
-        );
+        content = <ArticleDetailsDeprecated />;
     }
 
     return (
