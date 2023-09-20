@@ -4,8 +4,6 @@ import cls from './NotificationList.module.scss';
 import { useNotifications } from '../../api/notificationApi';
 import { VStack } from '@/shared/ui/redesigned/Stack';
 import { NotificationItem } from '../NotificationItem/NotificationItem';
-import { Skeleton as SkeletonDeprecated } from '@/shared/ui/deprecated/Skeleton';
-import { toggleFeatures } from '@/shared/lib/features';
 import { Skeleton as SkeletonRedesigned } from '@/shared/ui/redesigned/Skeleton';
 
 interface NotificationListProps {
@@ -18,11 +16,7 @@ export const NotificationList = memo((props: NotificationListProps) => {
         pollingInterval: 10000,
     });
 
-    const Skeleton = toggleFeatures({
-        name: 'isAppRedesigned',
-        off: () => SkeletonDeprecated,
-        on: () => SkeletonRedesigned
-    })
+    const Skeleton = SkeletonRedesigned;
 
     if (isLoading) {
         return (

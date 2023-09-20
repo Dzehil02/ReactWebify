@@ -10,17 +10,15 @@ import { fetchArticleById } from '../../model/services/fetchArticleById/fetchArt
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useSelector } from 'react-redux';
 import {
+    getArticleDetailsData,
     getArticleDetailsError,
     getArticleDetailsIsLoading,
 } from '../../model/selectors/articleDetails';
-import { Text as TextDeprecated, TextAlign } from '@/shared/ui/deprecated/Text';
 import { useTranslation } from 'react-i18next';
 
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { VStack } from '@/shared/ui/redesigned/Stack';
-import { ToggleFeatures } from '@/shared/lib/features';
 import { Text } from '@/shared/ui/redesigned/Text';
-import { ArticleDetailsDeprecated } from './ArticleDetailsDeprecated';
 import { ArticleDetailsRedesigned } from './ArticleDetailsRedesigned';
 import { ArticleDetailsSkeleton } from './ArticleDetailsSkeleton';
 
@@ -39,9 +37,13 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
     const dispatch = useAppDispatch();
     const isLoading = useSelector(getArticleDetailsIsLoading);
     const error = useSelector(getArticleDetailsError);
+    const article = useSelector(getArticleDetailsData);
+
+    console.log('ARTICLE' + article);
 
     useInitialEffect(() => {
         if (__PROJECT__ !== 'storybook') {
+            console.log('!!1111111111111111111111111111111111!!!');
             dispatch(fetchArticleById(id));
         }
     });
@@ -51,26 +53,9 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
     if (isLoading) {
         content = <ArticleDetailsSkeleton />;
     } else if (error) {
-        content = (
-            <ToggleFeatures
-                feature="isAppRedesigned"
-                off={
-                    <TextDeprecated
-                        align={TextAlign.CENTER}
-                        title={t('Error Article')}
-                    />
-                }
-                on={<Text align="center" title={t('Error Article')} />}
-            />
-        );
+        content = <Text align="center" title={t('Error Article')} />;
     } else {
-        content = (
-            <ToggleFeatures
-                feature="isAppRedesigned"
-                off={<ArticleDetailsDeprecated />}
-                on={<ArticleDetailsRedesigned />}
-            />
-        );
+        content = <ArticleDetailsRedesigned />;
     }
 
     return (

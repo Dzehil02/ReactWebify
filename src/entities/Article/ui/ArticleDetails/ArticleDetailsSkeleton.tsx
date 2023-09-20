@@ -1,17 +1,10 @@
-import { memo } from "react";
+import { memo } from 'react';
 import cls from './ArticleDetails.module.scss';
-import { VStack } from "@/shared/ui/redesigned/Stack";
-import { Skeleton as SkeletonDeprecated } from '@/shared/ui/deprecated/Skeleton';
+import { VStack } from '@/shared/ui/redesigned/Stack';
 import { Skeleton as SkeletonRedesigned } from '@/shared/ui/redesigned/Skeleton';
-import { toggleFeatures } from "@/shared/lib/features";
 
 export const ArticleDetailsSkeleton = memo(() => {
-    
-    const Skeleton = toggleFeatures({
-        name: 'isAppRedesigned',
-        off: () => SkeletonDeprecated,
-        on: () => SkeletonRedesigned,
-    })
+    const Skeleton = SkeletonRedesigned;
 
     return (
         <VStack gap="16" max>

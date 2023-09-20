@@ -8,7 +8,6 @@ import {
     useAnimationLibs,
 } from '@/shared/lib/components/AnimationProvider';
 import { useTheme } from '@/shared/lib/hooks/useTheme/useTheme';
-import { toggleFeatures } from '@/shared/lib/features';
 
 interface DrawerProps {
     className?: string;
@@ -85,11 +84,7 @@ export const DrawerContent = memo((props: DrawerProps) => {
                 className={classNames(cls.Drawer, {}, [
                     className,
                     theme,
-                    toggleFeatures({
-                        name: 'isAppRedesigned',
-                        off: () => cls.drawerOld,
-                        on: () => cls.drawerNew,
-                    }),
+                    cls.drawerNew,
                 ])}
             >
                 <Overlay onClick={close} />

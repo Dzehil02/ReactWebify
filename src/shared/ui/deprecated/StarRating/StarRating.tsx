@@ -1,9 +1,7 @@
 import { memo, useState } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './StarRating.module.scss';
-import Star from '@/shared/assets/icons/star.svg';
 import StarNew from '@/shared/assets/icons/starNew.svg';
-import { ToggleFeatures, toggleFeatures } from '@/shared/lib/features';
 import { Icon } from '../../redesigned/Icon';
 
 interface StarRatingProps {
@@ -41,17 +39,7 @@ export const StarRating = memo((props: StarRatingProps) => {
     };
 
     return (
-        <div
-            className={classNames(
-                toggleFeatures({
-                    name: 'isAppRedesigned',
-                    off: () => cls.StarRating,
-                    on: () => cls.StarRatingRedesigned,
-                }),
-                {},
-                [className],
-            )}
-        >
+        <div className={classNames(cls.StarRatingRedesigned, {}, [className])}>
             {stars.map((starNumber) => {
                 const commonProps = {
                     className: classNames(
@@ -63,7 +51,6 @@ export const StarRating = memo((props: StarRatingProps) => {
                                 : cls.normal,
                         ],
                     ),
-                    key: starNumber,
                     onMouseLeave: onLeave,
                     onMouseEnter: onHover(starNumber),
                     onClick: onClick(starNumber),
@@ -73,17 +60,11 @@ export const StarRating = memo((props: StarRatingProps) => {
                     'data-selected': currentStarsCount >= starNumber,
                 };
                 return (
-                    <ToggleFeatures
+                    <Icon
                         key={starNumber}
-                        feature="isAppRedesigned"
-                        off={<Star {...commonProps} />}
-                        on={
-                            <Icon 
-                                clickable={!isSelected}
-                                Svg={StarNew}
-                                {...commonProps}
-                            />
-                        }
+                        clickable={!isSelected}
+                        Svg={StarNew}
+                        {...commonProps}
                     />
                 );
             })}

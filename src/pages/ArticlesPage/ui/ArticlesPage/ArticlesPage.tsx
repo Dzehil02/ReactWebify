@@ -11,11 +11,9 @@ import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch
 import { Page } from '@/widgets/Page';
 import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage';
 import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage';
-import { ArticlesPageFilters } from '../ArticlesPageFilters/ArticlesPageFilters';
 import { useSearchParams } from 'react-router-dom';
 import { ArticleInfiniteList } from '../ArticleInfiniteList/ArticleInfiniteList';
 import { ArticlePageGreeting } from '@/features/articlePageGreeting';
-import { ToggleFeatures } from '@/shared/lib/features';
 import { StickyContentLayout } from '@/shared/layouts/StickyContentLayout';
 import { ViewSelectorContainer } from '../ViewSelectorContainer/ViewSelectorContainer';
 import { FiltersContainer } from '../FiltersContainer/FiltersContainer';
@@ -41,38 +39,22 @@ const ArticlesPage: FC<ArticlesPageProps> = ({ className }) => {
     });
 
     const content = (
-        <ToggleFeatures
-            feature="isAppRedesigned"
-            off={
+        <StickyContentLayout
+            content={
                 <Page
                     data-testid="ArticlesPage"
                     onScrollEnd={onLoadNextPart}
-                    className={classNames(cls.ArticlesPage, {}, [className])}
+                    className={classNames(cls.ArticlesPageRedesigned, {}, [
+                        className,
+                    ])}
                 >
-                    <ArticlesPageFilters />
+                    {/* <ArticlesPageFilters /> */}
                     <ArticleInfiniteList className={cls.list} />
                     <ArticlePageGreeting />
                 </Page>
             }
-            on={
-                <StickyContentLayout
-                    content={
-                        <Page
-                            data-testid="ArticlesPage"
-                            onScrollEnd={onLoadNextPart}
-                            className={classNames(cls.ArticlesPageRedesigned, {}, [
-                                className,
-                            ])}
-                        >
-                            {/* <ArticlesPageFilters /> */}
-                            <ArticleInfiniteList className={cls.list} />
-                            <ArticlePageGreeting />
-                        </Page>
-                    }
-                    left={<ViewSelectorContainer/>}
-                    right={<FiltersContainer/>}
-                />
-            }
+            left={<ViewSelectorContainer />}
+            right={<FiltersContainer />}
         />
     );
 
