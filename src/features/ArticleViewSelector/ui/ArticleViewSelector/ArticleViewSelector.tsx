@@ -83,7 +83,7 @@ export const ArticleViewSelector: FC<ArticleViewSelectorProps> = ({
                     )}
                     border={'round'}
                 >
-                    <HStack>
+                    <HStack gap='8'>
                         {viewTypes.map((viewType) => (
                             <Icon
                                 clickable

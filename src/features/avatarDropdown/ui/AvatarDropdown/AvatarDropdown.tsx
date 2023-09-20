@@ -13,7 +13,7 @@ import {
     isUserManager,
     userActions,
 } from '@/entities/User';
-import { Button, ButtonTheme } from '@/shared/ui/deprecated/Button';
+// import { Button, ButtonTheme } from '@/shared/ui/deprecated/Button';
 import { ToggleFeatures } from '@/shared/lib/features';
 import { Avatar } from '@/shared/ui/redesigned/Avatar';
 
@@ -39,11 +39,11 @@ export const AvatarDropdown = memo((props: AvatarDropdownProps) => {
         return null;
     }
 
-    const trigger = (
-        <Button theme={ButtonTheme.CLEAR_INVERTED}>
-            <AvatarDeprecated size={30} src={authData.avatar} />
-        </Button>
-    );
+    // const trigger = (
+    //     <Button theme={ButtonTheme.CLEAR_INVERTED}>
+    //         <AvatarDeprecated size={30} src={authData.avatar} />
+    //     </Button>
+    // );
 
     const items = [
         ...(isAdminPanelAvailable
