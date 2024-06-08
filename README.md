@@ -143,33 +143,6 @@ npm run start:dev или npm run start:dev:vite - запуск сервера + 
 Для автоматического удаления фичи во всём проекте используется скрипт remove-features.ts, который принимает два аргумента:
 
    1. Название удаляемого фича флага.
-   2. Сотсояние (on либо off)
+   2. Состояние (on либо off)
 
 ----
-
-## Сущности (entities)
-
-- [Article](/src/entities/Article)
-- [Comment](/src/entities/Comment)
-- [Counter](/src/entities/Counter)
-- [Country](/src/entities/Country)
-- [Currency](/src/entities/Currency)
-- [Notification](/src/entities/Notification)
-- [Profile](/src/entities/Profile)
-- [Rating](/src/entities/Rating)
-- [User](/src/entities/User)
-
-## Фичи (features)
-
-- [addCommentForm](/src/features/addCommentForm)
-- [articleEditForm](/src/features/articleEditForm)
-- [articleRating](/src/features/articleRating)
-- [articleRecommendationsList](/src/features/articleRecommendationsList)
-- [AuthByUsername](/src/features/AuthByUsername)
-- [avatarDropdown](/src/features/avatarDropdown)
-- [editableProfileCard](/src/features/editableProfileCard)
-- [LangSwitcher](/src/features/LangSwitcher)
-- [notificationButton](/src/features/notificationButton)
-- [profileRating](/src/features/profileRating)
-- [ScrollSave](/src/features/ScrollSave)
-- [ThemeSwitcher](/src/features/ThemeSwitcher)
